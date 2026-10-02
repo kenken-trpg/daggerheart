@@ -7,3 +7,6 @@ build
 foundry
 styles/daggerheart.css
 styles/daggerheart.css.map
+
+# translation working file
+lang/translation/pending.json
