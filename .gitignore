@@ -11,3 +11,11 @@ styles/daggerheart.css.map
 
 # translation working file
 lang/translation/pending.json
+
+# Reference-only glossaries: third-party or pre-strip sources, never committed.
+# lang/DnD_Glossary_JP.txt is someone else's compiled work (official D&D JA
+# wordings with sourcebook citations) - consult locally, do not redistribute.
+# Daggerheart_en-ja.csv still carries its D&D column; the committed copy is
+# lang/translation/glossary/daggerheart-ja.csv, which has that column removed.
+lang/DnD_Glossary_JP.txt
+lang/Daggerheart_en-ja.csv

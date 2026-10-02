@@ -21,12 +21,12 @@ node tools/lang-sync.mjs apply     # pending.json を ja.json に反映し、en.
 1ファイル = 1出典の CSV。1列目に英語、2列目に日本語。3列目以降は備考として無視される。
 ファイル名の昇順で読み込み、後のファイルが前のファイルを上書きする。
 
-| ファイル | 状態 | 備考 |
+| ファイル | 行数 | 出所 |
 | --- | --- | --- |
-| （未配置） | — | `lang/Daggerheart_en-ja.csv` をここにコピーすると有効になる |
+| `daggerheart-ja.csv` | 1531 | 本リポジトリ独自の訳。`en.json` の文言を種に訳したもの |
 
-`lang/Daggerheart_en-ja.csv` と `lang/DnD_Glossary_JP.txt` は現在リポジトリ未追跡。
-用語集として常用するなら `glossary/` に移してコミットする。
+`daggerheart-ja.csv` は手元の `lang/Daggerheart_en-ja.csv` から
+**D&D 列を除いて**作成したもの。1列目=英語、2列目=日本語、3列目=`en.json` のキー（参考）。
 
 ## 参照している原典・訳文
 
@@ -34,6 +34,27 @@ node tools/lang-sync.mjs apply     # pending.json を ja.json に反映し、en.
 | --- | --- | --- |
 | Daggerheart System Reference Document 2.0 | DH_SRD_2_2026_08_25 | https://www.daggerheart.com/wp-content/uploads/2026/08/DH_SRD_2_2026_08_25.pdf |
 | ダガーハート SRD 日本語版（非公式・しろぱんだ訳） | 宣伝前ベータ版 | https://shirokuro-hanten.github.io/dhsrd-jp/ |
+
+### 参照のみ・取り込み不可
+
+| ファイル | 理由 |
+| --- | --- |
+| `lang/DnD_Glossary_JP.txt` | 他者の編纂物（D&D 日本語版の公式訳語に出典ページを付した一覧）。手元で参照するのは自由だが、本リポジトリに取り込んで再配布することはできない。`.gitignore` 済み。 |
+| `lang/Daggerheart_en-ja.csv` | 上記由来の D&D 列を含むため、このファイル自体は取り込まない。D&D 列を除いた `glossary/daggerheart-ja.csv` が取り込み済みの正本。`.gitignore` 済み。 |
+
+D&D の定訳語を訳の参考にすること自体は差し支えないが、**出典付きの対訳表という形で
+リポジトリに持ち込まない**。「有利」「クラス」級の短い定訳語が結果的に一致するのは問題ない。
+
+## 上流のライセンス構造
+
+README.md（Licenses 節）より:
+
+- SRD 記載のゲーム内容およびドメインアイコン → [Darrington Press Community Gaming License](https://darringtonpress.com/wp-content/uploads/2025/07/DPCGL-July-30th-2025.pdf)
+- HTML / CSS / JavaScript → MIT
+
+`lang/*.json` はデータファイルだが、防具・武器特徴のルール文など SRD 由来の文章を含む。
+その和訳は SRD テキストの二次的著作物であり、配布の根拠は DPCGL の許諾範囲に依存する。
+これは `ja.json` を置いている時点で既に同じ枠内にあり、用語集 CSV で新たに生じる論点ではない。
 
 ## しろぱんだ訳の取り込みについて
 
