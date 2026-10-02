@@ -3,6 +3,36 @@
 `lang/ja.json` は上流 (Foundryborne/daggerheart) の `lang/en.json` を追従して維持する。
 作業は `tools/lang-sync.mjs` で行う。
 
+## 上流の取り込みは rebase ではなくマージ
+
+```bash
+git fetch origin                 # origin = Foundryborne/daggerheart
+git merge origin/main            # rebase しない
+npm run lang:report              # 訳の差分を確認
+npm run lang:prepare             # → lang/translation/pending.json を埋める
+npm run lang:apply
+git push kenken-trpg main
+```
+
+`kenken-trpg/main` は force push を禁止している (`allow_force_pushes: false`)。
+rebase するとフォーク側の履歴が書き換わって push が GH006 で拒否されるため、
+**マージで取り込む**。`git config --local pull.rebase false` / `pull.ff false` を
+設定済みなので、`git pull` でも必ずマージコミットが作られる。
+
+上流は `main` が直接進むので、マージ時に競合しうるのはフォークが手を入れた
+ファイルだけ。現状は次の3つ（追加しただけのファイルは競合しない）:
+
+| ファイル | フォーク側の変更 |
+| --- | --- |
+| `system.json` | `languages` に `ja` を追加 |
+| `package.json` | `lang:report` / `lang:prepare` / `lang:apply` スクリプト |
+| `.gitignore` | `.DS_Store`、参照専用ファイル、`pending.json` |
+
+いずれも追記のみなので、競合しても両方を残す形で解消すればよい。
+`lang/ja.json` は上流に存在しないため、通常は競合しない。
+
+## 翻訳同期ツール (`tools/lang-sync.mjs`)
+
 ```bash
 node tools/lang-sync.mjs report    # en.json との差分状況を確認
 node tools/lang-sync.mjs prepare   # 未訳分を lang/translation/pending.json に書き出す
