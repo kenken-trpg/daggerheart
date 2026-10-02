@@ -55,7 +55,7 @@ const normalize = string =>
     String(string)
         .toLowerCase()
         .replace(/[−–—]/g, '-')
-        .replace(/[‘’]/g, "'")
+        .replace(/[‘’]/g, '\'')
         .replace(/\s+/g, ' ')
         .replace(/[.。]$/, '')
         .trim();
