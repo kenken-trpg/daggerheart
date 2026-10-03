@@ -187,11 +187,31 @@ CSV を `glossary/` に置き、`diff --only=<出典>` で既訳との食い違�
 | 対象 | 規模 | 日本語化 |
 | --- | --- | --- |
 | `lang/ja.json` (UI 文言) | 2,285文字列 / 69,510文字 | 100% (未訳0・英語フォールバック0) |
-| `src/packs/*/*.json` (ゲーム内容) | 8,916文字列 / 601,861文字 / 1,160ドキュメント | **0%** (日本語を含むファイル0件) |
+| `src/packs/**/*.json` (ゲーム内容) | **11,505フィールド / 980,122文字** / 1,820ファイル | **0%** (日本語を含むファイル0件) |
 
-内容側は UI の約8.7倍。画面上は「枠は日本語、中身は英語」になる。
-内訳は `adversaries` 273,513文字 / `environments` 115,002 / `domains` 113,164 /
-`subclasses` 41,215 / `classes` 23,392 / 以下小。
+内容側は UI の約14倍。画面上は「枠は日本語、中身は英語」になる。
+
+> **数値を上方修正した。** 以前ここには 8,916文字列 / 601,861文字 と書いていたが、
+> `items[]`(アクターに埋め込まれた機能アイテム)配下の `system.description`、
+> `effects[].description`、`journals` の `pages[].text.content` を数えていなかった。
+> 埋め込みアイテムの説明文だけで 296,051文字あり、これは最大の単一項目である。
+
+パック別 (文字数 / フィールド数):
+
+| パック | 文字数 | フィールド | パック | 文字数 | フィールド |
+| --- | --- | --- | --- | --- | --- |
+| `adversaries` | 315,420 | 5,095 | `items/weapons` | 22,527 | 1,226 |
+| `journals` | 208,012 | 39 | `items/loot` | 20,315 | 348 |
+| `environments` | 139,154 | 933 | `beastforms` | 12,319 | 265 |
+| `domains` | 132,649 | 1,271 | `ancestries` | 11,379 | 211 |
+| `subclasses` | 46,754 | 710 | `items/armors` | 5,770 | 266 |
+| `items/consumables` | 25,850 | 496 | `communities` | 5,667 | 92 |
+| `classes` | 25,228 | 225 | `rolltables` | 5,073 | 279 |
+| | | | `transformations` | 4,005 | 49 |
+
+`journals` は 39フィールドで 208,012文字 — SRD のルール本文そのもので、
+1フィールドあたり5,000文字を超える。他のパックとは作業の性質が違うので、
+工程も分けて考える (後述)。
 
 ### 方式選択では減らない固定費
 
@@ -259,24 +279,153 @@ minimum v13 / verified v14 / maximum v14。本リポジトリの
 スキーマで確認する (調査時、公式ドキュメントは JS レンダリングで本文が取得できず、
 コミュニティ Wiki の記述に依拠している)。
 
-### 着手前に決めること
+### 設計 (Babele 2.9.1 のソースを読んで確定させたこと)
 
-- **キーの安定性。** Babele の訳ファイルは通常エントリ名で引く。pack のファイル名には
-  ID が埋まっている (`domainCard_Safe_Haven_lmBLMPuR8qLbuzNf.json`) ので、
-  **名前ではなく `_id` で引けるか**を Babele の mapping 仕様で確認する。
-  90日で666件追加される対象なので、ここが追従コストを左右する。**最優先項目。**
+ここまで「要確認」としていた項目を、インストール済みの Babele 2.9.1
+(`Data/modules/babele/script/`) を読んで決着させた。**実装はまだしていない。**
+
+#### キーは `_id` にする (最優先項目・解決)
+
+Babele は「エントリ名で引く」と理解していたが、2.9.1 には
+`DocumentIdentity` (`script/identity/document-identity.js`) があり、既定値は:
+
+```js
+export: ["name", "_id", "id"]   // 訳ファイルを書き出すときのキー
+match:  ["_id", "name", "sourceId"]   // 訳を引くときに試す順
+```
+
+つまり**照合は既定で `_id` が最優先、名前はフォールバック**。
+ドキュメント型ごとに `_identity` で上書きできる (コア側では `TableResult` が
+実際にそうしている)。本リポジトリでは明示的にこう置く:
+
+```json
+"_identity": { "export": ["_id"], "match": ["_id", "name"] }
+```
+
+- `export` を `_id` のみにすると、訳ファイルのキーが ID になる。
+  上流が英語名を変えても訳が外れない。90日で666件追加される対象なので、ここが効く。
+- `match` に `name` を残すのは、ID が変わった(= 作り直された)ドキュメントを
+  旧名で拾える保険。外れたら未訳として見えるので、害はない。
+- 代償は**訳ファイルが人間に読めなくなる**こと。
+  `"lmBLMPuR8qLbuzNf": { "name": "安息の地" }` では差分レビューができない。
+  各エントリに `"_note": "<英語原文>"` を併記する方針にする
+  (Babele はマッピングにないキーを無視する)。これは書き出しツール側の仕事。
+
+#### 入れ子の連想配列には `structured` コンバータが要る
+
+Daggerheart のデータは、訳すべきテキストが**ランダム ID をキーにした
+連想配列の中**にある。これが dnd5e などの既存訳モジュールと一番違う点:
+
+```
+.system.actions.<16桁ID>.name          711件
+.system.actions.<16桁ID>.description   279件 / 48,036文字
+.system.experiences.<16桁ID>.name      287件
+.items[].system.actions.<16桁ID>.name  874件
+```
+
+配列ではないので `nameCollection` 系では扱えない。2.9.1 の
+`structured` コンバータ (`script/converter/structured-data-converter.js`) が
+**キー付きコンテナ**に対応していて、既定で `sourceKey` (= そのランダム ID) で
+照合し、`key` / `keys` オプションで値の中のプロパティ (例 `name`) に
+切り替えられる。ここは `sourceKey` のまま使う — ID で引く方針と揃う。
+
+#### 必要なマッピングの全体像
+
+実測したフィールド出現数から、最低限これだけ要る:
+
+| パス | 件数 | コンバータ |
+| --- | --- | --- |
+| `name` / `system.description` | 1,820 / 1,127 | 既定 |
+| `system.motivesAndTactics` | 264 | 既定 |
+| `items[]` (埋め込みアイテム) | 1,108 | `document` (cardinality many) |
+| `effects[]` | 534 | `document` → `ActiveEffect` |
+| `system.actions.<id>` | 711 | `structured` |
+| `system.experiences.<id>` | 287 | `structured` |
+| `system.attack.name` | 588 | 既定 |
+| `system.actions.<id>.areas[].name` | 250 | `nameCollection` |
+| `system.advantageOn.<id>.value` | 64 | `structured` |
+| `effects[].system.changes[].value` | 215 | **要選別** (下記) |
+| `pages[].text.content` (journals) | 18 | `pages` |
+
+`items[]` と `effects[]` は入れ子なので、その中でも `system.actions.<id>` の
+マッピングが再帰的に必要。**マッピング定義は1つのファイルに書いて
+`Item` / `Actor` の両方から参照する**構成にする。
+
+#### 訳してはいけないフィールド
+
+機械的に「文字列なら訳す」とやると壊れる:
+
+- **`system.weaponFeatures[].value`** (207件) / **`armorFeatures[].value`** (65件)
+  — 実データを確認したところ中身は `paired` / `heavy` / `flexible` / `bulky` といった
+  **小文字の列挙キー**だった。表示名は UI 側 (`lang/ja.json`) で解決される。
+  **訳の対象外。** 272フィールドがここで落ちる。
+- **`effects[].system.changes[].value`** (157件+58件) — **自由文と数式が混在していた。**
+  一括で扱えない:
+  ```
+  2*@system.traits.strength.value*@stacks          ← 数式。訳すと効果が壊れる
+  -max(ORIGIN.@system.traits.knowledge.value,1)    ← 同上
+  On Attacks                                        ← 自由文。訳す対象
+  Presence Rolls to socialize with other revelers   ← 同上
+  ```
+  `@` を含む / 算術記号のみで構成される値を数式として機械的に弾き、
+  **残りは必ず目で確認する**。`system.conditionals[].value` (23件) は確認した限り
+  全て数式だったが、同じ判定を通す。
+- **`_key`** — LevelDB のキー (`!actors.items!<id>.<id>`)。データ構造。
+- **説明文中の Foundry エンリッチャ** — `@Lookup[@name]`、`@UUID[...]{...}`、
+  `[[/dr ...]]` など。`@Lookup[@name]` は adversaries の説明文に多数ある。
+  **角括弧の中は原文のまま残し、表示ラベル部分だけ訳す。**
+  訳者向けのチェックとして、原文と訳文でエンリッチャの出現を機械比較する。
+- `system.advantageOn.<id>.value` (64件) — `Attack` / `Sneak` / `Locate` /
+  `Navigate` など15語程度の語彙が繰り返し出るだけ。訳す対象だが、
+  **`glossary/` に入れれば実質ゼロコスト**。UI 側の既存訳と必ず揃える。
+
+### 工程 (見積もり込み)
+
+| # | 内容 | 規模 | 目的 |
+| --- | --- | --- | --- |
+| 0 | 書き出し・取り込みツールを書く | — | 以降すべての前提 |
+| 1 | `transformations` で実証 | 4,005字 / 49 | マッピングが成立するか |
+| 2 | `communities` + `ancestries` | 17,046字 / 303 | 入れ子 `items[]` の検証 |
+| 3 | `items/*` 4パック | 74,462字 / 2,336 | 件数が多く1件が短い型 |
+| 4 | `domains` + `subclasses` + `classes` + `beastforms` | 216,950字 / 2,471 | プレイヤー側が完成する |
+| 5 | `adversaries` + `environments` | 454,574字 / 6,028 | 全体の46%。最後に回す |
+| 6 | `journals` | 208,012字 / 39 | 下記の通り別扱い |
+
+工程1〜2が「方式が成立するか」の判定で、ここまでで打ち切れる。
+工程3以降は純粋な翻訳量なので、分割して継続的に進める形にする。
+
+**工程6 (`journals`) は性質が違う。** 中身は Daggerheart SRD のルール本文で、
+1フィールド5,000文字超の長文。他のパックが「用語を揃えて短文を訳す」作業なのに対し、
+これは「ルールブックを翻訳する」作業。かつ**ライセンスの検討が別途必要**
+(SRD は DPCGL 下にあり、本リポジトリのライセンス構造は後述)。
+他のパックと同じ工程に並べず、**着手の可否を別に判断する。**
+
+### ツール側で用意するもの (工程0)
+
+`tools/lang-sync.mjs` と同じ発想で、packs 用に3つ:
+
+1. **書き出し** — `src/packs/**/*.json` を走査して Babele 形式の訳テンプレートを生成。
+   キーは `_id`、各エントリに `_note` として英語原文を併記。
+   既存の訳があれば保持する (`lang:apply` と同じ「落とさない」保証)。
+2. **カバー率レポート** — パック別に「訳済み / 未訳 / 上流から消えた」を出す。
+   666件/90日の追加に追従するため**必須**。`lang:report` と同じ出力形式に揃える。
+3. **整合性チェック** — 原文と訳文でエンリッチャ (`@Lookup`、`@UUID`) の
+   出現が一致するか、訳してはいけないフィールドに手が入っていないかを検証。
+
+`glossary/` は packs でもそのまま使う。むしろ UI より効く — 同じ用語が
+980,122文字の中に散るので、揃っていないことが目立つ。
+
+### 残っている未検証項目
+
+- **`module.json` の `languages[].system` フィールド。** これが効くなら
+  (前述の通り) フォーク自体が不要になる。v14 のマニフェストスキーマで確認する。
+  **フォークをやめるかどうかの判断なので、工程0より前に片付けるべき。**
 - **既存ワールドへの影響。** Babele は閲覧・インポート時にのみ訳を当てる。
   既にワールドへインポート済みのドキュメントは遡って翻訳されない。
-
-### 着手順
-
-1. Babele の mapping 仕様を確認 (`_id` キー対応の可否)。
-2. 小さい pack 1つで実証 — `transformations` (19件 / 3,665文字) か
-   `communities` (31件 / 5,357文字)。
-3. 成立したら `ancestries` (73件) → `domains` (320件) →
-   `adversaries` (268件 / 273,513文字) の順。重いものを最後に。
-4. カバー率レポートを `lang-sync.mjs` と同じ発想で作る。
-   666件/90日の追加に追従するため必須。
+  ユーザーへの告知事項。
+- **`src/packs` の `_stats.coreVersion` が 14.366/14.367** のため、
+  それより古いコアでは journals / rolltables の移行が失敗する (実機テストで確認済み)。
+  Babele 検証は `verified` の 14.368 で行う。
 
 ## 日本語で崩れるレイアウト (CSS)
 
