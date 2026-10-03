@@ -656,6 +656,45 @@ Foundry の Setup → Game Systems → Install System に貼る。
 確認済み: `version 2.10.7.1` / `languages ['en','ja']` /
 `download` の zip が HTTP 200 で 36,319,389 バイト。
 
+#### 配布物の実機確認 (2026-10-03)
+
+公開した URL から**隔離環境へ実際にインストールして**確認した
+(別データパス / ポート30100 / 本番の30000には触れていない)。
+
+| 確認項目 | 結果 |
+| --- | --- |
+| マニフェスト URL からのインストール | 成功 (`Installed system daggerheart`) |
+| インストールされたバージョン | `2.10.7.1` |
+| `lang/ja.json` の同梱 | 227,203バイト |
+| 他者の著作物の混入 | **0件** (`DnD_Glossary` / `en-ja` とも無し) |
+| `game.i18n.lang` | `ja` |
+| 翻訳の解決 | `DAGGERHEART.GENERAL.evasion` → `回避値` |
+| シートの日本語崩れ | character / adversary / environment / companion の4種で **0件** |
+| コンペンディウム15パック | 全て open 可、ドキュメント読み出し可 |
+
+`装備` / `ロードアウト` / `経験` が横一行で出ることを目視でも確認した。
+**CSS 修正が配布物に乗っている。**
+
+#### 起動時の移行エラーは無害 (ただし出る)
+
+ワールド起動時に8件のエラーが出る:
+
+```
+An error occurred during the migration of RollTable record [...] of
+database "daggerheart.rolltables":
+Error: Documents from a core version newer than the running version
+cannot be migrated
+```
+
+内訳は `daggerheart.rolltables` 6件 / `daggerheart.journals` 4件
+(ログ上の database 名の出現数)。原因は `src/packs` の
+`_stats.coreVersion` が 14.366/14.367 で、動かしたコアが 14.365 だから。
+
+**データは失われない。** 確認したところ rolltables は
+テーブル5件 + フォルダ2件 = ソースの7ファイルと一致、journals も3件で一致し、
+どちらも index から読み出せた。`verified` の 14.368 以降なら出ない。
+**上流から引き継いだ性質で、日本語化とは無関係。**
+
 #### フォークでは Release イベントでワークフローが走らない
 
 `2.10.7.1` を publish したが **`deploy.yml` は起動しなかった**。
