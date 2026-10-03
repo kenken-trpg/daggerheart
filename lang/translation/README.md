@@ -234,6 +234,10 @@ minimum v13 / verified v14 / maximum v14。本リポジトリの
 決め手は**上流マージの競合がゼロになる**こと。本体リポジトリに触らないので、
 現在の追従作業がこれ以上重くならない。
 
+なお開発環境の Foundry には Babele 2.9.1 が既にインストール済み
+(`Data/modules/babele`)。「ユーザーに導入の手間をかける」という A の唯一の
+短所は、少なくとも手元では既に払い終わっている。
+
 ### A を選ぶとフォーク自体が不要になりうる
 
 モジュールの `module.json` の `languages` 配列には**オプションの `system` フィールド**が
@@ -274,15 +278,120 @@ minimum v13 / verified v14 / maximum v14。本リポジトリの
 4. カバー率レポートを `lang-sync.mjs` と同じ発想で作る。
    666件/90日の追加に追従するため必須。
 
+## 日本語で崩れるレイアウト (CSS)
+
+訳文そのものは正しくても、英語を前提にした CSS のせいで表示が崩れる箇所がある。
+**原因は一つで、英語は単語の途中で改行できないが日本語は任意の文字間で改行できること。**
+`display: flex` の子要素は既定で `min-content` まで縮むので、英語では
+「単語1つぶんの幅」で下げ止まるところが、日本語では「1文字ぶんの幅」まで潰れて
+縦書きのように積み上がる。
+
+実機で検出して修正済み:
+
+| 箇所 | 症状 | 修正 |
+| --- | --- | --- |
+| `styles/less/utils/mixin.less` の `.section-title()` | キャラクターシート左の「装備」「ロードアウト」「経験」が縦積み (ロードアウトは3行) | `h3` に `white-space: nowrap` |
+| `styles/less/sheets/actors/adversary/sidebar.less` (攻撃/経験の2箇所) | 敵対者シートで同じ症状 | 同上 |
+| `styles/less/sheets/actors/companion/details.less` | 相棒シートの「パートナー」が5行に分解 | 同上 |
+| `styles/less/sheets/actors/companion/header.less` の `.status-label` | 相棒シートの「回避値」が2行になりバッジからはみ出す | `width: auto; min-width: 100%` + `h4` に `white-space: nowrap` |
+| `styles/less/dialog/dice-roll/roll-selection.less` の `.dice-select .label` | ロールダイアログの「希望」「恐怖」が縦積み | `.label` に `white-space: nowrap` |
+
+いずれも英語表示では描画幅が変わらないので、上流にそのまま PR できる性質の修正。
+
+### 検出のしかた
+
+目視では見落とすので、ブラウザのコンソールで DOM を走査する。
+「葉ノードで、CJK を含み、描画幅がフォントサイズの 2.6 倍未満なのに 2行以上」を
+崩れとみなす:
+
+```js
+[...document.querySelectorAll('.application *')].filter(el => {
+    if (el.children.length) return false;
+    const txt = el.textContent.trim();
+    if (txt.length < 2 || !/[\u3040-\u30ff\u4e00-\u9fff]/.test(txt)) return false;
+    const r = el.getBoundingClientRect();
+    if (r.width < 1) return false;
+    const fs = parseFloat(getComputedStyle(el).fontSize);
+    const lh = parseFloat(getComputedStyle(el).lineHeight) || fs * 1.2;
+    return Math.round(r.height / lh) >= 2 && r.width < fs * 2.6;
+});
+```
+
+アクター6種・アイテム12種のシートを順に開いて走査すれば、シート側は網羅できる。
+**ダイアログは別途開かないと引っかからない** (上の「希望/恐怖」は
+ロールダイアログを開くまで検出できなかった) ので、カバレッジは
+「開いた画面のぶんだけ」である点に注意。
+
+## 実機テストの手順
+
+翻訳の抜けは `npm run lang:report` で分かるが、**レイアウトの崩れと
+`.mjs` 直書きの英語は実際に動かさないと分からない。** 稼働中の Foundry
+には触らず、独立したデータパスで立てる:
+
+```sh
+# 1. ビルド (packs を含む)
+npm run build
+npm run pullYMLtoLDBBuild
+
+# 2. テスト専用のデータパスを用意してリポジトリをシンボリックリンク
+TD=/tmp/fvtt-test
+mkdir -p "$TD"/{Data/systems,Data/modules,Config}
+cp "$HOME/Library/Application Support/FoundryVTT/Config/license.json" "$TD/Config/"
+ln -sfn "$PWD" "$TD/Data/systems/daggerheart"
+# core の日本語化は別モジュール任せなので、入れないと素の UI が英語のままになる
+ln -sfn "$HOME/Library/Application Support/FoundryVTT/Data/modules/foundryVTTja" \
+        "$TD/Data/modules/foundryVTTja"
+
+# 3. 別ポートで起動 (本番の 30000 とデータパスの両方を避ける)
+node "/Applications/Foundry Virtual Tabletop.app/Contents/Resources/app/main.js" \
+     --dataPath="$TD" --port=30100 --noupnp --headless --world=<world-id>
+```
+
+注意点:
+
+- **既存のデータパスを使い回さない。** Foundry はデータパス単位でロックを取るので
+  デスクトップアプリが動いていると起動できないし、`Data/systems/daggerheart` を
+  差し替えると既存ワールドが次回起動時にマイグレーションされる。
+- `foundryVTTja` を入れ忘れると `CHAT.MODES.public` などの **core のキー**が
+  英語で出る。これはシステム側の不具合ではないので、未訳として数えないこと。
+- `src/packs` の `_stats.coreVersion` は 14.366/14.367 を含む。
+  それより古い core で起動すると journals と rolltables のマイグレーションが
+  失敗する (`Documents from a core version newer than the running version
+  cannot be migrated`)。`system.json` の verified に合わせた core を使う。
+
 ## 翻訳機構を通っていない文字列 (上流の不具合)
 
-`{{localize}}` を経由しておらず、`ja.json` では直せないもの。296個の `.hbs` を
-走査してこの2件だけなので、上流の i18n 対応はほぼ網羅されている。
+`{{localize}}` を経由しておらず、`ja.json` では直せないもの。
+
+`.hbs` 側 (296ファイル走査) は2件のみ。
 
 | 箇所 | 文字列 | 備考 |
 | --- | --- | --- |
 | `templates/dialogs/reactionRoll.hbs:2` | `Reaction Roll` | 上流に PR を出す価値がある (en.json にキーを追加してテンプレートを差し替えるだけ) |
 | `templates/sheets/actors/party/projects.hbs:3` | `Soon tm` | 未実装機能のプレースホルダ。放置で可 |
+
+**`.mjs` 側はテンプレートより多い。** データモデルの `initial` 値や設定テーブルに
+英語がそのまま書かれている箇所があり、こちらは画面に出るにもかかわらず
+`ja.json` では一切手が出せない。実機テストで見つかった代表例:
+
+| 箇所 | 文字列 | 画面上の出方 |
+| --- | --- | --- |
+| `module/data/actor/companion.mjs:86` | `name: 'Attack'` | 相棒シートの既定攻撃の名前。character は `_loc('DAGGERHEART.GENERAL.unarmedAttack')` を使っているので対応漏れ |
+| `module/data/actor/adversary.mjs:74` | `name: 'Attack'` | 同上 (敵対者シート) |
+| `module/data/item/weapon.mjs:55` | `name: 'Attack'` | 同上 (武器) |
+| `module/data/levelTier.mjs:146-194` | `Character Trait` / `Hit Points` / `Evasion` / `Proficiency` / `Experience` / `Domain Card` / `Subclass` / `Multiclass` / `Increase Dice Size` ほか | レベルアップ選択肢 (`LevelOptionType`)。`levelupOptionsDialog.mjs` と `companionLevelup.mjs` が `.label` をそのまま表示する |
+| `module/config/actorConfig.mjs:281-326` | `Armor Marks +1` / `Major Damage Threshold +2` など | レベルアップのティア選択肢 |
+| `module/data/fields/action/rollField.mjs:91,155` | `Bonus to Hit` / `Attack` | アクション設定 |
+| `module/data/activeEffect/baseEffect.mjs:160` | `New Effect` | 効果の新規作成時の名前 |
+
+一括検出は下記で出せる (内部 ID と混ざるので目視選別が要る):
+
+```sh
+grep -rnE "\b(name|label|title|hint|placeholder): '[A-Z][^']+'" module/
+```
+
+直すなら `en.json` にキーを足して `_loc()` 経由にする上流 PR になる。
+フォーク側だけで潰すことはできない。
 
 ## 参照している原典・訳文
 
