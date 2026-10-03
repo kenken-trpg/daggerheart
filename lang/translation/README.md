@@ -646,18 +646,65 @@ Foundry が更新を確認するのは**インストール済みの `system.json
   `${{github.repository}}` は自動でフォーク名に化けるので他は触らない。
 - `version` を `2.10.7.1` に。
 
-#### 残っている手順 (GitHub 側の操作)
+#### インストール URL (2026-10-03 公開済み)
 
-1. タグ `2.10.7.1` で Release を作成して publish する。
-2. `deploy.yml` が走り、`system.json` と `system.zip` が添付される。
-3. インストール URL:
-   ```
-   https://raw.githubusercontent.com/kenken-trpg/daggerheart/main/system.json
-   ```
+```
+https://raw.githubusercontent.com/kenken-trpg/daggerheart/main/system.json
+```
 
-`.gitignore` により `lang/DnD_Glossary_JP.txt` と
-`lang/Daggerheart_en-ja.csv` は追跡外なので、**zip には入らない** (確認済み)。
-他者の著作物を再配布しない条件は満たされる。
+Foundry の Setup → Game Systems → Install System に貼る。
+確認済み: `version 2.10.7.1` / `languages ['en','ja']` /
+`download` の zip が HTTP 200 で 36,319,389 バイト。
+
+#### フォークでは Release イベントでワークフローが走らない
+
+`2.10.7.1` を publish したが **`deploy.yml` は起動しなかった**。
+リポジトリの累計実行数が 0 で、`main` への push 5回でも `ci.yml` が
+1件も走っていない (`ci.yml` は `push: branches: [main]` を持つ)。
+
+手動ディスパッチは**成功する**:
+
+```bash
+gh workflow run "Project CI" -R kenken-trpg/daggerheart --ref main   # → success 27s
+```
+
+つまり Actions 自体は有効で、**フォークに対するイベントトリガーだけが
+抑止されている**。`deploy.yml` は `on: release` のみなので手動起動もできない。
+
+直すなら GitHub の Actions タブの
+「I understand my workflows, go ahead and enable them」を1回押す。
+押さない場合は下記のローカル手順で配れる (そのほうが確実)。
+
+#### ローカルでリリース成果物を作る手順
+
+`deploy.yml` と同じことを手元でやる:
+
+```bash
+npm run pullYMLtoLDBBuild
+mv -f src/packs/LICENSE packs/LICENSE      # CI は GNU の --force。macOS は -f
+npm run build
+
+# deploy.yml と同じ置換: flags.hotReload を false にした system.json を作る
+# (リポジトリの system.json は書き換えたままにしない)
+
+zip -rq system.zip system.json README.md LICENSE \
+    build/daggerheart.js build/tagify.css styles/daggerheart.css \
+    assets/ templates/ packs/ lang/en.json lang/ja.json -x '*.DS_Store'
+
+gh release upload <tag> -R kenken-trpg/daggerheart system.json system.zip
+```
+
+後片付け: `git checkout src/packs/LICENSE` と `system.json` の復元。
+
+> **`zip -r lang/` と書いてはいけない。**
+> `lang/DnD_Glossary_JP.txt` (953,549バイト) と `lang/Daggerheart_en-ja.csv` は
+> `.gitignore` されているが**作業ツリーには存在する**ので、`zip` は拾う。
+> `.gitignore` は `zip` に効かない。実際に1回目の zip に両方入っていた。
+> **他者の著作物の再配布になる。** `lang/en.json lang/ja.json` と
+> 個別に指定する。
+>
+> CI (`deploy.yml`) では新規チェックアウトなので起きない。
+> **ローカルビルド固有の罠。**
 
 #### B を選んだことで負う責任
 
