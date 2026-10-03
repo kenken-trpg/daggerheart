@@ -7,6 +7,10 @@
  * `prepare` writes that drift to lang/translation/pending.json, pre-filling any
  *           value an approved glossary in lang/translation/glossary/ already
  *           answers, so only the genuinely new strings need a translator.
+ * `diff`    compares an external Japanese translation (any glossary CSV) against
+ *           the wordings lang/ja.json already uses and writes only the keys where
+ *           the two disagree, so an outside translation can be reviewed key by key
+ *           instead of being trusted wholesale.
  * `apply`   merges lang/translation/pending.json back into lang/ja.json and
  *           rebuilds it in en.json's key order, dropping retired keys.
  *
@@ -83,9 +87,14 @@ function parseCsv(text) {
 /**
  * Every CSV in lang/translation/glossary/ maps an English string to a Japanese one
  * in its first two columns. Later files win, so an SRD-wide glossary can be dropped
- * in front of a narrower correction file by name.
+ * in front of a narrower correction file by name. Each entry remembers which file
+ * it came from, so `diff` can attribute a suggested wording to its source.
+ *
+ * `only` narrows the load to the glossaries whose filename contains it, which is how
+ * one external translation gets compared on its own rather than through the merged
+ * stack of every glossary present.
  */
-async function loadGlossaries() {
+async function loadGlossaries(only) {
     const glossary = new Map();
     const sources = [];
     let files = [];
@@ -94,12 +103,13 @@ async function loadGlossaries() {
     } catch {
         return { glossary, sources };
     }
+    if (only) files = files.filter(file => file.includes(only));
     for (const file of files) {
         const rows = parseCsv((await fs.readFile(path.join(GLOSSARY_DIR, file), 'utf8')).replace(/^﻿/, ''));
         let entries = 0;
         for (const [english, japanese] of rows.slice(1)) {
             if (!english?.trim() || !japanese?.trim()) continue;
-            glossary.set(normalize(english), japanese.trim());
+            glossary.set(normalize(english), { japanese: japanese.trim(), file });
             entries++;
         }
         sources.push({ file, entries });
@@ -127,6 +137,12 @@ async function analyze() {
     return { en, ja, untranslated, retired, fallback, established };
 }
 
+const options = process.argv.slice(3);
+const flag = name => {
+    const hit = options.find(option => option === `--${name}` || option.startsWith(`--${name}=`));
+    return hit === undefined ? undefined : (hit.split('=')[1] ?? true);
+};
+
 const commands = {
     async report() {
         const { en, untranslated, retired, fallback } = await analyze();
@@ -149,7 +165,7 @@ const commands = {
         let prefilled = 0;
         for (const key of [...untranslated, ...fallback]) {
             const english = String(en[key]);
-            const known = established.get(normalize(english)) ?? glossary.get(normalize(english));
+            const known = established.get(normalize(english)) ?? glossary.get(normalize(english))?.japanese;
             if (known) prefilled++;
             pending[key] = { en: english, ja: known ?? '' };
         }
@@ -158,6 +174,61 @@ const commands = {
         console.log(`${PENDING}: ${Object.keys(pending).length} entries, ${prefilled} pre-filled from`);
         console.log(`  established ja.json wordings and ${sources.length} glossary file(s)`);
         console.log(`Fill in the empty "ja" values, then run: node tools/lang-sync.mjs apply`);
+    },
+
+    /**
+     * Review an outside Japanese translation against the one in lang/ja.json.
+     *
+     * Only the keys where the two disagree are written out, each carrying the
+     * wording already shipped and the one the glossary proposes, so adopting a
+     * foreign translation stays a per-key decision with both options visible.
+     * Normalized comparison keeps pure punctuation drift out of the list.
+     *
+     *   --only=<substring>  compare against just the glossaries whose filename matches
+     *   --adopt             pre-fill `ja` with the suggestion, so rejecting means
+     *                       clearing a value instead of copying one
+     */
+    async diff() {
+        const { en, ja } = await analyze();
+        const only = flag('only');
+        const adopt = Boolean(flag('adopt'));
+        const { glossary, sources } = await loadGlossaries(typeof only === 'string' ? only : undefined);
+
+        if (!sources.length) {
+            console.error(
+                only ? `No glossary in ${GLOSSARY_DIR} matches "${only}".` : `No glossary found in ${GLOSSARY_DIR}.`
+            );
+            process.exit(1);
+        }
+
+        const pending = {};
+        const bySource = new Map();
+        for (const [key, english] of Object.entries(en)) {
+            if (typeof english !== 'string' || typeof ja[key] !== 'string') continue;
+            const entry = glossary.get(normalize(english));
+            if (!entry || normalize(entry.japanese) === normalize(ja[key])) continue;
+            pending[key] = {
+                en: english,
+                current: ja[key],
+                suggest: entry.japanese,
+                source: entry.file,
+                ja: adopt ? entry.japanese : ''
+            };
+            bySource.set(entry.file, (bySource.get(entry.file) ?? 0) + 1);
+        }
+
+        const total = Object.keys(pending).length;
+        await fs.writeFile(PENDING, `${JSON.stringify({ retired: [], pending }, null, 4)}\n`);
+        console.log(`compared against: ${sources.map(source => `${source.file} (${source.entries})`).join(', ')}`);
+        console.log(`${PENDING}: ${total} key(s) where the glossary differs from lang/ja.json`);
+        for (const [file, count] of bySource) console.log(`  ${count} from ${file}`);
+        console.log(
+            adopt
+                ? 'Suggestions are pre-filled. Clear the "ja" value of every one you reject, then run: node tools/lang-sync.mjs apply'
+                : 'Copy "suggest" into "ja" for each one you accept, then run: node tools/lang-sync.mjs apply'
+        );
+        for (const [key, entry] of Object.entries(pending).slice(0, 20))
+            console.log(`  ${key}\n    now: ${entry.current}\n    new: ${entry.suggest}`);
     },
 
     async apply() {
@@ -175,7 +246,7 @@ const commands = {
         /* Nesting against en.json drops retired keys and restores upstream ordering. */
         await fs.writeFile(path.join(LANG, 'ja.json'), `${JSON.stringify(nest(reference, ja), null, 4)}\n`);
         const skipped = Object.keys(pending).length - applied;
-        console.log(`lang/ja.json updated: ${applied} applied${skipped ? `, ${skipped} still empty` : ''}`);
+        console.log(`lang/ja.json updated: ${applied} applied${skipped ? `, ${skipped} left as-is` : ''}`);
     }
 };
 

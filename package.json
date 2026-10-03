@@ -19,6 +19,7 @@
     "pullYMLtoLDBBuild": "node ./tools/pullYMLtoLDB.mjs --build",
     "lang:report": "node ./tools/lang-sync.mjs report",
     "lang:prepare": "node ./tools/lang-sync.mjs prepare",
+    "lang:diff": "node ./tools/lang-sync.mjs diff",
     "lang:apply": "node ./tools/lang-sync.mjs apply",
     "createSymlink": "node ./tools/create-symlink.mjs",
     "lint": "eslint",

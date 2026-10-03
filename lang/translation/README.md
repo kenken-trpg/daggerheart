@@ -36,6 +36,7 @@ rebase するとフォーク側の履歴が書き換わって push が GH006 で
 ```bash
 node tools/lang-sync.mjs report    # en.json との差分状況を確認
 node tools/lang-sync.mjs prepare   # 未訳分を lang/translation/pending.json に書き出す
+node tools/lang-sync.mjs diff      # 外部日本語訳と既訳が食い違うキーを書き出す
 node tools/lang-sync.mjs apply     # pending.json を ja.json に反映し、en.json のキー順で再構築
 ```
 
@@ -46,10 +47,51 @@ node tools/lang-sync.mjs apply     # pending.json を ja.json に反映し、en.
 ネットワークアクセスは一切しない。用語集は手でコミットする CSV なので、
 どの文言をどこから採ったかが必ず git 履歴に残る。
 
+## 外部訳との差分検出 (`diff`)
+
+`prepare` は**未訳キーしか見ない**。`ja.json` が全キー埋まっている通常の状態では、
+用語集を追加しても `prepare` の出力は 0 件になる (既訳が用語集より優先されるため)。
+外部の日本語訳を既訳と比べて見直すには `diff` を使う。
+
+```bash
+npm run lang:diff                                   # 全用語集 vs ja.json
+node tools/lang-sync.mjs diff --only=shiropanda     # 特定の出典だけと比較
+node tools/lang-sync.mjs diff --only=shiropanda --adopt
+```
+
+用語集の訳と現行 `ja.json` の訳が食い違うキーだけを `pending.json` に書き出す。
+各エントリは次の形で、**現行訳と提案訳の両方が見える**:
+
+```json
+"DAGGERHEART.GENERAL.damageType": {
+    "en": "Damage Type",
+    "current": "ダメージタイプ",
+    "suggest": "ダメージ種別",
+    "source": "daggerheart-ja.csv",
+    "ja": ""
+}
+```
+
+- `ja` が空のエントリは `apply` が**無視する**。既定では何も変わらない。
+- 採用するものだけ `suggest` を `ja` にコピーして `apply`。
+- `--adopt` は `ja` に提案訳を入れた状態で出力する。却下するものを空にする運用。
+- `--only=<文字列>` はファイル名が部分一致する用語集だけを読み込む。出典ごとに
+  単独で比較できるので、複数の用語集が重なって上書きされた結果を見ずに済む。
+- 比較は正規化後に行う (大小文字・空白・ダッシュ・引用符・末尾句点)。
+  句読点の揺れだけのものは一覧に出ない。
+
+**一括採用はしない前提の設計**。英語文字列でマッチするため、文脈を持たない用語集を
+当てると誤訳が混ざる。実際に手元の用語集で試すと `Hide` → 「非表示」(正しくは「隠れる」)、
+`Long` → 「長期」(武器の射程なので「長射程」) が提案として出る。
+1件ずつ採否を決めるのはこのため。
+
 ## 用語集 (`glossary/`)
 
 1ファイル = 1出典の CSV。1列目に英語、2列目に日本語。3列目以降は備考として無視される。
-ファイル名の昇順で読み込み、後のファイルが前のファイルを上書きする。
+1行目はヘッダとして読み飛ばす。BOM 付きでもよい。外部訳を起こす際も必要なのは
+この2列だけで、`en.json` のキー列はなくてよい (キーではなく英語文字列で突合するため)。
+ファイル名の昇順で読み込み、後のファイルが前のファイルを上書きする。`diff --only=` で
+出典を1つに絞る運用を考えると、ファイル名は出典が分かる形にしておく。
 
 | ファイル | 行数 | 出所 |
 | --- | --- | --- |
@@ -88,7 +130,8 @@ README.md（Licenses 節）より:
 
 ## しろぱんだ訳の取り込みについて
 
-**現状: 未取り込み。** 受け入れ側の仕組み (`glossary/` と `lang-sync.mjs`) だけを用意した段階。
+**現状: 未取り込み。** 受け入れ側の仕組み (`glossary/`、`lang-sync.mjs` の
+`diff` による既訳との差分採否) だけを用意した段階。
 
 取り込む場合に先に片付けること:
 
@@ -110,4 +153,5 @@ README.md（Licenses 節）より:
 1. 訳者の許諾を得る。
 2. SRD 本文から拾った対応を `glossary/shiropanda-srd.csv` として起こす。
 3. 上の表に出典・版・参照日・許諾の状況を追記する。
-4. `node tools/lang-sync.mjs prepare` → 差分を確認 → `apply`。
+4. `node tools/lang-sync.mjs diff --only=shiropanda` → 用語ごとに採否を決める → `apply`。
+   未訳キーがある場合は `prepare` も併用する。
