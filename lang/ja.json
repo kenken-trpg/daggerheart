@@ -353,7 +353,7 @@
                 },
                 "comboDieIndex": {
                     "label": "コンボダイス段階",
-                    "hint": "コンボダイスが1d4から何段階引き上げられたかを表します。+1するごとにダイスが1段階大きくなります。"
+                    "hint": "コンボダイスが1d4から何段階引き上げられたかを表します。＋1するごとにダイスが1段階大きくなります。"
                 },
                 "companionFeatures": "相棒特徴",
                 "connections": "繋がり",
@@ -1647,7 +1647,7 @@
                 "dataCompare": "データ比較",
                 "weaponRestriction": "武器制限",
                 "actionType": "アクションタイプ",
-                "damageType": "ダメージタイプ"
+                "damageType": "ダメージ種別"
             },
             "ConditionalWeaponRestrictionType": {
                 "sameWeapon": "同じ武器",
@@ -2924,7 +2924,7 @@
                     "actionTypes": "アクションタイプ"
                 },
                 "damageType": {
-                    "damageType": "ダメージタイプ"
+                    "damageType": "ダメージ種別"
                 }
             },
             "Duration": {
@@ -3350,7 +3350,7 @@
             "d20Roll": "D20ロール",
             "damage": "ダメージ",
             "damageRoll": "ダメージロール",
-            "damageType": "ダメージタイプ",
+            "damageType": "ダメージ種別",
             "description": "説明",
             "difficulty": "難易度",
             "downtime": "ダウンタイム",
