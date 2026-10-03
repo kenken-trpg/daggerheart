@@ -62,10 +62,10 @@ export class ItemBrowser extends HandlebarsApplicationMixin(ApplicationV2) {
     /** @override */
     static PARTS = {
         sidebar: {
-            template: 'systems/daggerheart/templates/ui/itemBrowser/sidebar.hbs'
+            template: 'systems/daggerheart-ja/templates/ui/itemBrowser/sidebar.hbs'
         },
         list: {
-            template: 'systems/daggerheart/templates/ui/itemBrowser/itemBrowser.hbs'
+            template: 'systems/daggerheart-ja/templates/ui/itemBrowser/itemBrowser.hbs'
         }
     };
 
@@ -261,7 +261,7 @@ export class ItemBrowser extends HandlebarsApplicationMixin(ApplicationV2) {
             for (const item of this.items) {
                 if (['weapon', 'armor'].includes(item.type)) {
                     item.system.enrichedTags = await foundry.applications.handlebars.renderTemplate(
-                        'systems/daggerheart/templates/ui/itemBrowser/item-tags.hbs',
+                        'systems/daggerheart-ja/templates/ui/itemBrowser/item-tags.hbs',
                         { item: item.system }
                     );
                 }
@@ -281,7 +281,7 @@ export class ItemBrowser extends HandlebarsApplicationMixin(ApplicationV2) {
             }
 
             const filterList = await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/ui/itemBrowser/filterContainer.hbs',
+                'systems/daggerheart-ja/templates/ui/itemBrowser/filterContainer.hbs',
                 {
                     fieldFilter: this.fieldFilter,
                     presets: this.presets,
@@ -295,7 +295,7 @@ export class ItemBrowser extends HandlebarsApplicationMixin(ApplicationV2) {
             else filterContainer.removeAttribute('disabled');
 
             const itemList = await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/ui/itemBrowser/itemContainer.hbs',
+                'systems/daggerheart-ja/templates/ui/itemBrowser/itemContainer.hbs',
                 {
                     items: this.items,
                     tooltipType: this.items[0] instanceof Item ? 'item' : ['environment', 'adversary'].includes(this.items[0]?.type) ? 'actor' : null,

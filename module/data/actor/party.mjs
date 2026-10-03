@@ -34,7 +34,7 @@ export default class DhParty extends BaseDataActor {
     /* -------------------------------------------- */
 
     /**@inheritdoc */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/actors/dark-squad.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/actors/dark-squad.svg';
     static ALLOWED_ACTOR_TYPES = ['character', 'companion', 'adversary', 'npc'];
     static DICE_ROLL_ACTOR_TYPES = ['character'];
     

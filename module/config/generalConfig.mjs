@@ -1,5 +1,5 @@
 export const compendiumJournals = {
-    welcome: 'Compendium.daggerheart.journals.JournalEntry.g7NhKvwltwafmMyR'
+    welcome: 'Compendium.daggerheart-ja.journals.JournalEntry.g7NhKvwltwafmMyR'
 };
 
 export const ruleChoice = {

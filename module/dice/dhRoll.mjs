@@ -21,7 +21,7 @@ export default class DHRoll extends BaseRoll {
 
     static messageType = 'adversaryRoll';
 
-    static CHAT_TEMPLATE = 'systems/daggerheart/templates/ui/chat/roll.hbs';
+    static CHAT_TEMPLATE = 'systems/daggerheart-ja/templates/ui/chat/roll.hbs';
 
     static DefaultDialog = D20RollDialog;
 

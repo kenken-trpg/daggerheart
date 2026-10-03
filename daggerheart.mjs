@@ -65,7 +65,7 @@ CONFIG.Combatant.dataModels = { base: models.DhCombatant };
 
 CONFIG.ChatMessage.dataModels = models.chatMessages.config;
 CONFIG.ChatMessage.documentClass = documents.DhChatMessage;
-CONFIG.ChatMessage.template = 'systems/daggerheart/templates/ui/chat/chat-message.hbs';
+CONFIG.ChatMessage.template = 'systems/daggerheart-ja/templates/ui/chat/chat-message.hbs';
 
 CONFIG.Canvas.rulerClass = placeables.DhRuler;
 CONFIG.Canvas.layers.regions.layerClass = placeables.DhRegionLayer;
@@ -76,7 +76,7 @@ CONFIG.MeasuredTemplate.objectClass = placeables.DhMeasuredTemplate;
 CONFIG.Region.objectClass = placeables.DhRegion;
 
 CONFIG.RollTable.documentClass = documents.DhRollTable;
-CONFIG.RollTable.resultTemplate = 'systems/daggerheart/templates/ui/chat/table-result.hbs';
+CONFIG.RollTable.resultTemplate = 'systems/daggerheart-ja/templates/ui/chat/table-result.hbs';
 
 CONFIG.Scene.documentClass = documents.DhScene;
 

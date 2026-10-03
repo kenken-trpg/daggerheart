@@ -16,17 +16,17 @@
       "1jkJtSVsk6R7dwt6": {
         "label": "Deep Sea Denizens",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.TLzY1nDw0Bu9Ud40",
-          "Compendium.daggerheart.adversaries.Actor.4nqv3ZwJGjnmic8j",
-          "Compendium.daggerheart.adversaries.Actor.YmVAkdNsyuXWTtYp",
-          "Compendium.daggerheart.adversaries.Actor.BK4jwyXSRx7IOQiO"
+          "Compendium.daggerheart-ja.adversaries.Actor.TLzY1nDw0Bu9Ud40",
+          "Compendium.daggerheart-ja.adversaries.Actor.4nqv3ZwJGjnmic8j",
+          "Compendium.daggerheart-ja.adversaries.Actor.YmVAkdNsyuXWTtYp",
+          "Compendium.daggerheart-ja.adversaries.Actor.BK4jwyXSRx7IOQiO"
         ]
       },
       "yvbQHy61C6WGqrAC": {
         "label": "Pirates",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.OROJbjsqagVh7ECV",
-          "Compendium.daggerheart.adversaries.Actor.5YgEajn0wa4i85kC"
+          "Compendium.daggerheart-ja.adversaries.Actor.OROJbjsqagVh7ECV",
+          "Compendium.daggerheart-ja.adversaries.Actor.5YgEajn0wa4i85kC"
         ]
       }
     },
@@ -264,11 +264,11 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.OROJbjsqagVh7ECV",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.OROJbjsqagVh7ECV",
                 "count": "1"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.5YgEajn0wa4i85kC",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.5YgEajn0wa4i85kC",
                 "count": "3"
               }
             ],
@@ -518,7 +518,7 @@
     }
   ],
   "_id": "NPup5xz3eYkB4Vhc",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Ocean Voyage",
     "displayName": 0,
@@ -527,7 +527,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -1,6 +1,6 @@
 {
   "name": "Cult Ritual",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "XMeecO3IRvu5ck6F",
   "system": {
@@ -8,10 +8,10 @@
       "hNREaghvi4LqHQ06": {
         "label": "Cult of the Fallen",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.0NxCSugvKQ4W8OYZ",
-          "Compendium.daggerheart.adversaries.Actor.tyBOpLfigAhI9bU3",
-          "Compendium.daggerheart.adversaries.Actor.zx99sOGTXicP4SSD",
-          "Compendium.daggerheart.adversaries.Actor.sLAccjvCWfeedbpI"
+          "Compendium.daggerheart-ja.adversaries.Actor.0NxCSugvKQ4W8OYZ",
+          "Compendium.daggerheart-ja.adversaries.Actor.tyBOpLfigAhI9bU3",
+          "Compendium.daggerheart-ja.adversaries.Actor.zx99sOGTXicP4SSD",
+          "Compendium.daggerheart-ja.adversaries.Actor.sLAccjvCWfeedbpI"
         ]
       }
     },
@@ -37,7 +37,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -374,7 +374,7 @@
       "name": "The Summoning",
       "type": "feature",
       "system": {
-        "description": "<p><em>Countdown (6)</em>. When the PCs enter the scene or the cult begins the ritual to summon a demon, activate the countdown. Designate one adversary to lead the ritual. The countdown ticks down when a PC rolls with Fear. When it triggers, summon a @UUID[Compendium.daggerheart.adversaries.Actor.3tqCjDwJAQ7JKqMb]{Minor Demon} within Very Close range of the ritual's leader. If the leader is defeated, the countdown ends with no effect as the ritual fails.</p><section class=\"secret\" id=\"secret-OXdRqIZ0R8wGn3Gm\"><p><em>What will the cult do with this leashed demon if they succeed? What will they try to summon next?</em></p></section>",
+        "description": "<p><em>Countdown (6)</em>. When the PCs enter the scene or the cult begins the ritual to summon a demon, activate the countdown. Designate one adversary to lead the ritual. The countdown ticks down when a PC rolls with Fear. When it triggers, summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.3tqCjDwJAQ7JKqMb]{Minor Demon} within Very Close range of the ritual's leader. If the leader is defeated, the countdown ends with no effect as the ritual fails.</p><section class=\"secret\" id=\"secret-OXdRqIZ0R8wGn3Gm\"><p><em>What will the cult do with this leashed demon if they succeed? What will they try to summon next?</em></p></section>",
         "resource": null,
         "actions": {
           "bUIfzuWd1VfiV8sc": {
@@ -437,7 +437,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.3tqCjDwJAQ7JKqMb",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.3tqCjDwJAQ7JKqMb",
                 "count": "1"
               }
             ],

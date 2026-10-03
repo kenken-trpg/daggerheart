@@ -1,6 +1,6 @@
 {
   "name": "Castle Siege",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "MfrIkJK12PAEfbPL",
   "system": {
@@ -8,19 +8,19 @@
       "yNuW3h5S2tsbgLm4": {
         "label": "Mercenaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.uRtghKE9mHlII4rs",
-          "Compendium.daggerheart.adversaries.Actor.bgreCaQ6ap2DVpCr",
-          "Compendium.daggerheart.adversaries.Actor.ldbWEL7uZs84vyrR",
-          "Compendium.daggerheart.adversaries.Actor.ZNbQ2jg35LG4t9eH"
+          "Compendium.daggerheart-ja.adversaries.Actor.uRtghKE9mHlII4rs",
+          "Compendium.daggerheart-ja.adversaries.Actor.bgreCaQ6ap2DVpCr",
+          "Compendium.daggerheart-ja.adversaries.Actor.ldbWEL7uZs84vyrR",
+          "Compendium.daggerheart-ja.adversaries.Actor.ZNbQ2jg35LG4t9eH"
         ]
       },
       "djL6ySNZ1A0skdMT": {
         "label": "Noble Forces",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.0ts6CGd93lLqGZI5",
-          "Compendium.daggerheart.adversaries.Actor.99TqczuQipBmaB8i",
-          "Compendium.daggerheart.adversaries.Actor.bfhVWMBUh61b9J6n",
-          "Compendium.daggerheart.adversaries.Actor.7ai2opemrclQe3VF"
+          "Compendium.daggerheart-ja.adversaries.Actor.0ts6CGd93lLqGZI5",
+          "Compendium.daggerheart-ja.adversaries.Actor.99TqczuQipBmaB8i",
+          "Compendium.daggerheart-ja.adversaries.Actor.bfhVWMBUh61b9J6n",
+          "Compendium.daggerheart-ja.adversaries.Actor.7ai2opemrclQe3VF"
         ]
       }
     },
@@ -46,7 +46,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -292,7 +292,7 @@
       "name": "Reinforcements!",
       "type": "feature",
       "system": {
-        "description": "<p>Summon a @UUID[Compendium.daggerheart.adversaries.Actor.7ai2opemrclQe3VF]{Knight of the Realm}, a number of Tier 3 Minions equal to the number of PCs, and two adversaries of your choice within Far range of a chosen PC as reinforcements. The Knight of the Realm immediately takes the spotlight.</p><section id=\"secret-qYx1WuL81hHF5XW8\" class=\"secret\"><p><em>Who are they targeting first? What formation do they take?</em></p></section>",
+        "description": "<p>Summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.7ai2opemrclQe3VF]{Knight of the Realm}, a number of Tier 3 Minions equal to the number of PCs, and two adversaries of your choice within Far range of a chosen PC as reinforcements. The Knight of the Realm immediately takes the spotlight.</p><section id=\"secret-qYx1WuL81hHF5XW8\" class=\"secret\"><p><em>Who are they targeting first? What formation do they take?</em></p></section>",
         "resource": null,
         "actions": {},
         "featureForm": "action",

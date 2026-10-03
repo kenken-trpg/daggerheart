@@ -42,7 +42,7 @@ export default class CharacterResetDialog extends HandlebarsApplicationMixin(App
     static PARTS = {
         resourceDice: {
             id: 'resourceDice',
-            template: 'systems/daggerheart/templates/dialogs/characterReset.hbs'
+            template: 'systems/daggerheart-ja/templates/dialogs/characterReset.hbs'
         }
     };
 

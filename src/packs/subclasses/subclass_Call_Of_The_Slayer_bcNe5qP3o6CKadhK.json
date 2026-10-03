@@ -10,15 +10,15 @@
     "features": [
       {
         "type": "foundation",
-        "item": "Compendium.daggerheart.subclasses.Item.1hF5KGKQc2VKT5O8"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.1hF5KGKQc2VKT5O8"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.HAqtoKUTrk8Mip1n"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.HAqtoKUTrk8Mip1n"
       },
       {
         "type": "mastery",
-        "item": "Compendium.daggerheart.subclasses.Item.dHgAnbt9m1KsQFmp"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.dHgAnbt9m1KsQFmp"
       }
     ],
     "featureState": 1,
@@ -28,7 +28,7 @@
       "page": null,
       "artist": ""
     },
-    "linkedClass": "Compendium.daggerheart.classes.Item.xCUWwJz4WSthvLfy",
+    "linkedClass": "Compendium.daggerheart-ja.classes.Item.xCUWwJz4WSthvLfy",
     "gmNotes": ""
   },
   "effects": [],

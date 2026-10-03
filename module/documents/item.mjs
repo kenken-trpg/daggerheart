@@ -310,7 +310,7 @@ export default class DhItem extends foundry.documents.Item {
             speaker: cls.getSpeaker({ actor: item.actor }),
             system: systemData,
             content: await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/ui/chat/ability-use.hbs',
+                'systems/daggerheart-ja/templates/ui/chat/ability-use.hbs',
                 systemData
             ),
             flags: {

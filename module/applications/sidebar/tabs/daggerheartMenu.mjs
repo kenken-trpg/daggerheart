@@ -43,7 +43,7 @@ export default class DaggerheartMenu extends HandlebarsApplicationMixin(Abstract
 
     /** @override */
     static PARTS = {
-        main: { template: 'systems/daggerheart/templates/sidebar/daggerheart-menu/main.hbs' }
+        main: { template: 'systems/daggerheart-ja/templates/sidebar/daggerheart-menu/main.hbs' }
     };
 
     /* -------------------------------------------- */

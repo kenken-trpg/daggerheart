@@ -174,7 +174,7 @@ export default class DamageField extends fields.SchemaField {
                     `DAGGERHEART.UI.Chat.damageSummary.${config.hasHealing ? 'healingTitle' : 'title'}`
                 ),
                 content: await foundry.applications.handlebars.renderTemplate(
-                    'systems/daggerheart/templates/ui/chat/damageSummary.hbs',
+                    'systems/daggerheart-ja/templates/ui/chat/damageSummary.hbs',
                     {
                         targets: targetDamage,
                         allResourceLabels: getAllResourceLabels(),

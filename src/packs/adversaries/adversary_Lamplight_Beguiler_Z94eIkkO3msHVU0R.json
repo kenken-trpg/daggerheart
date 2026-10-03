@@ -501,7 +501,7 @@
     }
   ],
   "_id": "Z94eIkkO3msHVU0R",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Lamplight Beguiler",
     "displayName": 0,
@@ -510,7 +510,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

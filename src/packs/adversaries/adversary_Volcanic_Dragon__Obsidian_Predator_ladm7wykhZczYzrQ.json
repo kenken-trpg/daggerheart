@@ -3,7 +3,7 @@
   "name": "Volcanic Dragon: Obsidian Predator",
   "type": "adversary",
   "_id": "ladm7wykhZczYzrQ",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "system": {
     "description": "<p><em>A massive winged creature with obsidian scales and impossibly sharp claws.</em></p>",
     "resistance": {
@@ -146,7 +146,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -736,7 +736,7 @@
       "name": "Erupting Rage",
       "type": "feature",
       "system": {
-        "description": "<p>When the @Lookup[@name] marks their last HP, replace them with the @UUID[Compendium.daggerheart.adversaries.Actor.eArAPuB38CNR0ZIM]{Molten Scourge} and immediately spotlight them.</p>",
+        "description": "<p>When the @Lookup[@name] marks their last HP, replace them with the @UUID[Compendium.daggerheart-ja.adversaries.Actor.eArAPuB38CNR0ZIM]{Molten Scourge} and immediately spotlight them.</p>",
         "resource": null,
         "actions": {
           "OxGkCGgIl4vGFufD": {
@@ -759,7 +759,7 @@
               "consumeOnSuccess": false
             },
             "transform": {
-              "actorUUID": "Compendium.daggerheart.adversaries.Actor.eArAPuB38CNR0ZIM",
+              "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.eArAPuB38CNR0ZIM",
               "resourceRefresh": {
                 "hitPoints": true,
                 "stress": true

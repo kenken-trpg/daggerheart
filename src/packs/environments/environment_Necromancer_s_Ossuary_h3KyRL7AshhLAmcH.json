@@ -1,6 +1,6 @@
 {
   "name": "Necromancer's Ossuary",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "IKumu5HTLqONLYqb",
   "system": {
@@ -8,8 +8,8 @@
       "eYaDM6WMAmdzysKZ": {
         "label": "Arch-Necromancer's Host",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.CP6iRfHdyFWniTHY",
-          "Compendium.daggerheart.adversaries.Actor.YhJrP7rTBiRdX5Fp"
+          "Compendium.daggerheart-ja.adversaries.Actor.CP6iRfHdyFWniTHY",
+          "Compendium.daggerheart-ja.adversaries.Actor.YhJrP7rTBiRdX5Fp"
         ]
       }
     },
@@ -35,7 +35,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -412,7 +412,7 @@
       "name": "They Just Keep Coming!",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend a Fear</strong> to summon [[/r 1d6]] @UUID[Compendium.daggerheart.adversaries.Actor.gP3fWTLzSFnpA8EJ]{Rotted Zombie}, two @UUID[Compendium.daggerheart.adversaries.Actor.CP6iRfHdyFWniTHY]{Perfected Zombie}, or a @UUID[Compendium.daggerheart.adversaries.Actor.YhJrP7rTBiRdX5Fp]{Zombie Legion}, who appear at Close range of a chosen PC.</p><section class=\"secret\" id=\"secret-O5DKa2eIgNp51OVK\"><p><em>Who were these people before they became the necromancer's pawns? What vestiges of those lives remain for the heroes to see?</em></p></section>",
+        "description": "<p><strong>Spend a Fear</strong> to summon [[/r 1d6]] @UUID[Compendium.daggerheart-ja.adversaries.Actor.gP3fWTLzSFnpA8EJ]{Rotted Zombie}, two @UUID[Compendium.daggerheart-ja.adversaries.Actor.CP6iRfHdyFWniTHY]{Perfected Zombie}, or a @UUID[Compendium.daggerheart-ja.adversaries.Actor.YhJrP7rTBiRdX5Fp]{Zombie Legion}, who appear at Close range of a chosen PC.</p><section class=\"secret\" id=\"secret-O5DKa2eIgNp51OVK\"><p><em>Who were these people before they became the necromancer's pawns? What vestiges of those lives remain for the heroes to see?</em></p></section>",
         "resource": null,
         "actions": {
           "hFeTdiHWeCYkb8Hg": {

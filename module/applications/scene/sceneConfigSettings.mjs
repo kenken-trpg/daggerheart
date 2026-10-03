@@ -20,9 +20,9 @@ export default class DhSceneConfigSettings extends foundry.applications.sheets.S
     static buildParts() {
         const { footer, tabs, ...parts } = super.PARTS;
         const tmpParts = {
-            tabs: { template: 'systems/daggerheart/templates/scene/tabs.hbs' },
+            tabs: { template: 'systems/daggerheart-ja/templates/scene/tabs.hbs' },
             ...parts,
-            dh: { template: 'systems/daggerheart/templates/scene/dh-config.hbs' },
+            dh: { template: 'systems/daggerheart-ja/templates/scene/dh-config.hbs' },
             footer
         };
         return tmpParts;
@@ -31,7 +31,7 @@ export default class DhSceneConfigSettings extends foundry.applications.sheets.S
     static PARTS = DhSceneConfigSettings.buildParts();
 
     static buildTabs() {
-        super.TABS.sheet.tabs.push({ id: 'dh', src: 'systems/daggerheart/assets/logos/FoundryBorneLogoWhite.svg' });
+        super.TABS.sheet.tabs.push({ id: 'dh', src: 'systems/daggerheart-ja/assets/logos/FoundryBorneLogoWhite.svg' });
         return super.TABS;
     }
 

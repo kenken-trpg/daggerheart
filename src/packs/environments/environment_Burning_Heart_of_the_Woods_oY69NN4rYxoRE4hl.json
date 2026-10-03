@@ -1,6 +1,6 @@
 {
   "name": "Burning Heart of the Woods",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "MfrIkJK12PAEfbPL",
   "system": {
@@ -8,22 +8,22 @@
       "x0uI3WUhqmIcqimN": {
         "label": "Beasts",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.71qKDLKO3CsrNkdy",
-          "Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0"
+          "Compendium.daggerheart-ja.adversaries.Actor.71qKDLKO3CsrNkdy",
+          "Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0"
         ]
       },
       "ndk8FXXrRjHiPN0R": {
         "label": "Elementals",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.P7h54ZePFPHpYwvB"
+          "Compendium.daggerheart-ja.adversaries.Actor.P7h54ZePFPHpYwvB"
         ]
       },
       "XD3YccQrTKsxtlSZ": {
         "label": "Verdant Defenders",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.wR7cFKrHvRzbzhBT",
-          "Compendium.daggerheart.adversaries.Actor.XK78QUfY8c8Go8Uv",
-          "Compendium.daggerheart.adversaries.Actor.KGVwnLq85ywP9xvB"
+          "Compendium.daggerheart-ja.adversaries.Actor.wR7cFKrHvRzbzhBT",
+          "Compendium.daggerheart-ja.adversaries.Actor.XK78QUfY8c8Go8Uv",
+          "Compendium.daggerheart-ja.adversaries.Actor.KGVwnLq85ywP9xvB"
         ]
       }
     },
@@ -49,7 +49,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

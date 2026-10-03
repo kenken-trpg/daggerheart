@@ -60,25 +60,25 @@ export default class DHActionBaseConfig extends DaggerheartSheet(ApplicationV2) 
     static PARTS = {
         header: {
             id: 'header',
-            template: 'systems/daggerheart/templates/sheets-settings/action-settings/header.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets-settings/action-settings/header.hbs'
         },
-        tabs: { template: 'systems/daggerheart/templates/sheets/global/tabs/tab-navigation.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-navigation.hbs' },
         base: {
             id: 'base',
-            template: 'systems/daggerheart/templates/sheets-settings/action-settings/base.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets-settings/action-settings/base.hbs'
         },
         configuration: {
             id: 'configuration',
-            template: 'systems/daggerheart/templates/sheets-settings/action-settings/configuration.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets-settings/action-settings/configuration.hbs'
         },
         effect: {
             id: 'effect',
-            template: 'systems/daggerheart/templates/sheets-settings/action-settings/effect.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets-settings/action-settings/effect.hbs',
             scrollable: ['']
         },
         trigger: {
             id: 'trigger',
-            template: 'systems/daggerheart/templates/sheets-settings/action-settings/trigger.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets-settings/action-settings/trigger.hbs'
         }
     };
 

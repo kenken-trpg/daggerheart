@@ -36,19 +36,19 @@ export default class EnvironmentSheet extends DHBaseActorSheet {
     /**@override */
     static PARTS = {
         limited: {
-            template: 'systems/daggerheart/templates/sheets/actors/environment/limited.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/environment/limited.hbs',
             scrollable: ['.limited-container']
         },
-        header: { template: 'systems/daggerheart/templates/sheets/actors/environment/header.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/actors/environment/header.hbs' },
         features: {
-            template: 'systems/daggerheart/templates/sheets/actors/environment/features.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/environment/features.hbs',
             scrollable: ['.feature-section']
         },
         potentialAdversaries: {
-            template: 'systems/daggerheart/templates/sheets/actors/environment/potentialAdversaries.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/environment/potentialAdversaries.hbs',
             scrollable: ['.items-section']
         },
-        notes: { template: 'systems/daggerheart/templates/sheets/actors/environment/notes.hbs' }
+        notes: { template: 'systems/daggerheart-ja/templates/sheets/actors/environment/notes.hbs' }
     };
 
     /** @inheritdoc */

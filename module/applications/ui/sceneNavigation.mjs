@@ -14,7 +14,7 @@ export default class DhSceneNavigation extends foundry.applications.ui.SceneNavi
     static PARTS = {
         scenes: {
             root: true,
-            template: 'systems/daggerheart/templates/ui/sceneNavigation/scene-navigation.hbs'
+            template: 'systems/daggerheart-ja/templates/ui/sceneNavigation/scene-navigation.hbs'
         }
     };
 

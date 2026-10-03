@@ -310,7 +310,7 @@
     }
   ],
   "_id": "sstO8KJz1VeYv2hZ",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Realm Of The Dead",
     "displayName": 0,
@@ -319,7 +319,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

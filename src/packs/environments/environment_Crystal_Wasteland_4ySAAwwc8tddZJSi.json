@@ -16,12 +16,12 @@
       "ALbfIsyRuqyBQ1AG": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.G7jiltRjgvVhZewm",
-          "Compendium.daggerheart.adversaries.Actor.P7h54ZePFPHpYwvB",
-          "Compendium.daggerheart.adversaries.Actor.JqYraOqNmmhHk4Yy",
-          "Compendium.daggerheart.adversaries.Actor.FVgYb28fhxlVcGwA",
-          "Compendium.daggerheart.adversaries.Actor.c5hGdvY5UnSjlHws",
-          "Compendium.daggerheart.adversaries.Actor.iT3pDkKEtPTqM8kw"
+          "Compendium.daggerheart-ja.adversaries.Actor.G7jiltRjgvVhZewm",
+          "Compendium.daggerheart-ja.adversaries.Actor.P7h54ZePFPHpYwvB",
+          "Compendium.daggerheart-ja.adversaries.Actor.JqYraOqNmmhHk4Yy",
+          "Compendium.daggerheart-ja.adversaries.Actor.FVgYb28fhxlVcGwA",
+          "Compendium.daggerheart-ja.adversaries.Actor.c5hGdvY5UnSjlHws",
+          "Compendium.daggerheart-ja.adversaries.Actor.iT3pDkKEtPTqM8kw"
         ]
       }
     },
@@ -564,7 +564,7 @@
     }
   ],
   "_id": "4ySAAwwc8tddZJSi",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Crystal Wasteland",
     "displayName": 0,
@@ -573,7 +573,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

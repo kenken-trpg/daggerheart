@@ -16,14 +16,14 @@
       "dGGEFeoh8LOS51RN": {
         "label": "Local Fauna",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.nrcRGYmyMy2vBJXl",
-          "Compendium.daggerheart.adversaries.Actor.RIrQcvhlSmXTqFxr"
+          "Compendium.daggerheart-ja.adversaries.Actor.nrcRGYmyMy2vBJXl",
+          "Compendium.daggerheart-ja.adversaries.Actor.RIrQcvhlSmXTqFxr"
         ]
       },
       "TGaPRMzMRhCwaj1v": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.WPEOIGfclNJxWb87"
+          "Compendium.daggerheart-ja.adversaries.Actor.WPEOIGfclNJxWb87"
         ]
       }
     },
@@ -314,7 +314,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.WPEOIGfclNJxWb87",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.WPEOIGfclNJxWb87",
                 "count": "1"
               }
             ]
@@ -336,7 +336,7 @@
     }
   ],
   "_id": "qPo3w2ag677zAAa4",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Moon Kingdom",
     "displayName": 0,
@@ -345,7 +345,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

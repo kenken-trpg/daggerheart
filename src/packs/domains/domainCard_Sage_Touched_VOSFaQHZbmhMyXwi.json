@@ -1,6 +1,6 @@
 {
   "name": "Sage-Touched",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
   "type": "domainCard",
   "folder": "gEVGjjPrjqxxZkb5",
   "system": {
@@ -44,7 +44,7 @@
           "amount": null
         },
         "name": "Double Agility",
-        "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+        "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
         "range": "",
         "baseAction": false,
         "originItem": {
@@ -87,7 +87,7 @@
           "amount": null
         },
         "name": "Double Instinct",
-        "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+        "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
         "range": "",
         "baseAction": false,
         "originItem": {
@@ -152,7 +152,7 @@
         ]
       },
       "_id": "7zMpgedPII5GIYUl",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
       "disabled": false,
       "duration": {
         "value": null,
@@ -176,7 +176,7 @@
     },
     {
       "name": "Double Agility",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
       "transfer": true,
       "_id": "Mmax64mlLPYxJPB7",
       "type": "base",
@@ -220,7 +220,7 @@
     },
     {
       "name": "Double Instinct",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
       "transfer": true,
       "_id": "p03IjcyigL4b2WD1",
       "type": "base",

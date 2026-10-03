@@ -501,7 +501,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.Nj9E7DLb7UakiKz6",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.Nj9E7DLb7UakiKz6",
                 "count": "1"
               }
             ],
@@ -525,7 +525,7 @@
     }
   ],
   "_id": "Nj9E7DLb7UakiKz6",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Ravenous Mockery",
     "displayName": 0,
@@ -534,7 +534,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

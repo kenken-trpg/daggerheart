@@ -1,6 +1,6 @@
 {
   "name": "Hush",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/midnight.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/midnight.png",
   "type": "domainCard",
   "folder": "8erksbTp7ic6in4I",
   "system": {
@@ -96,7 +96,7 @@
   "effects": [
     {
       "name": "Silenced",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/midnight.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/midnight.png",
       "transfer": false,
       "_id": "pZ5YpjKidaj48IYF",
       "type": "base",

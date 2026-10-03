@@ -3,7 +3,7 @@
   "name": "Volcanic Dragon: Molten Scourge",
   "type": "adversary",
   "_id": "eArAPuB38CNR0ZIM",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "system": {
     "description": "<p><em>Enraged by their wounds, the dragon bursts into molten lava.</em></p>",
     "resistance": {
@@ -146,7 +146,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -865,7 +865,7 @@
       "name": "Ashen Vengeance",
       "type": "feature",
       "system": {
-        "description": "<p>When the @Lookup[@name] marks their last HP, replace them with the @UUID[Compendium.daggerheart.adversaries.Actor.pMuXGCSOQaxpi5tb]{Ashen Tyrant} and immediately spotlight them.</p>",
+        "description": "<p>When the @Lookup[@name] marks their last HP, replace them with the @UUID[Compendium.daggerheart-ja.adversaries.Actor.pMuXGCSOQaxpi5tb]{Ashen Tyrant} and immediately spotlight them.</p>",
         "resource": null,
         "actions": {
           "cFqFjemAfAjB0OB0": {
@@ -888,7 +888,7 @@
               "consumeOnSuccess": false
             },
             "transform": {
-              "actorUUID": "Compendium.daggerheart.adversaries.Actor.pMuXGCSOQaxpi5tb",
+              "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.pMuXGCSOQaxpi5tb",
               "resourceRefresh": {
                 "hitPoints": true,
                 "stress": true

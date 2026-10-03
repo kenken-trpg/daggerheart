@@ -460,7 +460,7 @@
       "type": "feature",
       "system": {
         "featureForm": "action",
-        "description": "<p>Mark any number of Stress to have the Sporophore summon an equal number of @UUID[Compendium.daggerheart.adversaries.Actor.55oYzFQRmrXCqNxn]{Fungispunj Sporelings} within Close range.</p>",
+        "description": "<p>Mark any number of Stress to have the Sporophore summon an equal number of @UUID[Compendium.daggerheart-ja.adversaries.Actor.55oYzFQRmrXCqNxn]{Fungispunj Sporelings} within Close range.</p>",
         "attribution": {},
         "gmNotes": "",
         "resource": null,
@@ -543,7 +543,7 @@
     }
   ],
   "_id": "5BKK7pDRjRAgN3Nm",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Fungispunj Sporophore",
     "displayName": 0,
@@ -552,7 +552,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

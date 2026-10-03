@@ -1,6 +1,6 @@
 {
   "name": "Glyph of Nightfall",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/midnight.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/midnight.png",
   "type": "domainCard",
   "folder": "WTdOLLkQyPdg0KWU",
   "system": {
@@ -96,7 +96,7 @@
   "effects": [
     {
       "name": "Glyph of Nightfall",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/midnight.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/midnight.png",
       "transfer": false,
       "_id": "9avDhppIdTqAR56f",
       "type": "base",

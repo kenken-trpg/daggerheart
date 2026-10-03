@@ -16,9 +16,9 @@
       "0xlyOLCOac2BMPBx": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.vw7PTv0hdDRCXhus",
-          "Compendium.daggerheart.adversaries.Actor.Wy9Dx05ulqeybn4h",
-          "Compendium.daggerheart.adversaries.Actor.KUevwJakVF7byrgT"
+          "Compendium.daggerheart-ja.adversaries.Actor.vw7PTv0hdDRCXhus",
+          "Compendium.daggerheart-ja.adversaries.Actor.Wy9Dx05ulqeybn4h",
+          "Compendium.daggerheart-ja.adversaries.Actor.KUevwJakVF7byrgT"
         ]
       }
     },
@@ -178,11 +178,11 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.Wy9Dx05ulqeybn4h",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.Wy9Dx05ulqeybn4h",
                 "count": "2"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.vw7PTv0hdDRCXhus",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.vw7PTv0hdDRCXhus",
                 "count": "1d6"
               }
             ],
@@ -206,7 +206,7 @@
     }
   ],
   "_id": "5vOcK3I6ei6WnbKO",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Sunken Citadel",
     "displayName": 0,
@@ -215,7 +215,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

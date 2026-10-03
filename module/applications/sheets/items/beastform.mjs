@@ -9,16 +9,16 @@ export default class BeastformSheet extends DHBaseItemSheet {
 
     /**@override */
     static PARTS = {
-        header: { template: 'systems/daggerheart/templates/sheets/items/beastform/header.hbs' },
-        tabs: { template: 'systems/daggerheart/templates/sheets/global/tabs/tab-navigation.hbs' },
-        settings: { template: 'systems/daggerheart/templates/sheets/items/beastform/settings.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/items/beastform/header.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-navigation.hbs' },
+        settings: { template: 'systems/daggerheart-ja/templates/sheets/items/beastform/settings.hbs' },
         features: {
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-features.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-features.hbs',
             scrollable: ['.features']
         },
-        advanced: { template: 'systems/daggerheart/templates/sheets/items/beastform/advanced.hbs' },
+        advanced: { template: 'systems/daggerheart-ja/templates/sheets/items/beastform/advanced.hbs' },
         effects: {
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-effects.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-effects.hbs',
             scrollable: ['.effects']
         }
     };

@@ -1,6 +1,6 @@
 {
   "name": "Healing Hands",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/splendor.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/splendor.png",
   "type": "domainCard",
   "folder": "2yh8wuYprOyswf0r",
   "system": {
@@ -391,7 +391,7 @@
   "effects": [
     {
       "name": "Healed by Healing Hands",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/splendor.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/splendor.png",
       "transfer": false,
       "_id": "sd5liP4ZcVeTMAoW",
       "type": "base",

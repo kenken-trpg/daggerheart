@@ -10,27 +10,27 @@
     "features": [
       {
         "type": "foundation",
-        "item": "Compendium.daggerheart.subclasses.Item.Y9eGMewnFZgPvX0M"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.Y9eGMewnFZgPvX0M"
       },
       {
         "type": "foundation",
-        "item": "Compendium.daggerheart.subclasses.Item.D3ffFWSXCza4WGcM"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.D3ffFWSXCza4WGcM"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.oirsCnN66GOlK3Fa"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.oirsCnN66GOlK3Fa"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.hNqLf3zEfKRzSbvq"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.hNqLf3zEfKRzSbvq"
       },
       {
         "type": "mastery",
-        "item": "Compendium.daggerheart.subclasses.Item.1nmFmkNXY6OYyyju"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.1nmFmkNXY6OYyyju"
       },
       {
         "type": "mastery",
-        "item": "Compendium.daggerheart.subclasses.Item.8TH6h6a36h09mf6d"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.8TH6h6a36h09mf6d"
       }
     ],
     "featureState": 1,
@@ -40,7 +40,7 @@
       "page": null,
       "artist": ""
     },
-    "linkedClass": "Compendium.daggerheart.classes.Item.5LwX4m8ziY3F1ZGC",
+    "linkedClass": "Compendium.daggerheart-ja.classes.Item.5LwX4m8ziY3F1ZGC",
     "gmNotes": ""
   },
   "effects": [],

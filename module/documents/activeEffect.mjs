@@ -265,7 +265,7 @@ export default class DhActiveEffect extends foundry.documents.ActiveEffect {
             user: game.user.id,
             system: systemData,
             content: await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/ui/chat/action.hbs',
+                'systems/daggerheart-ja/templates/ui/chat/action.hbs',
                 systemData
             )
         };

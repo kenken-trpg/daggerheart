@@ -497,7 +497,7 @@
       "type": "feature",
       "system": {
         "featureForm": "action",
-        "description": "<p>Mark any number of Stress up to the number of PCs in the scene. For each Stress you mark, the Harbinger summons <strong>1d4</strong> @UUID[Compendium.daggerheart.adversaries.Actor.YhJrP7rTBiRdX5Fp]{Contagious Zombie Legions} within Far range and immediately spotlights one of them.</p>",
+        "description": "<p>Mark any number of Stress up to the number of PCs in the scene. For each Stress you mark, the Harbinger summons <strong>1d4</strong> @UUID[Compendium.daggerheart-ja.adversaries.Actor.YhJrP7rTBiRdX5Fp]{Contagious Zombie Legions} within Far range and immediately spotlights one of them.</p>",
         "attribution": {},
         "gmNotes": "",
         "resource": null,
@@ -664,14 +664,14 @@
       "sort": 0,
       "flags": {},
       "_stats": {
-        "compendiumSource": "Compendium.daggerheart.adversaries.Actor.unuX3PZSkhlNUdVF.Item.vI14KIZ1C0GnyQpR"
+        "compendiumSource": "Compendium.daggerheart-ja.adversaries.Actor.unuX3PZSkhlNUdVF.Item.vI14KIZ1C0GnyQpR"
       },
       "_id": "obZh9m7dZIXyIkub",
       "_key": "!actors.items!PwAVKf3IhLYD8JTJ.obZh9m7dZIXyIkub"
     }
   ],
   "_id": "PwAVKf3IhLYD8JTJ",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Harbinger Of Pestilence",
     "displayName": 0,
@@ -680,7 +680,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

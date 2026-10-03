@@ -15,30 +15,30 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.njj2C3tMDeCHHOoh"
+        "item": "Compendium.daggerheart-ja.classes.Item.njj2C3tMDeCHHOoh"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.3hNVqD1c0VIw2Nj5"
+        "item": "Compendium.daggerheart-ja.classes.Item.3hNVqD1c0VIw2Nj5"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.eoSmuAJmgHUyULtp"
+        "item": "Compendium.daggerheart-ja.classes.Item.eoSmuAJmgHUyULtp"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw",
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk"
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw",
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.KuPuEAbUK4VKpS2O",
-        "Compendium.daggerheart.classes.Item.LoQH7wpfyKsuMJ5l"
+        "Compendium.daggerheart-ja.classes.Item.KuPuEAbUK4VKpS2O",
+        "Compendium.daggerheart-ja.classes.Item.LoQH7wpfyKsuMJ5l"
       ]
     },
     "characterGuide": {
@@ -50,9 +50,9 @@
         "presence": -1,
         "knowledge": 0
       },
-      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.Iv8BZM1R24QMT72M",
+      "suggestedPrimaryWeapon": "Compendium.daggerheart-ja.weapons.Item.Iv8BZM1R24QMT72M",
       "suggestedSecondaryWeapon": null,
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.haULhuEg37zUUvhb"
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.haULhuEg37zUUvhb"
     },
     "isMulticlass": false,
     "attribution": {

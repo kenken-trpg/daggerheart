@@ -31,7 +31,7 @@ export default class DhpNPC extends BaseDataActor {
     }
 
     /**@inheritdoc */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/actors/drama-masks.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/actors/drama-masks.svg';
 
     get features() {
         return this.parent.items.filter(x => x.type === 'feature');

@@ -1,6 +1,6 @@
 {
   "name": "Arch-Necromancer",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "7XHlANCPz18yvl5L",
   "system": {
@@ -153,7 +153,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -568,7 +568,7 @@
       "name": "Open the Gates of Death",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend a Fear</strong> to summon a @UUID[Compendium.daggerheart.adversaries.Actor.YhJrP7rTBiRdX5Fp]{Zombie Legion}, which appears at Close range and immediately takes the spotlight.</p>",
+        "description": "<p><strong>Spend a Fear</strong> to summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.YhJrP7rTBiRdX5Fp]{Zombie Legion}, which appears at Close range and immediately takes the spotlight.</p>",
         "resource": null,
         "actions": {
           "qSuWxC8xQOhnbBx9": {
@@ -591,7 +591,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.YhJrP7rTBiRdX5Fp",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.YhJrP7rTBiRdX5Fp",
                 "count": "1"
               }
             ],

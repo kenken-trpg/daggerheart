@@ -13,13 +13,13 @@ export default class DhCombatTracker extends foundry.applications.sidebar.tabs.C
 
     static PARTS = {
         header: {
-            template: 'systems/daggerheart/templates/ui/combatTracker/combatTrackerHeader.hbs'
+            template: 'systems/daggerheart-ja/templates/ui/combatTracker/combatTrackerHeader.hbs'
         },
         tracker: {
-            template: 'systems/daggerheart/templates/ui/combatTracker/combatTracker.hbs'
+            template: 'systems/daggerheart-ja/templates/ui/combatTracker/combatTracker.hbs'
         },
         footer: {
-            template: 'systems/daggerheart/templates/ui/combatTracker/combatTrackerFooter.hbs'
+            template: 'systems/daggerheart-ja/templates/ui/combatTracker/combatTrackerFooter.hbs'
         }
     };
 

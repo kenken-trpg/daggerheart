@@ -15,24 +15,24 @@
     "features": [
       {
         "type": "foundation",
-        "item": "Compendium.daggerheart.subclasses.Item.YlKPNBkoSOCLm1Yo"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.YlKPNBkoSOCLm1Yo"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.KtkCySTmYjN2uXF4"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.KtkCySTmYjN2uXF4"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.A8VBqkOtH8gEJCvv"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.A8VBqkOtH8gEJCvv"
       },
       {
         "type": "mastery",
-        "item": "Compendium.daggerheart.subclasses.Item.6HGlS2CvR9NBsVg5"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.6HGlS2CvR9NBsVg5"
       }
     ],
     "featureState": 1,
     "isMulticlass": false,
-    "linkedClass": "Compendium.daggerheart.classes.Item.HHAmaNZDicgkill5"
+    "linkedClass": "Compendium.daggerheart-ja.classes.Item.HHAmaNZDicgkill5"
   },
   "effects": [],
   "sort": 0,

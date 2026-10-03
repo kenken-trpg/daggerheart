@@ -16,9 +16,9 @@
       "sOYNTMSDlEz1swf7": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.P7h54ZePFPHpYwvB",
-          "Compendium.daggerheart.adversaries.Actor.dsfB3YhoL5SudvS2",
-          "Compendium.daggerheart.adversaries.Actor.ladm7wykhZczYzrQ"
+          "Compendium.daggerheart-ja.adversaries.Actor.P7h54ZePFPHpYwvB",
+          "Compendium.daggerheart-ja.adversaries.Actor.dsfB3YhoL5SudvS2",
+          "Compendium.daggerheart-ja.adversaries.Actor.ladm7wykhZczYzrQ"
         ]
       }
     },
@@ -432,7 +432,7 @@
     }
   ],
   "_id": "tBXKfR9yQ2zypqWt",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Volcanic Eruption",
     "displayName": 0,
@@ -441,7 +441,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

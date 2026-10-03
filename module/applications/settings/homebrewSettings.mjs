@@ -51,17 +51,17 @@ export default class DhHomebrewSettings extends HandlebarsApplicationMixin(Appli
     };
 
     static PARTS = {
-        tabs: { template: 'systems/daggerheart/templates/sheets/global/tabs/tab-navigation.hbs' },
-        settings: { template: 'systems/daggerheart/templates/settings/homebrew-settings/settings.hbs' },
-        domains: { template: 'systems/daggerheart/templates/settings/homebrew-settings/domains.hbs' },
-        types: { template: 'systems/daggerheart/templates/settings/homebrew-settings/types.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-navigation.hbs' },
+        settings: { template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/settings.hbs' },
+        domains: { template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/domains.hbs' },
+        types: { template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/types.hbs' },
         resources: {
-            template: 'systems/daggerheart/templates/settings/homebrew-settings/resources.hbs',
+            template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/resources.hbs',
             scrollable: ['.resource-types-container']
         },
-        itemTypes: { template: 'systems/daggerheart/templates/settings/homebrew-settings/itemFeatures.hbs' },
-        downtime: { template: 'systems/daggerheart/templates/settings/homebrew-settings/downtime.hbs' },
-        footer: { template: 'systems/daggerheart/templates/settings/homebrew-settings/footer.hbs' }
+        itemTypes: { template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/itemFeatures.hbs' },
+        downtime: { template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/downtime.hbs' },
+        footer: { template: 'systems/daggerheart-ja/templates/settings/homebrew-settings/footer.hbs' }
     };
 
     /** @inheritdoc */
@@ -177,7 +177,7 @@ export default class DhHomebrewSettings extends HandlebarsApplicationMixin(Appli
         const icon = await foundry.applications.api.DialogV2.input({
             classes: ['daggerheart', 'dh-style', 'change-currency-icon'],
             content: await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/settings/homebrew-settings/change-currency-icon.hbs',
+                'systems/daggerheart-ja/templates/settings/homebrew-settings/change-currency-icon.hbs',
                 { currentIcon }
             ),
             window: {

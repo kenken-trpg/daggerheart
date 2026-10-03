@@ -47,24 +47,24 @@ export default class AdversarySheet extends DHBaseActorSheet {
 
     static PARTS = {
         limited: {
-            template: 'systems/daggerheart/templates/sheets/actors/adversary/limited.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/adversary/limited.hbs',
             scrollable: ['.limited-container']
         },
         sidebar: {
-            template: 'systems/daggerheart/templates/sheets/actors/adversary/sidebar.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/adversary/sidebar.hbs',
             scrollable: ['.shortcut-items-section']
         },
-        header: { template: 'systems/daggerheart/templates/sheets/actors/adversary/header.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/actors/adversary/header.hbs' },
         features: {
-            template: 'systems/daggerheart/templates/sheets/actors/adversary/features.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/adversary/features.hbs',
             scrollable: ['.feature-section']
         },
         effects: {
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-effects.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-effects.hbs',
             scrollable: ['.effects-sections']
         },
         notes: {
-            template: 'systems/daggerheart/templates/sheets/actors/adversary/notes.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/adversary/notes.hbs',
             scrollable: ['.editor-content']
         }
     };

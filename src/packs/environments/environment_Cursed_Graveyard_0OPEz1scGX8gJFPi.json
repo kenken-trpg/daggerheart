@@ -16,16 +16,16 @@
       "6RB1MDFDZlGQGOXa": {
         "label": "Corrupted Spirits",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.9x2xY9zwc3xzbXo5",
-          "Compendium.daggerheart.adversaries.Actor.T2kyHFC68VKtIXir"
+          "Compendium.daggerheart-ja.adversaries.Actor.9x2xY9zwc3xzbXo5",
+          "Compendium.daggerheart-ja.adversaries.Actor.T2kyHFC68VKtIXir"
         ]
       },
       "9nT0BYx6IU732cL0": {
         "label": "Living Dead",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.10YIQl0lvCJXZLfX",
-          "Compendium.daggerheart.adversaries.Actor.Nf0v43rtflV56V2T",
-          "Compendium.daggerheart.adversaries.Actor.EQTOAOUrkIvS2z88"
+          "Compendium.daggerheart-ja.adversaries.Actor.10YIQl0lvCJXZLfX",
+          "Compendium.daggerheart-ja.adversaries.Actor.Nf0v43rtflV56V2T",
+          "Compendium.daggerheart-ja.adversaries.Actor.EQTOAOUrkIvS2z88"
         ]
       }
     },
@@ -437,7 +437,7 @@
     }
   ],
   "_id": "0OPEz1scGX8gJFPi",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Cursed Graveyard",
     "displayName": 0,
@@ -446,7 +446,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

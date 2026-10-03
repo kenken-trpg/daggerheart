@@ -117,7 +117,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
                 }
 
                 effect.description = await foundry.applications.handlebars.renderTemplate(
-                    'systems/daggerheart/templates/ui/tooltip/parts/beastformData.hbs',
+                    'systems/daggerheart-ja/templates/ui/tooltip/parts/beastformData.hbs',
                     {
                         item: { system: beastformData }
                     }
@@ -140,7 +140,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
         }
 
         const html = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/effect-display.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/effect-display.hbs`,
             {
                 effect
             }
@@ -174,7 +174,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
         // Beastform special case
         if (item.type === 'beastform') {
             const html = await foundry.applications.handlebars.renderTemplate(
-                `systems/daggerheart/templates/ui/tooltip/beastform.hbs`,
+                `systems/daggerheart-ja/templates/ui/tooltip/beastform.hbs`,
                 {
                     item,
                     description: item.system?.enrichedDescription ?? item.enrichedDescription,
@@ -249,7 +249,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
         }
 
         const html = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/basic.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/basic.hbs`,
             {
                 ...pick(item, ['img', 'name']),
                 description: item.system?.enrichedDescription ?? item.enrichedDescription,
@@ -285,7 +285,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
             `${attack.getDamageFormula()}${typeAddendum}`
         ].filter(t => Boolean(t));
         const html = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/basic.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/basic.hbs`,
             {
                 ...pick(attack, ['img', 'name']),
                 description: description,
@@ -305,7 +305,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
 
         if (actor) {
             return await foundry.applications.handlebars.renderTemplate(
-                `systems/daggerheart/templates/ui/tooltip/advantage.hbs`,
+                `systems/daggerheart-ja/templates/ui/tooltip/advantage.hbs`,
                 {
                     sources: isAdvantage ? actor.system.advantageSources : actor.system.disadvantageSources
                 }
@@ -320,7 +320,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
         const description = element.dataset.deathDescription;
 
         const html = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/basic.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/basic.hbs`,
             { name, img, description }
         );
 
@@ -339,7 +339,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
         const move = moves[key];
         const description = await foundry.applications.ux.TextEditor.enrichHTML(move.description);
         const html = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/basic.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/basic.hbs`,
             {
                 ...pick(move, ['img', 'name']),
                 description: description
@@ -575,7 +575,7 @@ export default class DhTooltipManager extends foundry.helpers.interaction.Toolti
             });
 
         return await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/battlepoints.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/battlepoints.hbs`,
             {
                 combatId: combat.id,
                 nrCharacters,

@@ -84,16 +84,16 @@ export default class DhCharacterCreation extends HandlebarsApplicationMixin(Appl
     };
 
     static PARTS = {
-        tabs: { template: 'systems/daggerheart/templates/characterCreation/tabs.hbs' },
-        class: { template: 'systems/daggerheart/templates/characterCreation/tabs/class.hbs' },
-        ancestry: { template: 'systems/daggerheart/templates/characterCreation/tabs/ancestry.hbs' },
-        community: { template: 'systems/daggerheart/templates/characterCreation/tabs/community.hbs' },
-        traits: { template: 'systems/daggerheart/templates/characterCreation/tabs/traits.hbs' },
-        experience: { template: 'systems/daggerheart/templates/characterCreation/tabs/experience.hbs' },
-        domainCards: { template: 'systems/daggerheart/templates/characterCreation/tabs/domainCards.hbs' },
-        equipment: { template: 'systems/daggerheart/templates/characterCreation/equipment.hbs' },
-        // story: { template: 'systems/daggerheart/templates/characterCreation/story.hbs' },
-        footer: { template: 'systems/daggerheart/templates/characterCreation/footer.hbs' }
+        tabs: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs.hbs' },
+        class: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs/class.hbs' },
+        ancestry: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs/ancestry.hbs' },
+        community: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs/community.hbs' },
+        traits: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs/traits.hbs' },
+        experience: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs/experience.hbs' },
+        domainCards: { template: 'systems/daggerheart-ja/templates/characterCreation/tabs/domainCards.hbs' },
+        equipment: { template: 'systems/daggerheart-ja/templates/characterCreation/equipment.hbs' },
+        // story: { template: 'systems/daggerheart-ja/templates/characterCreation/story.hbs' },
+        footer: { template: 'systems/daggerheart-ja/templates/characterCreation/footer.hbs' }
     };
 
     static TABS = {

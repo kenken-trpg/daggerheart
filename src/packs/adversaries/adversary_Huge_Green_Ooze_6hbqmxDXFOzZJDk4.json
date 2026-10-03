@@ -1,6 +1,6 @@
 {
   "name": "Huge Green Ooze",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "wTI7nZkPhKxl7Wwq",
   "system": {
@@ -148,7 +148,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -495,7 +495,7 @@
       "name": "Split",
       "type": "feature",
       "system": {
-        "description": "<p>When the @Lookup[@name] has 4 or more HP marked, you can <strong>spend a Fear</strong> to split them into two @UUID[Compendium.daggerheart.adversaries.Actor.SHXedd9zZPVfUgUa]{Green Oozes}(with no marked HP or Stress). Immediately spotlight both of them.</p>",
+        "description": "<p>When the @Lookup[@name] has 4 or more HP marked, you can <strong>spend a Fear</strong> to split them into two @UUID[Compendium.daggerheart-ja.adversaries.Actor.SHXedd9zZPVfUgUa]{Green Oozes}(with no marked HP or Stress). Immediately spotlight both of them.</p>",
         "resource": null,
         "actions": {
           "aeRdkiRsDNagTKhp": {
@@ -518,7 +518,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.SHXedd9zZPVfUgUa",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.SHXedd9zZPVfUgUa",
                 "count": "2"
               }
             ],

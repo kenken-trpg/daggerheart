@@ -591,7 +591,7 @@
       "type": "feature",
       "system": {
         "featureForm": "reaction",
-        "description": "<p>When the Empress marks her last HP, replace her with the @UUID[Compendium.daggerheart.adversaries.Actor.0QPn79SMU6C0b1qi]{Entombed Cat Beast} and immediately spotlight them.</p>",
+        "description": "<p>When the Empress marks her last HP, replace her with the @UUID[Compendium.daggerheart-ja.adversaries.Actor.0QPn79SMU6C0b1qi]{Entombed Cat Beast} and immediately spotlight them.</p>",
         "attribution": {},
         "gmNotes": "",
         "resource": null,
@@ -617,7 +617,7 @@
               "consumeOnSuccess": false
             },
             "transform": {
-              "actorUUID": "Compendium.daggerheart.adversaries.Actor.0QPn79SMU6C0b1qi",
+              "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.0QPn79SMU6C0b1qi",
               "resourceRefresh": {
                 "hitPoints": true,
                 "stress": true
@@ -641,7 +641,7 @@
     }
   ],
   "_id": "L6QLw1rYK4qtdf1F",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Entombed Empress",
     "displayName": 0,
@@ -650,7 +650,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

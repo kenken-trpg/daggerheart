@@ -49,17 +49,17 @@ export default class PartySheet extends DHBaseActorSheet {
 
     /**@override */
     static PARTS = {
-        header: { template: 'systems/daggerheart/templates/sheets/actors/party/header.hbs' },
-        tabs: { template: 'systems/daggerheart/templates/sheets/global/tabs/tab-navigation.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/actors/party/header.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-navigation.hbs' },
         partyMembers: {
-            template: 'systems/daggerheart/templates/sheets/actors/party/party-members.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/party/party-members.hbs',
             scrollable: ['']
         },
         inventory: {
-            template: 'systems/daggerheart/templates/sheets/actors/party/inventory.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/party/inventory.hbs',
             scrollable: ['.tab.inventory .items-section']
         },
-        notes: { template: 'systems/daggerheart/templates/sheets/actors/party/notes.hbs' }
+        notes: { template: 'systems/daggerheart-ja/templates/sheets/actors/party/notes.hbs' }
     };
 
     /** @inheritdoc */
@@ -314,7 +314,7 @@ export default class PartySheet extends DHBaseActorSheet {
                 icon: 'fa-solid fa-campground'
             },
             content: await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/sidebar/daggerheart-menu/main.hbs',
+                'systems/daggerheart-ja/templates/sidebar/daggerheart-menu/main.hbs',
                 {
                     refreshables: DaggerheartMenu.defaultRefreshSelections()
                 }

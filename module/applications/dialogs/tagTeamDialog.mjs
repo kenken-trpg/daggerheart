@@ -65,19 +65,19 @@ export default class TagTeamDialog extends HandlebarsApplicationMixin(Applicatio
     static PARTS = {
         initialization: {
             id: 'initialization',
-            template: 'systems/daggerheart/templates/dialogs/tagTeamDialog/initialization.hbs'
+            template: 'systems/daggerheart-ja/templates/dialogs/tagTeamDialog/initialization.hbs'
         },
         tagTeamRoll: {
             id: 'tagTeamRoll',
-            template: 'systems/daggerheart/templates/dialogs/tagTeamDialog/tagTeamRoll.hbs'
+            template: 'systems/daggerheart-ja/templates/dialogs/tagTeamDialog/tagTeamRoll.hbs'
         },
         rollSelection: {
             id: 'rollSelection',
-            template: 'systems/daggerheart/templates/dialogs/tagTeamDialog/rollSelection.hbs'
+            template: 'systems/daggerheart-ja/templates/dialogs/tagTeamDialog/rollSelection.hbs'
         },
         result: {
             id: 'result',
-            template: 'systems/daggerheart/templates/dialogs/tagTeamDialog/result.hbs'
+            template: 'systems/daggerheart-ja/templates/dialogs/tagTeamDialog/result.hbs'
         }
     };
 
@@ -116,7 +116,7 @@ export default class TagTeamDialog extends HandlebarsApplicationMixin(Applicatio
         for (const memberKey of Object.keys(this.party.system.tagTeam.members)) {
             parts[memberKey] = {
                 id: memberKey,
-                template: 'systems/daggerheart/templates/dialogs/tagTeamDialog/tagTeamMember.hbs'
+                template: 'systems/daggerheart-ja/templates/dialogs/tagTeamDialog/tagTeamMember.hbs'
             };
         }
 

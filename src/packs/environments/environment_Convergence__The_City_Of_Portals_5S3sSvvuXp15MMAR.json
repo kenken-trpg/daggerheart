@@ -16,13 +16,13 @@
       "5si048Lyh4c7sUrE": {
         "label": "Power Players",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.WPEOIGfclNJxWb87",
-          "Compendium.daggerheart.adversaries.Actor.FeIMCgQ5ZMRRDo4d",
-          "Compendium.daggerheart.adversaries.Actor.PjkvJjlljFIg6Ae9",
-          "Compendium.daggerheart.adversaries.Actor.r1mbfSSwKWdcFdAU",
-          "Compendium.daggerheart.adversaries.Actor.yx0vK2yfNVZKWUUi",
-          "Compendium.daggerheart.adversaries.Actor.befIqd5IYKg6eUz2",
-          "Compendium.daggerheart.adversaries.Actor.TVnr955huZCjXrHM"
+          "Compendium.daggerheart-ja.adversaries.Actor.WPEOIGfclNJxWb87",
+          "Compendium.daggerheart-ja.adversaries.Actor.FeIMCgQ5ZMRRDo4d",
+          "Compendium.daggerheart-ja.adversaries.Actor.PjkvJjlljFIg6Ae9",
+          "Compendium.daggerheart-ja.adversaries.Actor.r1mbfSSwKWdcFdAU",
+          "Compendium.daggerheart-ja.adversaries.Actor.yx0vK2yfNVZKWUUi",
+          "Compendium.daggerheart-ja.adversaries.Actor.befIqd5IYKg6eUz2",
+          "Compendium.daggerheart-ja.adversaries.Actor.TVnr955huZCjXrHM"
         ]
       }
     },
@@ -285,7 +285,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.VSdS3N5Kh6uratv9",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.VSdS3N5Kh6uratv9",
                 "count": "1d4"
               }
             ],
@@ -440,7 +440,7 @@
     }
   ],
   "_id": "5S3sSvvuXp15MMAR",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Convergence, The City Of Portals",
     "displayName": 0,
@@ -449,7 +449,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

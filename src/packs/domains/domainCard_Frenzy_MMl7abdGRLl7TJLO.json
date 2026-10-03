@@ -1,6 +1,6 @@
 {
   "name": "Frenzy",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
   "type": "domainCard",
   "folder": "me7ywrVh38j6T8Sm",
   "system": {
@@ -63,7 +63,7 @@
   "effects": [
     {
       "name": "Frenzy",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
       "transfer": false,
       "_id": "1POoAgObPOWDpUco",
       "type": "base",

@@ -16,18 +16,18 @@
       "sGbzbXsgB4qjaZbz": {
         "label": "Dungeon Denizens",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.Nx7LCcitOvQvXb8X",
-          "Compendium.daggerheart.adversaries.Actor.SHXedd9zZPVfUgUa",
-          "Compendium.daggerheart.adversaries.Actor.Nj9E7DLb7UakiKz6",
-          "Compendium.daggerheart.adversaries.Actor.y6dI50LstfCrlVfY"
+          "Compendium.daggerheart-ja.adversaries.Actor.Nx7LCcitOvQvXb8X",
+          "Compendium.daggerheart-ja.adversaries.Actor.SHXedd9zZPVfUgUa",
+          "Compendium.daggerheart-ja.adversaries.Actor.Nj9E7DLb7UakiKz6",
+          "Compendium.daggerheart-ja.adversaries.Actor.y6dI50LstfCrlVfY"
         ]
       },
       "BhKfIeoClSGtemGN": {
         "label": "Rival Adventurers",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.YnObCleGjPT7yqEc",
-          "Compendium.daggerheart.adversaries.Actor.niBpVU7yeo5ccskE",
-          "Compendium.daggerheart.adversaries.Actor.noDdT0tsN6FXSmC8"
+          "Compendium.daggerheart-ja.adversaries.Actor.YnObCleGjPT7yqEc",
+          "Compendium.daggerheart-ja.adversaries.Actor.niBpVU7yeo5ccskE",
+          "Compendium.daggerheart-ja.adversaries.Actor.noDdT0tsN6FXSmC8"
         ]
       }
     },
@@ -266,7 +266,7 @@
     }
   ],
   "_id": "tQpntfbUjUjmXc3e",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Deadly Dungeon",
     "displayName": 0,
@@ -275,7 +275,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

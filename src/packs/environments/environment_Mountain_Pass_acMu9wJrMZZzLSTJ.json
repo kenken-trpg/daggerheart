@@ -1,6 +1,6 @@
 {
   "name": "Mountain Pass",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "XMeecO3IRvu5ck6F",
   "system": {
@@ -8,17 +8,17 @@
       "f08TnNkCjPIzmQHh": {
         "label": "Beasts",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.71qKDLKO3CsrNkdy",
-          "Compendium.daggerheart.adversaries.Actor.OMQ0v6PE8s1mSU0K",
-          "Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0"
+          "Compendium.daggerheart-ja.adversaries.Actor.71qKDLKO3CsrNkdy",
+          "Compendium.daggerheart-ja.adversaries.Actor.OMQ0v6PE8s1mSU0K",
+          "Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0"
         ]
       },
       "8aqHp1uxtxvnuNSU": {
         "label": "Other",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.jDmHqGvzg5wjgmxE",
-          "Compendium.daggerheart.adversaries.Actor.rM9qCIYeWg9I0B4l",
-          "Compendium.daggerheart.adversaries.Actor.mVV7a7KQAORoPMgZ"
+          "Compendium.daggerheart-ja.adversaries.Actor.jDmHqGvzg5wjgmxE",
+          "Compendium.daggerheart-ja.adversaries.Actor.rM9qCIYeWg9I0B4l",
+          "Compendium.daggerheart-ja.adversaries.Actor.mVV7a7KQAORoPMgZ"
         ]
       }
     },
@@ -44,7 +44,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -236,7 +236,7 @@
       "name": "Raptor Nest",
       "type": "feature",
       "system": {
-        "description": "<p>When the PCs enter the raptors' hunting grounds, two @UUID[Compendium.daggerheart.adversaries.Actor.OMQ0v6PE8s1mSU0K]{Giant Eagles} appear at Very Far range of a chosen PC, identifying the PCs as likely prey.</p><section id=\"secret-aU19zKlmhVBdS2oF\" class=\"secret\"><p><em>How long has it been since the eagles last found prey? Do they have eggs in their nest or unfl edged young?</em></p></section>",
+        "description": "<p>When the PCs enter the raptors' hunting grounds, two @UUID[Compendium.daggerheart-ja.adversaries.Actor.OMQ0v6PE8s1mSU0K]{Giant Eagles} appear at Very Far range of a chosen PC, identifying the PCs as likely prey.</p><section id=\"secret-aU19zKlmhVBdS2oF\" class=\"secret\"><p><em>How long has it been since the eagles last found prey? Do they have eggs in their nest or unfl edged young?</em></p></section>",
         "resource": null,
         "actions": {
           "88MyOC3IRcct6VLk": {
@@ -259,7 +259,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.OMQ0v6PE8s1mSU0K",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.OMQ0v6PE8s1mSU0K",
                 "count": "2"
               }
             ],

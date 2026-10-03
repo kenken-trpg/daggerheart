@@ -16,8 +16,8 @@
       "hEkx10JrH1v3FFzG": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.xIICT6tEdnA7dKDV",
-          "Compendium.daggerheart.adversaries.Actor.tLHNONmalytgnngv"
+          "Compendium.daggerheart-ja.adversaries.Actor.xIICT6tEdnA7dKDV",
+          "Compendium.daggerheart-ja.adversaries.Actor.tLHNONmalytgnngv"
         ]
       }
     },
@@ -360,7 +360,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.tLHNONmalytgnngv",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.tLHNONmalytgnngv",
                 "count": "1"
               }
             ],
@@ -389,7 +389,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.xIICT6tEdnA7dKDV",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.xIICT6tEdnA7dKDV",
                 "count": "1"
               }
             ],
@@ -438,7 +438,7 @@
     }
   ],
   "_id": "E6xf7TTN2GeWyfv3",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Megastorm",
     "displayName": 0,
@@ -447,7 +447,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

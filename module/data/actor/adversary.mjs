@@ -9,7 +9,7 @@ import { signedNumber } from '../../helpers/utils.mjs';
 export default class DhpAdversary extends DhCreature {
     static LOCALIZATION_PREFIXES = ['DAGGERHEART.ACTORS.Adversary'];
 
-    static embedTemplate = 'systems/daggerheart/templates/components/actor-embed/adversary.hbs';
+    static embedTemplate = 'systems/daggerheart-ja/templates/components/actor-embed/adversary.hbs';
 
     static get metadata() {
         return foundry.utils.mergeObject(super.metadata, {
@@ -113,7 +113,7 @@ export default class DhpAdversary extends DhCreature {
     /* -------------------------------------------- */
 
     /**@inheritdoc */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/actors/dragon-head.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg';
 
     /* -------------------------------------------- */
 

@@ -1,6 +1,6 @@
 {
   "name": "Midnight-Touched",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/midnight.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/midnight.png",
   "type": "domainCard",
   "folder": "ML2JusN36oJoR8QA",
   "system": {
@@ -146,7 +146,7 @@
         "conditionals": []
       },
       "_id": "sNBuI2xIZAI4RgZy",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/midnight.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/midnight.png",
       "disabled": false,
       "duration": {
         "value": null,

@@ -114,41 +114,41 @@ export default class CharacterSheet extends DHBaseActorSheet {
         limited: {
             id: 'limited',
             scrollable: ['.limited-container'],
-            template: 'systems/daggerheart/templates/sheets/actors/character/limited.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/limited.hbs'
         },
         sidebar: {
             id: 'sidebar',
             scrollable: ['.shortcut-items-section'],
-            template: 'systems/daggerheart/templates/sheets/actors/character/sidebar.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/sidebar.hbs'
         },
         header: {
             id: 'header',
-            template: 'systems/daggerheart/templates/sheets/actors/character/header.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/header.hbs'
         },
         features: {
             id: 'features',
             scrollable: ['.features-sections'],
-            template: 'systems/daggerheart/templates/sheets/actors/character/features.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/features.hbs'
         },
         loadout: {
             id: 'loadout',
             scrollable: ['.items-section'],
-            template: 'systems/daggerheart/templates/sheets/actors/character/loadout.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/loadout.hbs'
         },
         inventory: {
             id: 'inventory',
             scrollable: ['.items-section'],
-            template: 'systems/daggerheart/templates/sheets/actors/character/inventory.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/inventory.hbs'
         },
         biography: {
             id: 'biography',
             scrollable: ['.items-section'],
-            template: 'systems/daggerheart/templates/sheets/actors/character/biography.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/actors/character/biography.hbs'
         },
         effects: {
             id: 'effects',
             scrollable: ['.effects-sections'],
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-effects.hbs'
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-effects.hbs'
         }
     };
 
@@ -1122,7 +1122,7 @@ export default class CharacterSheet extends DHBaseActorSheet {
         ).useResourcePips;
         const html = document.createElement('div');
         html.innerHTML = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/armorManagement.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/armorManagement.hbs`,
             {
                 sources: armorSources,
                 useResourcePips
@@ -1221,7 +1221,7 @@ export default class CharacterSheet extends DHBaseActorSheet {
 
         const html = document.createElement('div');
         html.innerHTML = await foundry.applications.handlebars.renderTemplate(
-            `systems/daggerheart/templates/ui/tooltip/resourceManagement.hbs`,
+            `systems/daggerheart-ja/templates/ui/tooltip/resourceManagement.hbs`,
             {
                 resources: extraResources
             }

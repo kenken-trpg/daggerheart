@@ -30,9 +30,9 @@
       }
     },
     "features": [
-      "Compendium.daggerheart.beastforms.Item.EVOJTskJYf4rpuga",
-      "Compendium.daggerheart.beastforms.Item.DfBXO8jTchwFG8dZ",
-      "Compendium.daggerheart.beastforms.Item.ODudjX88Te4vDP57"
+      "Compendium.daggerheart-ja.beastforms.Item.EVOJTskJYf4rpuga",
+      "Compendium.daggerheart-ja.beastforms.Item.DfBXO8jTchwFG8dZ",
+      "Compendium.daggerheart-ja.beastforms.Item.ODudjX88Te4vDP57"
     ],
     "evolved": {
       "mainTraitBonus": 0,

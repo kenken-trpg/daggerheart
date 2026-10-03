@@ -16,16 +16,16 @@
       "slL9ro9IoNdBE1Yf": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.kE4dfhqmIQpNd44e",
-          "Compendium.daggerheart.adversaries.Actor.P7h54ZePFPHpYwvB",
-          "Compendium.daggerheart.adversaries.Actor.RKdp5SOjwx1CHtaZ"
+          "Compendium.daggerheart-ja.adversaries.Actor.kE4dfhqmIQpNd44e",
+          "Compendium.daggerheart-ja.adversaries.Actor.P7h54ZePFPHpYwvB",
+          "Compendium.daggerheart-ja.adversaries.Actor.RKdp5SOjwx1CHtaZ"
         ]
       },
       "UIANRGlgpUvlLzlC": {
         "label": "Psychic Vampires",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.i2UNbRvgyoSs07M6",
-          "Compendium.daggerheart.adversaries.Actor.woVws0rcFaedtW3g"
+          "Compendium.daggerheart-ja.adversaries.Actor.i2UNbRvgyoSs07M6",
+          "Compendium.daggerheart-ja.adversaries.Actor.woVws0rcFaedtW3g"
         ]
       }
     },
@@ -313,7 +313,7 @@
     }
   ],
   "_id": "m1RJ6Iic7WfYX02N",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Astral Realm",
     "displayName": 0,
@@ -322,7 +322,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -1,6 +1,6 @@
 {
   "name": "Haunted City",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "XMeecO3IRvu5ck6F",
   "system": {
@@ -8,9 +8,9 @@
       "h07vZopQbVt6dlY6": {
         "label": "Ghosts",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.5tCkhnBByUIN5UdG",
-          "Compendium.daggerheart.adversaries.Actor.65cSO3EQEh6ZH6Xk",
-          "Compendium.daggerheart.adversaries.Actor.UFVGl1osOsJTneLf"
+          "Compendium.daggerheart-ja.adversaries.Actor.5tCkhnBByUIN5UdG",
+          "Compendium.daggerheart-ja.adversaries.Actor.65cSO3EQEh6ZH6Xk",
+          "Compendium.daggerheart-ja.adversaries.Actor.UFVGl1osOsJTneLf"
         ]
       }
     },
@@ -36,7 +36,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

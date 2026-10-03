@@ -1,6 +1,6 @@
 {
   "name": "Petty Noble",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "sxvlEwi25uAoB2C5",
   "system": {
@@ -148,7 +148,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -264,7 +264,7 @@
       "_id": "ebdAPBso5ROmdFNO",
       "img": "icons/environment/people/infantry-armored.webp",
       "system": {
-        "description": "<p>Once per scene, <strong>mark a Stress</strong> to summon <strong>1d4</strong> @UUID[Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy]{Bladed Guards}, who appear at Far range to enforce the @Lookup[@name]'s will.</p>",
+        "description": "<p>Once per scene, <strong>mark a Stress</strong> to summon <strong>1d4</strong> @UUID[Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy]{Bladed Guards}, who appear at Far range to enforce the @Lookup[@name]'s will.</p>",
         "resource": null,
         "actions": {
           "tioTtYfIGFIXRITN": {
@@ -296,7 +296,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy",
                 "count": "1d4"
               }
             ],

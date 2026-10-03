@@ -26,13 +26,13 @@ export default class CompanionSheet extends DHBaseActorSheet {
 
     static PARTS = {
         limited: {
-            template: 'systems/daggerheart/templates/sheets/actors/companion/limited.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/actors/companion/limited.hbs',
             scrollable: ['.limited-container']
         },
-        header: { template: 'systems/daggerheart/templates/sheets/actors/companion/header.hbs' },
-        details: { template: 'systems/daggerheart/templates/sheets/actors/companion/details.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/actors/companion/header.hbs' },
+        details: { template: 'systems/daggerheart-ja/templates/sheets/actors/companion/details.hbs' },
         effects: {
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-effects.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-effects.hbs',
             scrollable: ['.effects-sections']
         }
     };

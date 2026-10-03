@@ -679,7 +679,7 @@ export async function RefreshFeatures(
         const msg = {
             user: game.user.id,
             content: await foundry.applications.handlebars.renderTemplate(
-                'systems/daggerheart/templates/ui/chat/refreshMessage.hbs',
+                'systems/daggerheart-ja/templates/ui/chat/refreshMessage.hbs',
                 {
                     types: types
                 }

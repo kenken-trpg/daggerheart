@@ -23,7 +23,7 @@ export default class DhlevelUpViewMode extends HandlebarsApplicationMixin(Applic
     };
 
     static PARTS = {
-        main: { template: 'systems/daggerheart/templates/levelup/tabs/viewMode.hbs' }
+        main: { template: 'systems/daggerheart-ja/templates/levelup/tabs/viewMode.hbs' }
     };
 
     async _prepareContext(_options) {

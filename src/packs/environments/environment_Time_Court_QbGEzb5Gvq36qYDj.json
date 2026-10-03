@@ -16,9 +16,9 @@
       "Dh1UipXuHjMyzcbU": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.yx0vK2yfNVZKWUUi",
-          "Compendium.daggerheart.adversaries.Actor.68xDUa9Ls48O825Z",
-          "Compendium.daggerheart.adversaries.Actor.VSdS3N5Kh6uratv9"
+          "Compendium.daggerheart-ja.adversaries.Actor.yx0vK2yfNVZKWUUi",
+          "Compendium.daggerheart-ja.adversaries.Actor.68xDUa9Ls48O825Z",
+          "Compendium.daggerheart-ja.adversaries.Actor.VSdS3N5Kh6uratv9"
         ]
       }
     },
@@ -300,7 +300,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.VSdS3N5Kh6uratv9",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.VSdS3N5Kh6uratv9",
                 "count": "@partySize"
               }
             ]
@@ -322,7 +322,7 @@
     }
   ],
   "_id": "QbGEzb5Gvq36qYDj",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Time Court",
     "displayName": 0,
@@ -331,7 +331,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

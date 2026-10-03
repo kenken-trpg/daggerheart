@@ -411,7 +411,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.VENwg7xEFcYObjmT",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.VENwg7xEFcYObjmT",
                 "count": "1d6"
               }
             ],
@@ -704,14 +704,14 @@
       "sort": 0,
       "flags": {},
       "_stats": {
-        "compendiumSource": "Compendium.daggerheart.adversaries.Actor.unuX3PZSkhlNUdVF.Item.vI14KIZ1C0GnyQpR"
+        "compendiumSource": "Compendium.daggerheart-ja.adversaries.Actor.unuX3PZSkhlNUdVF.Item.vI14KIZ1C0GnyQpR"
       },
       "_id": "DfogFjl1t860BDII",
       "_key": "!actors.items!G7LS7f4StFvtPPG7.DfogFjl1t860BDII"
     }
   ],
   "_id": "G7LS7f4StFvtPPG7",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Harbinger Of War",
     "displayName": 0,
@@ -720,7 +720,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

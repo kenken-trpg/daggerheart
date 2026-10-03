@@ -16,18 +16,18 @@
       "cDV40IntAD7wIsdW": {
         "label": "Automated Security",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.JqYraOqNmmhHk4Yy",
-          "Compendium.daggerheart.adversaries.Actor.FVgYb28fhxlVcGwA",
-          "Compendium.daggerheart.adversaries.Actor.c5hGdvY5UnSjlHws"
+          "Compendium.daggerheart-ja.adversaries.Actor.JqYraOqNmmhHk4Yy",
+          "Compendium.daggerheart-ja.adversaries.Actor.FVgYb28fhxlVcGwA",
+          "Compendium.daggerheart-ja.adversaries.Actor.c5hGdvY5UnSjlHws"
         ]
       },
       "iGIc0fm5te27GwnO": {
         "label": "Gamblers",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.ZxWaWPdzFIUPNC62",
-          "Compendium.daggerheart.adversaries.Actor.Vy02IhGhkJLuezu4",
-          "Compendium.daggerheart.adversaries.Actor.wycLpvebWdUqRhpP",
-          "Compendium.daggerheart.adversaries.Actor.8zlynOhnVA59KpKT"
+          "Compendium.daggerheart-ja.adversaries.Actor.ZxWaWPdzFIUPNC62",
+          "Compendium.daggerheart-ja.adversaries.Actor.Vy02IhGhkJLuezu4",
+          "Compendium.daggerheart-ja.adversaries.Actor.wycLpvebWdUqRhpP",
+          "Compendium.daggerheart-ja.adversaries.Actor.8zlynOhnVA59KpKT"
         ]
       }
     },
@@ -263,15 +263,15 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.JqYraOqNmmhHk4Yy",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.JqYraOqNmmhHk4Yy",
                 "count": "@partySize"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.c5hGdvY5UnSjlHws",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.c5hGdvY5UnSjlHws",
                 "count": "@partySize"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.FVgYb28fhxlVcGwA",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.FVgYb28fhxlVcGwA",
                 "count": "1"
               }
             ]
@@ -317,7 +317,7 @@
     }
   ],
   "_id": "m2xG46JFpCw5YHRX",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Upscale Casino",
     "displayName": 0,
@@ -326,7 +326,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

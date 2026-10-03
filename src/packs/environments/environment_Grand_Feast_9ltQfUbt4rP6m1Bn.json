@@ -16,14 +16,14 @@
       "XVwmaoATfYXwo3B2": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.vNIbYQ4YSzNf0WPE",
-          "Compendium.daggerheart.adversaries.Actor.JRhrrEg5UroURiAD",
-          "Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy",
-          "Compendium.daggerheart.adversaries.Actor.mK3A5FTx6k8iPU3F",
-          "Compendium.daggerheart.adversaries.Actor.Al3w2CgjfdT3p9ma",
-          "Compendium.daggerheart.adversaries.Actor.wycLpvebWdUqRhpP",
-          "Compendium.daggerheart.adversaries.Actor.bgreCaQ6ap2DVpCr",
-          "Compendium.daggerheart.adversaries.Actor.8zlynOhnVA59KpKT"
+          "Compendium.daggerheart-ja.adversaries.Actor.vNIbYQ4YSzNf0WPE",
+          "Compendium.daggerheart-ja.adversaries.Actor.JRhrrEg5UroURiAD",
+          "Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy",
+          "Compendium.daggerheart-ja.adversaries.Actor.mK3A5FTx6k8iPU3F",
+          "Compendium.daggerheart-ja.adversaries.Actor.Al3w2CgjfdT3p9ma",
+          "Compendium.daggerheart-ja.adversaries.Actor.wycLpvebWdUqRhpP",
+          "Compendium.daggerheart-ja.adversaries.Actor.bgreCaQ6ap2DVpCr",
+          "Compendium.daggerheart-ja.adversaries.Actor.8zlynOhnVA59KpKT"
         ]
       }
     },
@@ -451,7 +451,7 @@
     }
   ],
   "_id": "9ltQfUbt4rP6m1Bn",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Grand Feast",
     "displayName": 0,
@@ -460,7 +460,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

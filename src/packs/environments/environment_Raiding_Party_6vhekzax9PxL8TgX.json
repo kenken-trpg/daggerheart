@@ -16,9 +16,9 @@
       "Z1qk14bnBBCM7Tnq": {
         "label": "Ship's Crew",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.OROJbjsqagVh7ECV",
-          "Compendium.daggerheart.adversaries.Actor.5YgEajn0wa4i85kC",
-          "Compendium.daggerheart.adversaries.Actor.mhcVkVFrzIJ18FDm"
+          "Compendium.daggerheart-ja.adversaries.Actor.OROJbjsqagVh7ECV",
+          "Compendium.daggerheart-ja.adversaries.Actor.5YgEajn0wa4i85kC",
+          "Compendium.daggerheart-ja.adversaries.Actor.mhcVkVFrzIJ18FDm"
         ]
       }
     },
@@ -427,7 +427,7 @@
     }
   ],
   "_id": "6vhekzax9PxL8TgX",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Raiding Party",
     "displayName": 0,
@@ -436,7 +436,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

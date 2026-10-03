@@ -24,5 +24,5 @@ export default class DHConsumable extends BaseDataItem {
     /* -------------------------------------------- */
 
     /**@override */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/items/round-potion.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/items/round-potion.svg';
 }

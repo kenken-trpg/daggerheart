@@ -1,6 +1,6 @@
 {
   "name": "Cliffside Ascent",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "GQ0VnOLrKBIHR6Us",
   "system": {
@@ -8,10 +8,10 @@
       "hWhlWzJ8nNKAMmXx": {
         "label": "Other",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.uOP5oT9QzXPlnf3p",
-          "Compendium.daggerheart.adversaries.Actor.9x2xY9zwc3xzbXo5",
-          "Compendium.daggerheart.adversaries.Actor.fmfntuJ8mHRCAktP",
-          "Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0"
+          "Compendium.daggerheart-ja.adversaries.Actor.uOP5oT9QzXPlnf3p",
+          "Compendium.daggerheart-ja.adversaries.Actor.9x2xY9zwc3xzbXo5",
+          "Compendium.daggerheart-ja.adversaries.Actor.fmfntuJ8mHRCAktP",
+          "Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0"
         ]
       }
     },
@@ -37,7 +37,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

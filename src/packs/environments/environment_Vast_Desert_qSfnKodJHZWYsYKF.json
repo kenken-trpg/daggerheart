@@ -16,9 +16,9 @@
       "pefTawH0Dv5bd4fz": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.89yAh30vaNQOALlz",
-          "Compendium.daggerheart.adversaries.Actor.A9EuHHWa6UmN7khR",
-          "Compendium.daggerheart.adversaries.Actor.GGljGjIJzx1WKLfD"
+          "Compendium.daggerheart-ja.adversaries.Actor.89yAh30vaNQOALlz",
+          "Compendium.daggerheart-ja.adversaries.Actor.A9EuHHWa6UmN7khR",
+          "Compendium.daggerheart-ja.adversaries.Actor.GGljGjIJzx1WKLfD"
         ]
       }
     },
@@ -551,7 +551,7 @@
     }
   ],
   "_id": "qSfnKodJHZWYsYKF",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Vast Desert",
     "displayName": 0,
@@ -560,7 +560,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -3,7 +3,7 @@ export default class DhActorDirectory extends foundry.applications.sidebar.tabs.
         renderUpdateKeys: ['system.levelData.level.current', 'system.partner', 'system.tier', 'system.type']
     };
 
-    static _entryPartial = 'systems/daggerheart/templates/ui/sidebar/actor-document-partial.hbs';
+    static _entryPartial = 'systems/daggerheart-ja/templates/ui/sidebar/actor-document-partial.hbs';
 
     async _prepareDirectoryContext(context, options) {
         await super._prepareDirectoryContext(context, options);

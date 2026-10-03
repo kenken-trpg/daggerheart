@@ -1,6 +1,6 @@
 {
   "name": "Rage Up",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
   "type": "domainCard",
   "folder": "EiP5dLozOFZKIeWN",
   "system": {
@@ -127,7 +127,7 @@
     },
     {
       "name": "Rage Up (2)",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
       "transfer": false,
       "_id": "t6SIjQxB6UBUJ98f",
       "type": "base",

@@ -16,22 +16,22 @@
       "LTxP8vZW7KiVkU7l": {
         "label": "Festival Security",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy",
-          "Compendium.daggerheart.adversaries.Actor.mK3A5FTx6k8iPU3F"
+          "Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy",
+          "Compendium.daggerheart-ja.adversaries.Actor.mK3A5FTx6k8iPU3F"
         ]
       },
       "DPTWl7saE8CkcAA1": {
         "label": "Local Luminaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.Al3w2CgjfdT3p9ma",
-          "Compendium.daggerheart.adversaries.Actor.wycLpvebWdUqRhpP"
+          "Compendium.daggerheart-ja.adversaries.Actor.Al3w2CgjfdT3p9ma",
+          "Compendium.daggerheart-ja.adversaries.Actor.wycLpvebWdUqRhpP"
         ]
       },
       "43YbBAN8zHvuBnPi": {
         "label": "Sundru Ne'er-Do-Wells",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.5Lh1T0zaT8Pkr2U2",
-          "Compendium.daggerheart.adversaries.Actor.C0OMQqV7pN6t7ouR"
+          "Compendium.daggerheart-ja.adversaries.Actor.5Lh1T0zaT8Pkr2U2",
+          "Compendium.daggerheart-ja.adversaries.Actor.C0OMQqV7pN6t7ouR"
         ]
       }
     },
@@ -274,7 +274,7 @@
     }
   ],
   "_id": "ChrSSjjTPmzCWGrZ",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Local Festival",
     "displayName": 0,
@@ -283,7 +283,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

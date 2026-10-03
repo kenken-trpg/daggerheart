@@ -469,6 +469,9 @@ Foundry はマニフェストを読んだあと `download` の zip を取得す�
 識別するので、公式版とフォーク版は**共存できない**。フォークを入れると公式版が
 置き換わり、以後は上流の更新通知と自前の更新がぶつかる。
 
+> **その後解消した。** `id` を `daggerheart-ja` に変えて共存できるようにした。
+> 経緯と書き換え範囲は「撤回: `id` を `daggerheart-ja` に変えた」を参照。
+
 ### フォークが上流と違っている中身
 
 選択肢を比べる前に、「何を運ぶ必要があるのか」を実測する。
@@ -621,6 +624,49 @@ Foundry が更新を確認するのは**インストール済みの `system.json
 
 `id` を変えるほうが既存ワールドを壊すので、**`daggerheart` のまま**でよい。
 
+#### 撤回: `id` を `daggerheart-ja` に変えた (2026-10-03)
+
+上の判断を覆した。理由は**併用したい利用者がいる**こと。公式版 (英語) と
+日本語版を並べて入れ、ワールドごとに選びたいという要求は、`id` を同じに
+している限り原理的に満たせない。
+
+変えた結果、上の Cons のうち「同時にインストールできない」は消え、
+代わりに下の2つを受け入れた:
+
+- **既存ワールドは開けなくなる。** ワールドは `system` に ID を持つので、
+  `daggerheart` のワールドは `daggerheart-ja` では開かない。移行するなら
+  ワールドの `world.json` の `system` を書き換える。
+- **公式版へ戻す経路も切れる。** 相互に開けるという利点を失った。
+
+##### 書き換えた対象
+
+| 対象 | 件数 | 備考 |
+| --- | --- | --- |
+| `systems/daggerheart/` → `systems/daggerheart-ja/` | 1,415 | mjs 389 / hbs 159 / packs の画像パス 867 |
+| `Compendium.daggerheart.` / `Compendium[daggerheart.` → `-ja` | 882 | packs 内部の UUID リンク |
+| `system.json` の `id` / `title` / `download` | 3 | |
+| `system.json` の `packs[].system` | 15 | **見落としやすい。** `daggerheart` のままだとパックがシステム不一致で読み込まれない |
+| `tools/pullYMLtoLDB.mjs` の `systemId` | 1 | コンパイル後のパックに焼き込まれる |
+| `tools/create-symlink.mjs` の配置先 | 1 | |
+
+##### 書き換えてはいけなかったもの
+
+- **`classes: ['daggerheart', 'dh-style', …]` 47箇所** — これは CSS
+  クラス名で ID ではない。変えると全スタイルが外れる。
+- `DAGGERHEART.*` の i18n キー — ID とは無関係。
+- `build/daggerheart.js` / `styles/daggerheart.css` — ただのファイル名。
+  `system.json` の `esmodules` / `styles` もこのまま。
+- `url` (`https://github.com/kenken-trpg/daggerheart`) — リポジトリ名は
+  `daggerheart` のままなので変えない。
+- **`flags.daggerheart`** — シーンの `sceneEnvironments` などが入っている。
+  Foundry は生の `update()` 経由なら未登録スコープでも読み書きできるため
+  動作し、変えると既存シーンのデータが参照できなくなる。据え置いた。
+
+##### 採番
+
+`id` が変わった時点で別パッケージなので、バージョンは `2.10.7.2` に上げた
+(`2.10.7.1` の成果物は旧 `id` を含むため再利用できない)。
+
 #### 採番
 
 上流は `2.10.8`、フォークは `2.10.7` 基準。**4つ目のセグメント**を足す:
@@ -657,6 +703,9 @@ Foundry の Setup → Game Systems → Install System に貼る。
 `download` の zip が HTTP 200 で 36,319,389 バイト。
 
 #### 配布物の実機確認 (2026-10-03)
+
+> この確認は **`id` が `daggerheart` だった 2.10.7.1** に対して行ったもの。
+> `id` を `daggerheart-ja` に変えた 2.10.7.2 では再確認が必要。
 
 公開した URL から**隔離環境へ実際にインストールして**確認した
 (別データパス / ポート30100 / 本番の30000には触れていない)。

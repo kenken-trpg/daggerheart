@@ -152,7 +152,7 @@
             {{/if}}
         </div>
         {{#if (and (not isSidebar) (eq item.system.resource.type 'simple'))}}
-            {{> "systems/daggerheart/templates/sheets/global/partials/item-resource.hbs"}}
+            {{> "systems/daggerheart-ja/templates/sheets/global/partials/item-resource.hbs"}}
         {{/if}}
         {{#if (and (not isSidebar) item.system.quantity)}}
             <div class="item-resource">
@@ -210,7 +210,7 @@
     {{/unless}}
     <div class="item-description">{{#unless isSidebar}}{{{item.system.description}}}{{/unless}}</div>
     {{#if (and (not isSidebar) (eq item.system.resource.type 'diceValue'))}}
-        {{> "systems/daggerheart/templates/sheets/global/partials/item-resource.hbs"}}
+        {{> "systems/daggerheart-ja/templates/sheets/global/partials/item-resource.hbs"}}
     {{/if}}
     {{#if featureType}}
         <div class="item-buttons">

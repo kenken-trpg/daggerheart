@@ -8,10 +8,10 @@ export default class CommunitySheet extends DHHeritageSheet {
 
     /**@inheritdoc */
     static PARTS = {
-        header: { template: 'systems/daggerheart/templates/sheets/items/community/header.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/items/community/header.hbs' },
         ...super.PARTS,
         features: {
-            template: 'systems/daggerheart/templates/sheets/items/community/features.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/items/community/features.hbs',
             scrollable: ['.feature']
         }
     };

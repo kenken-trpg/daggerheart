@@ -120,7 +120,7 @@ export default class DhCompanion extends DhCreature {
     /* -------------------------------------------- */
 
     /**@inheritdoc */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/actors/capybara.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/actors/capybara.svg';
 
     /* -------------------------------------------- */
 

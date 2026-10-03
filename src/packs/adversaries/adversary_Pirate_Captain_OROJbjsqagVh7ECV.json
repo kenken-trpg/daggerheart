@@ -1,6 +1,6 @@
 {
   "name": "Pirate Captain",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "sxvlEwi25uAoB2C5",
   "system": {
@@ -153,7 +153,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -322,7 +322,7 @@
       "_id": "WGEGO0DSOs5cF0EL",
       "img": "icons/environment/people/charge.webp",
       "system": {
-        "description": "<p>Once per scene, <strong>mark a Stress</strong> to summon a @UUID[Compendium.daggerheart.adversaries.Actor.5YgEajn0wa4i85kC]{Pirate Raider Horde}, which appears at Far range.</p>",
+        "description": "<p>Once per scene, <strong>mark a Stress</strong> to summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.5YgEajn0wa4i85kC]{Pirate Raider Horde}, which appears at Far range.</p>",
         "resource": null,
         "actions": {
           "nuYk5WeLLpIKa69q": {
@@ -354,7 +354,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.5YgEajn0wa4i85kC",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.5YgEajn0wa4i85kC",
                 "count": "1"
               }
             ],

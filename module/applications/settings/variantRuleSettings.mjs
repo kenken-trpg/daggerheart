@@ -32,7 +32,7 @@ export default class DHVariantRuleSettings extends HandlebarsApplicationMixin(Ap
 
     static PARTS = {
         main: {
-            template: 'systems/daggerheart/templates/settings/variant-rules.hbs'
+            template: 'systems/daggerheart-ja/templates/settings/variant-rules.hbs'
         }
     };
 

@@ -1,6 +1,6 @@
 {
   "name": "Gifted Tracker",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
   "type": "domainCard",
   "folder": "EJoXzO85rG5EiZsh",
   "system": {
@@ -72,7 +72,7 @@
   "effects": [
     {
       "name": "Gifted Tracker",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/sage.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/sage.png",
       "transfer": false,
       "_id": "47Oh2weCdmuvKHM9",
       "type": "base",

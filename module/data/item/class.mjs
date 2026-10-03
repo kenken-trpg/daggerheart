@@ -65,7 +65,7 @@ export default class DHClass extends BaseDataItem {
     /* -------------------------------------------- */
 
     /**@override */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/items/laurel-crown.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/items/laurel-crown.svg';
 
     /* -------------------------------------------- */
 
@@ -238,7 +238,7 @@ export default class DHClass extends BaseDataItem {
         const classFeatures = await getFeaturesHTMLData(this.classFeatures);
 
         const suffix = await foundry.applications.handlebars.renderTemplate(
-            'systems/daggerheart/templates/sheets/items/class/description.hbs',
+            'systems/daggerheart-ja/templates/sheets/items/class/description.hbs',
             {
                 class: this.parent,
                 domains: domainsLabel,

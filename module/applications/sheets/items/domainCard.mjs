@@ -18,22 +18,22 @@ export default class DomainCardSheet extends DHBaseItemSheet {
 
     /** @inheritdoc */
     static PARTS = {
-        header: { template: 'systems/daggerheart/templates/sheets/items/domainCard/header.hbs' },
-        tabs: { template: 'systems/daggerheart/templates/sheets/global/tabs/tab-navigation.hbs' },
+        header: { template: 'systems/daggerheart-ja/templates/sheets/items/domainCard/header.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-navigation.hbs' },
         description: { 
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-description.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-description.hbs',
             scrollable: ['.description-section']
         },
         actions: {
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-actions.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-actions.hbs',
             scrollable: ['']
         },
         settings: {
-            template: 'systems/daggerheart/templates/sheets/items/domainCard/settings.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/items/domainCard/settings.hbs',
             scrollable: ['']
         },
         effects: {
-            template: 'systems/daggerheart/templates/sheets/global/tabs/tab-effects.hbs',
+            template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-effects.hbs',
             scrollable: ['']
         }
     };

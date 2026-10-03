@@ -1,6 +1,6 @@
 {
   "name": "Demon of Wrath",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "wTI7nZkPhKxl7Wwq",
   "system": {
@@ -148,7 +148,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -510,7 +510,7 @@
       "name": "Blood and Souls",
       "type": "feature",
       "system": {
-        "description": "<p><em>Countdown (Loop 6)</em>. Activate the first time an attack is made within sight of the @Lookup[@name]. It ticks down when a PC takes a violent action. When it triggers, summon [[/r 1d4]]@UUID[Compendium.daggerheart.adversaries.Actor.3tqCjDwJAQ7JKqMb]{Minor Demons}, who appear at Close range.</p>",
+        "description": "<p><em>Countdown (Loop 6)</em>. Activate the first time an attack is made within sight of the @Lookup[@name]. It ticks down when a PC takes a violent action. When it triggers, summon [[/r 1d4]]@UUID[Compendium.daggerheart-ja.adversaries.Actor.3tqCjDwJAQ7JKqMb]{Minor Demons}, who appear at Close range.</p>",
         "resource": null,
         "actions": {
           "szg3qA09aJUt9WKS": {
@@ -573,7 +573,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.3tqCjDwJAQ7JKqMb",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.3tqCjDwJAQ7JKqMb",
                 "count": "1d4"
               }
             ],

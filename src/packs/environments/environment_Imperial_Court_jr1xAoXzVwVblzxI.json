@@ -1,6 +1,6 @@
 {
   "name": "Imperial Court",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "IKumu5HTLqONLYqb",
   "system": {
@@ -8,11 +8,11 @@
       "JTuzman711Fqs3u1": {
         "label": "Other",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy",
-          "Compendium.daggerheart.adversaries.Actor.ZxWaWPdzFIUPNC62",
-          "Compendium.daggerheart.adversaries.Actor.7ai2opemrclQe3VF",
-          "Compendium.daggerheart.adversaries.Actor.yx0vK2yfNVZKWUUi",
-          "Compendium.daggerheart.adversaries.Actor.8zlynOhnVA59KpKT"
+          "Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy",
+          "Compendium.daggerheart-ja.adversaries.Actor.ZxWaWPdzFIUPNC62",
+          "Compendium.daggerheart-ja.adversaries.Actor.7ai2opemrclQe3VF",
+          "Compendium.daggerheart-ja.adversaries.Actor.yx0vK2yfNVZKWUUi",
+          "Compendium.daggerheart-ja.adversaries.Actor.8zlynOhnVA59KpKT"
         ]
       }
     },
@@ -38,7 +38,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

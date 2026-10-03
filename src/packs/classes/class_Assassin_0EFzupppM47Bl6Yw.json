@@ -21,30 +21,30 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.lO3Xyd21qYimrWBs"
+        "item": "Compendium.daggerheart-ja.classes.Item.lO3Xyd21qYimrWBs"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.XxS0Li1P6SqIho7T"
+        "item": "Compendium.daggerheart-ja.classes.Item.XxS0Li1P6SqIho7T"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.D3hK5ub4uuZqjRDR"
+        "item": "Compendium.daggerheart-ja.classes.Item.D3hK5ub4uuZqjRDR"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk",
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.a4MyV9MZZFY4dKCZ",
-        "Compendium.daggerheart.classes.Item.x9H46Uwlq85bqRaU"
+        "Compendium.daggerheart-ja.classes.Item.a4MyV9MZZFY4dKCZ",
+        "Compendium.daggerheart-ja.classes.Item.x9H46Uwlq85bqRaU"
       ]
     },
     "characterGuide": {
@@ -56,9 +56,9 @@
         "presence": 0,
         "knowledge": 1
       },
-      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.ykuXSEA6GLjrApt3",
+      "suggestedPrimaryWeapon": "Compendium.daggerheart-ja.weapons.Item.ykuXSEA6GLjrApt3",
       "suggestedSecondaryWeapon": null,
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.uL6AvEhXGaFlzjjS"
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.uL6AvEhXGaFlzjjS"
     },
     "backgroundQuestions": [
       "You once killed someone you were close to. What happened, and how did it change you?",

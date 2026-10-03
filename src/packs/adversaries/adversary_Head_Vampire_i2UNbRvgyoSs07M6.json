@@ -1,6 +1,6 @@
 {
   "name": "Head Vampire",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "wTI7nZkPhKxl7Wwq",
   "system": {
@@ -148,7 +148,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -494,7 +494,7 @@
       "name": "The Hunt Is On",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend 2 Fear</strong> to summon [[/r 1d4]] @UUID[Compendium.daggerheart.adversaries.Actor.WWyUp6Mxl1S3KYUG]{Vampires}, who appear at Far range and immediately take the spotlight.</p>",
+        "description": "<p><strong>Spend 2 Fear</strong> to summon [[/r 1d4]] @UUID[Compendium.daggerheart-ja.adversaries.Actor.WWyUp6Mxl1S3KYUG]{Vampires}, who appear at Far range and immediately take the spotlight.</p>",
         "resource": null,
         "actions": {
           "jGFOnU6PNdWU6iF4": {
@@ -517,7 +517,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.WWyUp6Mxl1S3KYUG",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.WWyUp6Mxl1S3KYUG",
                 "count": "1d4"
               }
             ],

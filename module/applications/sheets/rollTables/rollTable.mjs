@@ -15,16 +15,16 @@ export default class DhRollTableSheet extends foundry.applications.sheets.RollTa
         return {
             sheet: {
                 ...sheet,
-                template: 'systems/daggerheart/templates/sheets/rollTable/sheet.hbs'
+                template: 'systems/daggerheart-ja/templates/sheets/rollTable/sheet.hbs'
             },
-            header: { template: 'systems/daggerheart/templates/sheets/rollTable/header.hbs' },
+            header: { template: 'systems/daggerheart-ja/templates/sheets/rollTable/header.hbs' },
             ...parts,
             results: {
-                template: 'systems/daggerheart/templates/sheets/rollTable/results.hbs',
+                template: 'systems/daggerheart-ja/templates/sheets/rollTable/results.hbs',
                 templates: ['templates/sheets/roll-table/result-details.hbs'],
                 scrollable: ['table[data-results] tbody']
             },
-            summary: { template: 'systems/daggerheart/templates/sheets/rollTable/summary.hbs' },
+            summary: { template: 'systems/daggerheart-ja/templates/sheets/rollTable/summary.hbs' },
             footer
         };
     }

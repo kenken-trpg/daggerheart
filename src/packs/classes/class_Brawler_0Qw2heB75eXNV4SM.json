@@ -20,30 +20,30 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.pPP9dHHa00lekbuu"
+        "item": "Compendium.daggerheart-ja.classes.Item.pPP9dHHa00lekbuu"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.WgUrpNTlX92k0Xs3"
+        "item": "Compendium.daggerheart-ja.classes.Item.WgUrpNTlX92k0Xs3"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.LtG3pKzd4gtfLgFJ"
+        "item": "Compendium.daggerheart-ja.classes.Item.LtG3pKzd4gtfLgFJ"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk",
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.73XdemkRkYNFiMqN",
-        "Compendium.daggerheart.classes.Item.wVYM6LqwYCKwwbh4"
+        "Compendium.daggerheart-ja.classes.Item.73XdemkRkYNFiMqN",
+        "Compendium.daggerheart-ja.classes.Item.wVYM6LqwYCKwwbh4"
       ]
     },
     "characterGuide": {
@@ -57,7 +57,7 @@
       },
       "suggestedPrimaryWeapon": null,
       "suggestedSecondaryWeapon": null,
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.uL6AvEhXGaFlzjjS"
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.uL6AvEhXGaFlzjjS"
     },
     "backgroundQuestions": [
       "Where did you spend time during your formative years that taught you, directly or indirectly, how to fight in the style you use?",

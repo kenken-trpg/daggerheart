@@ -1,6 +1,6 @@
 {
   "name": "Outpost Town",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "GQ0VnOLrKBIHR6Us",
   "system": {
@@ -8,19 +8,19 @@
       "yZr3dTicergVkU0d": {
         "label": "Jagged Knife Bandits",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.MbBPIOxaxXYNApXz",
-          "Compendium.daggerheart.adversaries.Actor.CBKixLH3yhivZZuL",
-          "Compendium.daggerheart.adversaries.Actor.C0OMQqV7pN6t7ouR",
-          "Compendium.daggerheart.adversaries.Actor.aTljstqteGoLpCBq",
-          "Compendium.daggerheart.adversaries.Actor.XF4tYTq9nPJAy2ox",
-          "Compendium.daggerheart.adversaries.Actor.1zuyof1XuIfi3aMG"
+          "Compendium.daggerheart-ja.adversaries.Actor.MbBPIOxaxXYNApXz",
+          "Compendium.daggerheart-ja.adversaries.Actor.CBKixLH3yhivZZuL",
+          "Compendium.daggerheart-ja.adversaries.Actor.C0OMQqV7pN6t7ouR",
+          "Compendium.daggerheart-ja.adversaries.Actor.aTljstqteGoLpCBq",
+          "Compendium.daggerheart-ja.adversaries.Actor.XF4tYTq9nPJAy2ox",
+          "Compendium.daggerheart-ja.adversaries.Actor.1zuyof1XuIfi3aMG"
         ]
       },
       "KZSZadT58Pd1kaDH": {
         "label": "Other",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.niBpVU7yeo5ccskE",
-          "Compendium.daggerheart.adversaries.Actor.Al3w2CgjfdT3p9ma"
+          "Compendium.daggerheart-ja.adversaries.Actor.niBpVU7yeo5ccskE",
+          "Compendium.daggerheart-ja.adversaries.Actor.Al3w2CgjfdT3p9ma"
         ]
       }
     },
@@ -46,7 +46,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -232,14 +232,14 @@
       "name": "Wrong Place, Wrong Time",
       "type": "feature",
       "system": {
-        "description": "<p>At night, or when the party is alone in a back alley, you can <strong>spend a Fear</strong> to introduce a group of thieves who try to rob them. The thieves appear at Close range of a chosen PC and include a @UUID[Compendium.daggerheart.adversaries.Actor.CBKixLH3yhivZZuL]{Jagged Knife Kneebreaker}, as many @UUID[Compendium.daggerheart.adversaries.Actor.C0OMQqV7pN6t7ouR]{Lackeys} as there are PCs, and a @UUID[Compendium.daggerheart.adversaries.Actor.aTljstqteGoLpCBq]{Lieutenant}. For a larger party, add a @UUID[Compendium.daggerheart.adversaries.Actor.MbBPIOxaxXYNApXz]{Hexer} or @UUID[Compendium.daggerheart.adversaries.Actor.1zuyof1XuIfi3aMG]{Jagged Knife Sniper}.</p><section class=\"secret\" id=\"secret-5MEuvRtxMnpLEwAA\"><p><em>What details show the party that these people are desperate former adventurers?</em></p></section>",
+        "description": "<p>At night, or when the party is alone in a back alley, you can <strong>spend a Fear</strong> to introduce a group of thieves who try to rob them. The thieves appear at Close range of a chosen PC and include a @UUID[Compendium.daggerheart-ja.adversaries.Actor.CBKixLH3yhivZZuL]{Jagged Knife Kneebreaker}, as many @UUID[Compendium.daggerheart-ja.adversaries.Actor.C0OMQqV7pN6t7ouR]{Lackeys} as there are PCs, and a @UUID[Compendium.daggerheart-ja.adversaries.Actor.aTljstqteGoLpCBq]{Lieutenant}. For a larger party, add a @UUID[Compendium.daggerheart-ja.adversaries.Actor.MbBPIOxaxXYNApXz]{Hexer} or @UUID[Compendium.daggerheart-ja.adversaries.Actor.1zuyof1XuIfi3aMG]{Jagged Knife Sniper}.</p><section class=\"secret\" id=\"secret-5MEuvRtxMnpLEwAA\"><p><em>What details show the party that these people are desperate former adventurers?</em></p></section>",
         "resource": null,
         "actions": {
           "UBHQzK5D6Dn5QuPc": {
             "type": "effect",
             "_id": "UBHQzK5D6Dn5QuPc",
             "systemPath": "actions",
-            "description": "<p>At night, or when the party is alone in a back alley, you can <strong>spend a Fear</strong> to introduce a group of thieves who try to rob them. The thieves appear at Close range of a chosen PC and include a @UUID[Compendium.daggerheart.adversaries.Actor.CBKixLH3yhivZZuL]{Jagged Knife Kneebreaker}, as many @UUID[Compendium.daggerheart.adversaries.Actor.C0OMQqV7pN6t7ouR]{Lackeys} as there are PCs, and a @UUID[Compendium.daggerheart.adversaries.Actor.aTljstqteGoLpCBq]{Lieutenant}.</p><section id=\"secret-8U6iwKGNeWQ27x1A\" class=\"secret\"><p>For a larger party, add a @UUID[Compendium.daggerheart.adversaries.Actor.MbBPIOxaxXYNApXz]{Hexer} or @UUID[Compendium.daggerheart.adversaries.Actor.1zuyof1XuIfi3aMG]{Jagged Knife Sniper}.</p><p><em>What details show the party that these people are desperate former adventurers?</em></p></section>",
+            "description": "<p>At night, or when the party is alone in a back alley, you can <strong>spend a Fear</strong> to introduce a group of thieves who try to rob them. The thieves appear at Close range of a chosen PC and include a @UUID[Compendium.daggerheart-ja.adversaries.Actor.CBKixLH3yhivZZuL]{Jagged Knife Kneebreaker}, as many @UUID[Compendium.daggerheart-ja.adversaries.Actor.C0OMQqV7pN6t7ouR]{Lackeys} as there are PCs, and a @UUID[Compendium.daggerheart-ja.adversaries.Actor.aTljstqteGoLpCBq]{Lieutenant}.</p><section id=\"secret-8U6iwKGNeWQ27x1A\" class=\"secret\"><p>For a larger party, add a @UUID[Compendium.daggerheart-ja.adversaries.Actor.MbBPIOxaxXYNApXz]{Hexer} or @UUID[Compendium.daggerheart-ja.adversaries.Actor.1zuyof1XuIfi3aMG]{Jagged Knife Sniper}.</p><p><em>What details show the party that these people are desperate former adventurers?</em></p></section>",
             "chatDisplay": true,
             "actionType": "action",
             "cost": [

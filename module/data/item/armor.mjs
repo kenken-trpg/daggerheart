@@ -44,7 +44,7 @@ export default class DHArmor extends BaseDataItem {
     /* -------------------------------------------- */
 
     /**@override */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/items/chest-armor.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/items/chest-armor.svg';
 
     /* -------------------------------------------- */
 
@@ -65,7 +65,7 @@ export default class DHArmor extends BaseDataItem {
         const features = this.armorFeatures.map(x => allFeatures[x.value]).filter(x => x);
 
         const prefix = await foundry.applications.handlebars.renderTemplate(
-            'systems/daggerheart/templates/sheets/items/description.hbs',
+            'systems/daggerheart-ja/templates/sheets/items/description.hbs',
             { features }
         );
 

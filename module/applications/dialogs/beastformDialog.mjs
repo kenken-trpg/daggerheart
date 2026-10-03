@@ -51,12 +51,12 @@ export default class BeastformDialog extends HandlebarsApplicationMixin(Applicat
 
     /** @override */
     static PARTS = {
-        header: { template: 'systems/daggerheart/templates/dialogs/beastform/header.hbs' },
-        tabs: { template: 'systems/daggerheart/templates/dialogs/beastform/tabs.hbs' },
-        beastformTier: { template: 'systems/daggerheart/templates/dialogs/beastform/beastformTier.hbs' },
-        advanced: { template: 'systems/daggerheart/templates/dialogs/beastform/advanced.hbs' },
-        modifications: { template: 'systems/daggerheart/templates/dialogs/beastform/modifications.hbs' },
-        footer: { template: 'systems/daggerheart/templates/dialogs/beastform/footer.hbs' }
+        header: { template: 'systems/daggerheart-ja/templates/dialogs/beastform/header.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/dialogs/beastform/tabs.hbs' },
+        beastformTier: { template: 'systems/daggerheart-ja/templates/dialogs/beastform/beastformTier.hbs' },
+        advanced: { template: 'systems/daggerheart-ja/templates/dialogs/beastform/advanced.hbs' },
+        modifications: { template: 'systems/daggerheart-ja/templates/dialogs/beastform/modifications.hbs' },
+        footer: { template: 'systems/daggerheart-ja/templates/dialogs/beastform/footer.hbs' }
     };
 
     /** @inheritdoc */

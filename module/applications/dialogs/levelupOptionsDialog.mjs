@@ -27,9 +27,9 @@ export default class LevelupOptionsDialog extends HandlebarsApplicationMixin(App
     };
 
     static PARTS = {
-        header: { template: 'systems/daggerheart/templates/dialogs/levelupOptionsDialog/header.hbs' },
-        tabs: { template: 'systems/daggerheart/templates/sheets/global/tabs/tab-navigation.hbs' },
-        tiers: { template: 'systems/daggerheart/templates/dialogs/levelupOptionsDialog/tiers.hbs' }
+        header: { template: 'systems/daggerheart-ja/templates/dialogs/levelupOptionsDialog/header.hbs' },
+        tabs: { template: 'systems/daggerheart-ja/templates/sheets/global/tabs/tab-navigation.hbs' },
+        tiers: { template: 'systems/daggerheart-ja/templates/dialogs/levelupOptionsDialog/tiers.hbs' }
     };
 
     /** @inheritdoc */

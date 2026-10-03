@@ -20,30 +20,30 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.7nIDpcWOGzO8Y6gq"
+        "item": "Compendium.daggerheart-ja.classes.Item.7nIDpcWOGzO8Y6gq"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.EFgQVcDiADsKxG3T"
+        "item": "Compendium.daggerheart-ja.classes.Item.EFgQVcDiADsKxG3T"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.koq6qy5n7alp7kcb"
+        "item": "Compendium.daggerheart-ja.classes.Item.koq6qy5n7alp7kcb"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk",
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.JqqUpW7aqMuNoqXc",
-        "Compendium.daggerheart.classes.Item.l787jY8NXcccj6GA"
+        "Compendium.daggerheart-ja.classes.Item.JqqUpW7aqMuNoqXc",
+        "Compendium.daggerheart-ja.classes.Item.l787jY8NXcccj6GA"
       ]
     },
     "characterGuide": {
@@ -55,9 +55,9 @@
         "presence": 1,
         "knowledge": 1
       },
-      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.eCEf5ysz8Eq0ma9u",
-      "suggestedSecondaryWeapon": "Compendium.daggerheart.weapons.Item.nuTwQsR2XTOsVfbR",
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.rWDk8ovwnBrBwWRR"
+      "suggestedPrimaryWeapon": "Compendium.daggerheart-ja.weapons.Item.eCEf5ysz8Eq0ma9u",
+      "suggestedSecondaryWeapon": "Compendium.daggerheart-ja.weapons.Item.nuTwQsR2XTOsVfbR",
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.rWDk8ovwnBrBwWRR"
     },
     "backgroundQuestions": [
       "Who from your community feared your magical craft? What rumor did they spread about you, and what truth did it contain?",

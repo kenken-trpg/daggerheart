@@ -15,34 +15,34 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.ieiQlD0joWSqt53D"
+        "item": "Compendium.daggerheart-ja.classes.Item.ieiQlD0joWSqt53D"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.CHK32dfCTTyuxV1A"
+        "item": "Compendium.daggerheart-ja.classes.Item.CHK32dfCTTyuxV1A"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.cshTYdtz9yoXYYB3"
+        "item": "Compendium.daggerheart-ja.classes.Item.cshTYdtz9yoXYYB3"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.P02cbN50LIoD662z"
+        "item": "Compendium.daggerheart-ja.classes.Item.P02cbN50LIoD662z"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk",
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.Yum0uBtnEtTBcpax",
-        "Compendium.daggerheart.classes.Item.9AM1YsPeuWSysdDo"
+        "Compendium.daggerheart-ja.classes.Item.Yum0uBtnEtTBcpax",
+        "Compendium.daggerheart-ja.classes.Item.9AM1YsPeuWSysdDo"
       ]
     },
     "characterGuide": {
@@ -54,9 +54,9 @@
         "presence": 1,
         "knowledge": 0
       },
-      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.j8cdNeIUYxxzFVji",
+      "suggestedPrimaryWeapon": "Compendium.daggerheart-ja.weapons.Item.j8cdNeIUYxxzFVji",
       "suggestedSecondaryWeapon": null,
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.yJFp1bfpecDcStVK"
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.yJFp1bfpecDcStVK"
     },
     "isMulticlass": false,
     "attribution": {

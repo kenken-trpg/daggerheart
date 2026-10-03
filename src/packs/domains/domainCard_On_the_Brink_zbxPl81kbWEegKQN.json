@@ -1,6 +1,6 @@
 {
   "name": "On the Brink",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/bone.png",
   "type": "domainCard",
   "folder": "eg2vM8j9xhya9Rwa",
   "system": {
@@ -48,7 +48,7 @@
         "conditionals": []
       },
       "_id": "UJTsJlnhi5Zi0XQ2",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/bone.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/bone.png",
       "disabled": true,
       "duration": {
         "value": null,

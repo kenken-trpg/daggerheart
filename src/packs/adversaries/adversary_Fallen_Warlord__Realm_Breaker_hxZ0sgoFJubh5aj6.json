@@ -3,7 +3,7 @@
   "name": "Fallen Warlord: Realm-Breaker",
   "type": "adversary",
   "_id": "hxZ0sgoFJubh5aj6",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "system": {
     "description": "<p><em>A Fallen God, wreathed in rage and resentment, bearing millennia of experience in breaking heroes' spirits.</em></p>",
     "resistance": {
@@ -156,7 +156,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -506,14 +506,14 @@
       "name": "All-Consuming Rage",
       "type": "feature",
       "system": {
-        "description": "<p><em>Countdown (Decreasing 8)</em>. When the @Lookup[@name] is in the spotlight for the first time, activate the countdown. When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within Far range must make a Presence Reaction Roll. Targets who fail take <strong>2d6+10</strong> direct magic damage. Targets who succeed take half damage. For each HP marked from this damage, summon a @UUID[Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troop} within Very Close range of the target who marked that HP. If the countdown ever decreases its maximum value to 0, the @Lookup[@name] marks their remaining HP and all targets within Far range must mark all remaining HP and make a death move.</p>",
+        "description": "<p><em>Countdown (Decreasing 8)</em>. When the @Lookup[@name] is in the spotlight for the first time, activate the countdown. When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within Far range must make a Presence Reaction Roll. Targets who fail take <strong>2d6+10</strong> direct magic damage. Targets who succeed take half damage. For each HP marked from this damage, summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troop} within Very Close range of the target who marked that HP. If the countdown ever decreases its maximum value to 0, the @Lookup[@name] marks their remaining HP and all targets within Far range must mark all remaining HP and make a death move.</p>",
         "resource": null,
         "actions": {
           "rgy5wXyXJWh6uWxC": {
             "type": "attack",
             "_id": "rgy5wXyXJWh6uWxC",
             "systemPath": "actions",
-            "description": "<p>When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within Far range must make a Presence Reaction Roll. Targets who fail take <strong>2d6+10</strong> direct magic damage. Targets who succeed take half damage. For each HP marked from this damage, summon a @UUID[Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troop} within Very Close range of the target who marked that HP. If the countdown ever decreases its maximum value to 0, the @Lookup[@name] marks their remaining HP and all targets within Far range must mark all remaining HP and make a death move.</p>",
+            "description": "<p>When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within Far range must make a Presence Reaction Roll. Targets who fail take <strong>2d6+10</strong> direct magic damage. Targets who succeed take half damage. For each HP marked from this damage, summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troop} within Very Close range of the target who marked that HP. If the countdown ever decreases its maximum value to 0, the @Lookup[@name] marks their remaining HP and all targets within Far range must mark all remaining HP and make a death move.</p>",
             "chatDisplay": true,
             "actionType": "action",
             "cost": [],
@@ -742,7 +742,7 @@
       "name": "I Have Never Known Defeat",
       "type": "feature",
       "system": {
-        "description": "<p>When the @Lookup[@name] marks their last HP, replace them with the @UUID[Compendium.daggerheart.adversaries.Actor.RXkZTwBRi4dJ3JE5]{Fallen Warlord: Undefeated Champion} and immediately spotlight them.</p>",
+        "description": "<p>When the @Lookup[@name] marks their last HP, replace them with the @UUID[Compendium.daggerheart-ja.adversaries.Actor.RXkZTwBRi4dJ3JE5]{Fallen Warlord: Undefeated Champion} and immediately spotlight them.</p>",
         "resource": null,
         "actions": {
           "gP426WmWbtrZEWCD": {
@@ -765,7 +765,7 @@
               "consumeOnSuccess": false
             },
             "transform": {
-              "actorUUID": "Compendium.daggerheart.adversaries.Actor.RXkZTwBRi4dJ3JE5",
+              "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.RXkZTwBRi4dJ3JE5",
               "resourceRefresh": {
                 "hitPoints": true,
                 "stress": true

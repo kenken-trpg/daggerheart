@@ -1,6 +1,6 @@
 {
   "name": "Local Tavern",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "GQ0VnOLrKBIHR6Us",
   "system": {
@@ -8,23 +8,23 @@
       "H53IurNOv7hOTz88": {
         "label": "Guards",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy",
-          "Compendium.daggerheart.adversaries.Actor.mK3A5FTx6k8iPU3F"
+          "Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy",
+          "Compendium.daggerheart-ja.adversaries.Actor.mK3A5FTx6k8iPU3F"
         ]
       },
       "2g6jJtdA8WiA0ihA": {
         "label": "Mercenaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.uRtghKE9mHlII4rs",
-          "Compendium.daggerheart.adversaries.Actor.bgreCaQ6ap2DVpCr",
-          "Compendium.daggerheart.adversaries.Actor.ldbWEL7uZs84vyrR",
-          "Compendium.daggerheart.adversaries.Actor.ZNbQ2jg35LG4t9eH"
+          "Compendium.daggerheart-ja.adversaries.Actor.uRtghKE9mHlII4rs",
+          "Compendium.daggerheart-ja.adversaries.Actor.bgreCaQ6ap2DVpCr",
+          "Compendium.daggerheart-ja.adversaries.Actor.ldbWEL7uZs84vyrR",
+          "Compendium.daggerheart-ja.adversaries.Actor.ZNbQ2jg35LG4t9eH"
         ]
       },
       "TzAxfdQKMVRRx5z5": {
         "label": "Other",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.Al3w2CgjfdT3p9ma"
+          "Compendium.daggerheart-ja.adversaries.Actor.Al3w2CgjfdT3p9ma"
         ]
       }
     },
@@ -50,7 +50,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

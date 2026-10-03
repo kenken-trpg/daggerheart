@@ -20,30 +20,30 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.QmFMbJzPV7DPLvjk"
+        "item": "Compendium.daggerheart-ja.classes.Item.QmFMbJzPV7DPLvjk"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.IOWBzweDFPoAHtQW"
+        "item": "Compendium.daggerheart-ja.classes.Item.IOWBzweDFPoAHtQW"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.OGPn7DUJoJwAXh8o"
+        "item": "Compendium.daggerheart-ja.classes.Item.OGPn7DUJoJwAXh8o"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk",
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.c1jomE48GRyNeXMY",
-        "Compendium.daggerheart.classes.Item.KGnwxeMYR4V7LJVi"
+        "Compendium.daggerheart-ja.classes.Item.c1jomE48GRyNeXMY",
+        "Compendium.daggerheart-ja.classes.Item.KGnwxeMYR4V7LJVi"
       ]
     },
     "characterGuide": {
@@ -55,9 +55,9 @@
         "presence": 2,
         "knowledge": 0
       },
-      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.813nH6tqOjBEvJMV",
-      "suggestedSecondaryWeapon": "Compendium.daggerheart.weapons.Item.A3kISypsGh9MNndo",
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.rWDk8ovwnBrBwWRR"
+      "suggestedPrimaryWeapon": "Compendium.daggerheart-ja.weapons.Item.813nH6tqOjBEvJMV",
+      "suggestedSecondaryWeapon": "Compendium.daggerheart-ja.weapons.Item.A3kISypsGh9MNndo",
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.rWDk8ovwnBrBwWRR"
     },
     "backgroundQuestions": [
       "Who from your community shunned you after you made a pact with your patron?",

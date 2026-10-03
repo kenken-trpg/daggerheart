@@ -1,6 +1,6 @@
 {
   "name": "Life Ward",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/splendor.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/splendor.png",
   "type": "domainCard",
   "folder": "vAZKNDtAafd7HDWV",
   "system": {
@@ -72,7 +72,7 @@
   "effects": [
     {
       "name": "Life Ward",
-      "img": "systems/daggerheart/assets/icons/domains/domain-card/splendor.png",
+      "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/splendor.png",
       "transfer": false,
       "_id": "E7Ou4OMEy3TeK1Gf",
       "type": "base",

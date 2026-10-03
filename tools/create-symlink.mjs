@@ -49,7 +49,7 @@ async function createDaggerheartSymlink() {
         return;
     }
 
-    const destination = path.join(dataPath, 'Data', 'systems', 'daggerheart');
+    const destination = path.join(dataPath, 'Data', 'systems', 'daggerheart-ja');
     if (fs.existsSync(destination)) {
         console.log('A Daggerheart folder already exists in Foundry data');
         return;

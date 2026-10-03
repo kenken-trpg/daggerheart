@@ -1,6 +1,6 @@
 {
   "name": "Dryad",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "type": "adversary",
   "folder": "wTI7nZkPhKxl7Wwq",
   "system": {
@@ -148,7 +148,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -389,7 +389,7 @@
       "name": "Grow Saplings",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend a Fear</strong> to grow three @UUID[Compendium.daggerheart.adversaries.Actor.o63nS0k3wHu6EgKP]{Treant Sapling Minions}, who appear at Close range and immediately take the spotlight.</p>",
+        "description": "<p><strong>Spend a Fear</strong> to grow three @UUID[Compendium.daggerheart-ja.adversaries.Actor.o63nS0k3wHu6EgKP]{Treant Sapling Minions}, who appear at Close range and immediately take the spotlight.</p>",
         "resource": null,
         "actions": {
           "R84DdS0OIx2cUt1w": {
@@ -412,7 +412,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.o63nS0k3wHu6EgKP",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.o63nS0k3wHu6EgKP",
                 "count": "3"
               }
             ],

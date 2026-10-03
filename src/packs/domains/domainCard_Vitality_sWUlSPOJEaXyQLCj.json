@@ -1,6 +1,6 @@
 {
   "name": "Vitality",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
   "type": "domainCard",
   "folder": "Emnx4o1DWGTVKoAg",
   "system": {
@@ -43,7 +43,7 @@
           "amount": null
         },
         "name": "Apply Effect",
-        "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+        "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
         "range": "",
         "baseAction": false,
         "originItem": {

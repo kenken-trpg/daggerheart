@@ -16,14 +16,14 @@
       "qy2gXfJmTL0CFppe": {
         "label": "The Dragon's Minions",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.VQjfu6GFyNlFSMgH",
-          "Compendium.daggerheart.adversaries.Actor.h5SPwKivPFqMgOrW"
+          "Compendium.daggerheart-ja.adversaries.Actor.VQjfu6GFyNlFSMgH",
+          "Compendium.daggerheart-ja.adversaries.Actor.h5SPwKivPFqMgOrW"
         ]
       },
       "o1qnuycew667nPOW": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.qe2bhZCyVou4lTO5"
+          "Compendium.daggerheart-ja.adversaries.Actor.qe2bhZCyVou4lTO5"
         ]
       }
     },
@@ -398,11 +398,11 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.VQjfu6GFyNlFSMgH",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.VQjfu6GFyNlFSMgH",
                 "count": "1d6"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.h5SPwKivPFqMgOrW",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.h5SPwKivPFqMgOrW",
                 "count": "2"
               }
             ],
@@ -426,7 +426,7 @@
     }
   ],
   "_id": "ta028s8hP4kvKTaw",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Dragon's Lair",
     "displayName": 0,
@@ -435,7 +435,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

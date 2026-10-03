@@ -36,9 +36,9 @@ Parameters:
             />
                 {{#if (and (not inactive) item.usable (ne showActions false))}}
                     {{#if @root.isNPC}}
-                        <img class="roll-img d20" src="systems/daggerheart/assets/icons/dice/default/d20.svg" alt="d20">
+                        <img class="roll-img d20" src="systems/daggerheart-ja/assets/icons/dice/default/d20.svg" alt="d20">
                     {{else}}
-                        <img class="roll-img duality" src="systems/daggerheart/assets/icons/dice/duality/DualityBW.svg" alt="2d12">
+                        <img class="roll-img duality" src="systems/daggerheart-ja/assets/icons/dice/duality/DualityBW.svg" alt="2d12">
                     {{/if}}
                 {{/if}}
             </div>
@@ -50,13 +50,13 @@ Parameters:
 
                 {{!-- Tags Start --}}
                 {{#if (not hideTags)}}
-                    {{#> "systems/daggerheart/templates/sheets/global/partials/item-tags.hbs" item}}
+                    {{#> "systems/daggerheart-ja/templates/sheets/global/partials/item-tags.hbs" item}}
                         {{#if (and (eq ../type 'feature') system.featureForm (ne @root.document.type "character"))}}
                             <div class="tag feature-form">
                                 <span class="recall-value">{{localize (concat "DAGGERHEART.CONFIG.FeatureForm." system.featureForm)}}</span>
                             </div>
                         {{/if}}
-                    {{/ "systems/daggerheart/templates/sheets/global/partials/item-tags.hbs"}}
+                    {{/ "systems/daggerheart-ja/templates/sheets/global/partials/item-tags.hbs"}}
                 {{/if}}
 
             {{!--Tags End --}}
@@ -64,7 +64,7 @@ Parameters:
 
             {{!-- Simple Resource --}}
             {{#if (and (not hideResources) (not (eq item.system.resource.type 'diceValue')))}}
-                {{> "systems/daggerheart/templates/sheets/global/partials/item-resource.hbs"}}
+                {{> "systems/daggerheart-ja/templates/sheets/global/partials/item-resource.hbs"}}
             {{/if}}
             {{#if (or isQuantifiable (or (eq item.system.quantity 0) (gt item.system.quantity 1)))}}
                 <div class="item-resource">
@@ -146,7 +146,7 @@ Parameters:
     </div>
     {{!-- Dice Resource --}}
     {{#if (and (not hideResources) (eq item.system.resource.type 'diceValue'))}}
-        {{> "systems/daggerheart/templates/sheets/global/partials/item-resource.hbs"}}
+        {{> "systems/daggerheart-ja/templates/sheets/global/partials/item-resource.hbs"}}
     {{/if}}
     {{!-- Actions Buttons --}}
     {{#if (and showActions item.system.actions.size)}}

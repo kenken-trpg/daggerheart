@@ -633,7 +633,7 @@
               "consumeOnSuccess": false
             },
             "transform": {
-              "actorUUID": "Compendium.daggerheart.adversaries.Actor.fa50qKab3hPt9gkV",
+              "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.fa50qKab3hPt9gkV",
               "resourceRefresh": {
                 "hitPoints": true,
                 "stress": true
@@ -657,7 +657,7 @@
     }
   ],
   "_id": "C652lQ56oZWBhdNz",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "prototypeToken": {
     "name": "Shapeshifting Fiend",
     "displayName": 0,
@@ -666,7 +666,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

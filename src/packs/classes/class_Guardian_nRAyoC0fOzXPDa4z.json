@@ -15,26 +15,26 @@
     "features": [
       {
         "type": "hope",
-        "item": "Compendium.daggerheart.classes.Item.YS1g7YdWwOaS629x"
+        "item": "Compendium.daggerheart-ja.classes.Item.YS1g7YdWwOaS629x"
       },
       {
         "type": "class",
-        "item": "Compendium.daggerheart.classes.Item.PnD2UCgzIlwX6cY3"
+        "item": "Compendium.daggerheart-ja.classes.Item.PnD2UCgzIlwX6cY3"
       }
     ],
     "inventory": {
       "take": [
-        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
-        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk",
-        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw"
+        "Compendium.daggerheart-ja.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart-ja.classes.Item.uoG5iq09mxJPXfmk",
+        "Compendium.daggerheart-ja.classes.Item.zqeXrJTd1geX73Pw"
       ],
       "choiceA": [
-        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
-        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+        "Compendium.daggerheart-ja.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart-ja.consumables.Item.b6vGSPFWOlzZZDLO"
       ],
       "choiceB": [
-        "Compendium.daggerheart.classes.Item.d3VdAtW65oO8j14Y",
-        "Compendium.daggerheart.classes.Item.VVvIPx1cduyAb8jr"
+        "Compendium.daggerheart-ja.classes.Item.d3VdAtW65oO8j14Y",
+        "Compendium.daggerheart-ja.classes.Item.VVvIPx1cduyAb8jr"
       ]
     },
     "characterGuide": {
@@ -46,9 +46,9 @@
         "presence": 1,
         "knowledge": 0
       },
-      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.fbDYUja3ll9vCtrB",
+      "suggestedPrimaryWeapon": "Compendium.daggerheart-ja.weapons.Item.fbDYUja3ll9vCtrB",
       "suggestedSecondaryWeapon": null,
-      "suggestedArmor": "Compendium.daggerheart.armors.Item.haULhuEg37zUUvhb"
+      "suggestedArmor": "Compendium.daggerheart-ja.armors.Item.haULhuEg37zUUvhb"
     },
     "isMulticlass": false,
     "attribution": {

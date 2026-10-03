@@ -7,7 +7,7 @@ import { fromUuids } from '../../helpers/utils.mjs';
 export default class DhEnvironment extends BaseDataActor {
     scenes = new Set();
 
-    static embedTemplate = 'systems/daggerheart/templates/components/actor-embed/environment.hbs';
+    static embedTemplate = 'systems/daggerheart-ja/templates/components/actor-embed/environment.hbs';
 
     /**@override */
     static LOCALIZATION_PREFIXES = ['DAGGERHEART.ACTORS.Environment'];
@@ -51,7 +51,7 @@ export default class DhEnvironment extends BaseDataActor {
     /* -------------------------------------------- */
 
     /**@inheritdoc */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/actors/forest.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/actors/forest.svg';
 
     /* -------------------------------------------- */
 

@@ -16,16 +16,16 @@
       "vGJG6PfuucD4WEsB": {
         "label": "Darkweave Spiders",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.Z16fYvCNRlD4XZij",
-          "Compendium.daggerheart.adversaries.Actor.YdGTyYI6bBXh5lgV",
-          "Compendium.daggerheart.adversaries.Actor.ADiUlCE0woMcvnzv"
+          "Compendium.daggerheart-ja.adversaries.Actor.Z16fYvCNRlD4XZij",
+          "Compendium.daggerheart-ja.adversaries.Actor.YdGTyYI6bBXh5lgV",
+          "Compendium.daggerheart-ja.adversaries.Actor.ADiUlCE0woMcvnzv"
         ]
       },
       "pYwK3J4SaqK0Yiw6": {
         "label": "Miner Ghosts",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.ytj3VDog4hrC4TkO",
-          "Compendium.daggerheart.adversaries.Actor.XuGDFgTjn1vFQhyA"
+          "Compendium.daggerheart-ja.adversaries.Actor.ytj3VDog4hrC4TkO",
+          "Compendium.daggerheart-ja.adversaries.Actor.XuGDFgTjn1vFQhyA"
         ]
       }
     },
@@ -152,7 +152,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.PcBt4ggimibM7DCp",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.PcBt4ggimibM7DCp",
                 "count": "1"
               }
             ],
@@ -367,7 +367,7 @@
     }
   ],
   "_id": "wNfqitfA2Gq3SrF8",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Abandoned Mine",
     "displayName": 0,
@@ -376,7 +376,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -1,6 +1,6 @@
 {
   "name": "Raging River",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "GQ0VnOLrKBIHR6Us",
   "system": {
@@ -8,19 +8,19 @@
       "UUdCj6oiRrJ4QWWD": {
         "label": "Beasts",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.71qKDLKO3CsrNkdy",
-          "Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0"
+          "Compendium.daggerheart-ja.adversaries.Actor.71qKDLKO3CsrNkdy",
+          "Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0"
         ]
       },
       "IOPWkNbGuLvPgnSy": {
         "label": "Jagged Knife Bandits",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.MbBPIOxaxXYNApXz",
-          "Compendium.daggerheart.adversaries.Actor.CBKixLH3yhivZZuL",
-          "Compendium.daggerheart.adversaries.Actor.C0OMQqV7pN6t7ouR",
-          "Compendium.daggerheart.adversaries.Actor.aTljstqteGoLpCBq",
-          "Compendium.daggerheart.adversaries.Actor.XF4tYTq9nPJAy2ox",
-          "Compendium.daggerheart.adversaries.Actor.1zuyof1XuIfi3aMG"
+          "Compendium.daggerheart-ja.adversaries.Actor.MbBPIOxaxXYNApXz",
+          "Compendium.daggerheart-ja.adversaries.Actor.CBKixLH3yhivZZuL",
+          "Compendium.daggerheart-ja.adversaries.Actor.C0OMQqV7pN6t7ouR",
+          "Compendium.daggerheart-ja.adversaries.Actor.aTljstqteGoLpCBq",
+          "Compendium.daggerheart-ja.adversaries.Actor.XF4tYTq9nPJAy2ox",
+          "Compendium.daggerheart-ja.adversaries.Actor.1zuyof1XuIfi3aMG"
         ]
       }
     },
@@ -46,7 +46,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -362,7 +362,7 @@
       "name": "Patient Hunter",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend a Fear</strong> to summon a @UUID[Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0]{Glass Snake} within Close range of a chosen PC. The Snake appears in or near the river and immediately takes the spotlight to use their \"Spinning Serpent\" action.</p><section class=\"secret\" id=\"secret-F8zsJQg3xWOPpH5v\"><p><em>What treasures does the beast have in their burrow? What travelers have already fallen victim to this predator?</em></p></section>",
+        "description": "<p><strong>Spend a Fear</strong> to summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0]{Glass Snake} within Close range of a chosen PC. The Snake appears in or near the river and immediately takes the spotlight to use their \"Spinning Serpent\" action.</p><section class=\"secret\" id=\"secret-F8zsJQg3xWOPpH5v\"><p><em>What treasures does the beast have in their burrow? What travelers have already fallen victim to this predator?</em></p></section>",
         "resource": null,
         "actions": {
           "uY9HMKE4Q5g7bRKg": {
@@ -394,7 +394,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0",
                 "count": "1"
               }
             ],

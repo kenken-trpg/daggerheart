@@ -1,6 +1,6 @@
 {
   "name": "Divine Usurpation",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "IKumu5HTLqONLYqb",
   "system": {
@@ -8,11 +8,11 @@
       "IMQDBXkxdUIUSjsm": {
         "label": "Other",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.WPEOIGfclNJxWb87",
-          "Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9",
-          "Compendium.daggerheart.adversaries.Actor.mVV7a7KQAORoPMgZ",
-          "Compendium.daggerheart.adversaries.Actor.befIqd5IYKg6eUz2",
-          "Compendium.daggerheart.adversaries.Actor.CP6iRfHdyFWniTHY"
+          "Compendium.daggerheart-ja.adversaries.Actor.WPEOIGfclNJxWb87",
+          "Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9",
+          "Compendium.daggerheart-ja.adversaries.Actor.mVV7a7KQAORoPMgZ",
+          "Compendium.daggerheart-ja.adversaries.Actor.befIqd5IYKg6eUz2",
+          "Compendium.daggerheart-ja.adversaries.Actor.CP6iRfHdyFWniTHY"
         ]
       }
     },
@@ -38,7 +38,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -246,7 +246,7 @@
       "name": "Difilers Abound",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend 2 Fear</strong> to summon [[/r 1d4+2]] @UUID[Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troop} that appear within Close range of the Usurper to assist their divine siege. Immediately spotlight the Shock Troops to use a \"Group Attack\" action.</p><section class=\"secret\" id=\"secret-QJHdwGNSuTgS59gn\"><p><em>Which High Fallen do these troops serve? Which god's fl esh do they wish to feast upon?</em></p></section>",
+        "description": "<p><strong>Spend 2 Fear</strong> to summon [[/r 1d4+2]] @UUID[Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troop} that appear within Close range of the Usurper to assist their divine siege. Immediately spotlight the Shock Troops to use a \"Group Attack\" action.</p><section class=\"secret\" id=\"secret-QJHdwGNSuTgS59gn\"><p><em>Which High Fallen do these troops serve? Which god's fl esh do they wish to feast upon?</em></p></section>",
         "resource": null,
         "actions": {
           "okcqGrI4rdghugUi": {
@@ -269,7 +269,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9",
                 "count": "1d4+2"
               }
             ],

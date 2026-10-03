@@ -16,17 +16,17 @@
       "XrsOn1uflDlwE4EM": {
         "label": "Operatives",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.niBpVU7yeo5ccskE",
-          "Compendium.daggerheart.adversaries.Actor.dNta0cUzr96xcFhf",
-          "Compendium.daggerheart.adversaries.Actor.8zlynOhnVA59KpKT"
+          "Compendium.daggerheart-ja.adversaries.Actor.niBpVU7yeo5ccskE",
+          "Compendium.daggerheart-ja.adversaries.Actor.dNta0cUzr96xcFhf",
+          "Compendium.daggerheart-ja.adversaries.Actor.8zlynOhnVA59KpKT"
         ]
       },
       "vLC92lDxsxj3rHvi": {
         "label": "Revelers",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.ZxWaWPdzFIUPNC62",
-          "Compendium.daggerheart.adversaries.Actor.Vy02IhGhkJLuezu4",
-          "Compendium.daggerheart.adversaries.Actor.EtLJiTsilPPZvLUX"
+          "Compendium.daggerheart-ja.adversaries.Actor.ZxWaWPdzFIUPNC62",
+          "Compendium.daggerheart-ja.adversaries.Actor.Vy02IhGhkJLuezu4",
+          "Compendium.daggerheart-ja.adversaries.Actor.EtLJiTsilPPZvLUX"
         ]
       }
     },
@@ -169,7 +169,7 @@
     }
   ],
   "_id": "2LTMLwpFCDE9Ih88",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Masquerade Ball",
     "displayName": 0,
@@ -178,7 +178,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

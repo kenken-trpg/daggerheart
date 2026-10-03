@@ -98,7 +98,7 @@ export default class DHWeapon extends BaseDataItem {
     /* -------------------------------------------- */
 
     /**@override */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/items/battered-axe.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/items/battered-axe.svg';
 
     /* -------------------------------------------- */
 
@@ -134,7 +134,7 @@ export default class DHWeapon extends BaseDataItem {
         const features = this.weaponFeatures.map(x => allFeatures[x.value]).filter(x => x);
 
         const prefix = await foundry.applications.handlebars.renderTemplate(
-            'systems/daggerheart/templates/sheets/items/description.hbs',
+            'systems/daggerheart-ja/templates/sheets/items/description.hbs',
             { features }
         );
 

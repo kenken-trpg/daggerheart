@@ -3,7 +3,7 @@
   "name": "Fallen Warlord: Undefeated Champion",
   "type": "adversary",
   "_id": "RXkZTwBRi4dJ3JE5",
-  "img": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
   "system": {
     "description": "<p><em>That which only the most feared have a chance to fear.</em></p>",
     "resistance": {
@@ -156,7 +156,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/dragon-head.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/dragon-head.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -506,7 +506,7 @@
       "name": "Endless Legions",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend a Fear</strong> to summon a number of @UUID[Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troops} equal to twice the number of PCs. The Shock Troops appear at Far range.</p>",
+        "description": "<p><strong>Spend a Fear</strong> to summon a number of @UUID[Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9]{Fallen Shock Troops} equal to twice the number of PCs. The Shock Troops appear at Far range.</p>",
         "resource": null,
         "actions": {
           "SrU7qbh8LcOgfozT": {
@@ -539,7 +539,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.OsLG2BjaEdTZUJU9",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.OsLG2BjaEdTZUJU9",
                 "count": "@partySize*2"
               }
             ],

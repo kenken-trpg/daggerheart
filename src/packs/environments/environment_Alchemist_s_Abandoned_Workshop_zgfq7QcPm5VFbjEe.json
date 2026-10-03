@@ -16,10 +16,10 @@
       "wk749LjUruN8wDBK": {
         "label": "Lab Leftovers",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.uOP5oT9QzXPlnf3p",
-          "Compendium.daggerheart.adversaries.Actor.DscWkNVoHak6P4hh",
-          "Compendium.daggerheart.adversaries.Actor.EQTOAOUrkIvS2z88",
-          "Compendium.daggerheart.adversaries.Actor.qNgs3AbLyJrY19nt"
+          "Compendium.daggerheart-ja.adversaries.Actor.uOP5oT9QzXPlnf3p",
+          "Compendium.daggerheart-ja.adversaries.Actor.DscWkNVoHak6P4hh",
+          "Compendium.daggerheart-ja.adversaries.Actor.EQTOAOUrkIvS2z88",
+          "Compendium.daggerheart-ja.adversaries.Actor.qNgs3AbLyJrY19nt"
         ]
       }
     },
@@ -285,7 +285,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.ChwwVqowFw8hJQwT",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.ChwwVqowFw8hJQwT",
                 "count": "1"
               }
             ],
@@ -309,7 +309,7 @@
     }
   ],
   "_id": "zgfq7QcPm5VFbjEe",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Alchemist's Abandoned Workshop",
     "displayName": 0,
@@ -318,7 +318,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

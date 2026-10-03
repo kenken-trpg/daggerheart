@@ -1,6 +1,6 @@
 {
   "name": "Hallowed Temple",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "XMeecO3IRvu5ck6F",
   "system": {
@@ -8,9 +8,9 @@
       "4oKNnCRPuWEFni6D": {
         "label": "Guards",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.JRhrrEg5UroURiAD",
-          "Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy",
-          "Compendium.daggerheart.adversaries.Actor.mK3A5FTx6k8iPU3F"
+          "Compendium.daggerheart-ja.adversaries.Actor.JRhrrEg5UroURiAD",
+          "Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy",
+          "Compendium.daggerheart-ja.adversaries.Actor.mK3A5FTx6k8iPU3F"
         ]
       }
     },
@@ -36,7 +36,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -319,7 +319,7 @@
       "name": "Divine Censure",
       "type": "feature",
       "system": {
-        "description": "<p>When the PCs have trespassed, blasphemed, or offended the clergy, you can <strong>spend a Fear</strong> to summon a @UUID[Compendium.daggerheart.adversaries.Actor.r1mbfSSwKWdcFdAU]{High Seraph} and [[/r 1d4]] @UUID[Compendium.daggerheart.adversaries.Actor.B4LZcGuBAHzyVdzy]{Bladed Guard} within Close range of the senior priest to reinforce their will.</p><section class=\"secret\" id=\"secret-bJG5Vk2KPgau6rQB\"><p><em>What symbols or icons do they bear that signal they are anointed agents of the divinity? Who leads the group and what led them to this calling?</em></p></section>",
+        "description": "<p>When the PCs have trespassed, blasphemed, or offended the clergy, you can <strong>spend a Fear</strong> to summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.r1mbfSSwKWdcFdAU]{High Seraph} and [[/r 1d4]] @UUID[Compendium.daggerheart-ja.adversaries.Actor.B4LZcGuBAHzyVdzy]{Bladed Guard} within Close range of the senior priest to reinforce their will.</p><section class=\"secret\" id=\"secret-bJG5Vk2KPgau6rQB\"><p><em>What symbols or icons do they bear that signal they are anointed agents of the divinity? Who leads the group and what led them to this calling?</em></p></section>",
         "resource": null,
         "actions": {
           "pJVipg7CbA9CB0Um": {

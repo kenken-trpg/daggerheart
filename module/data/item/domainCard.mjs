@@ -1,7 +1,7 @@
 import BaseDataItem from './base.mjs';
 
 export default class DHDomainCard extends BaseDataItem {
-    static embedTemplate = 'systems/daggerheart/templates/components/card/domain.hbs';
+    static embedTemplate = 'systems/daggerheart-ja/templates/components/card/domain.hbs';
 
     /** @inheritDoc */
     static get metadata() {
@@ -70,7 +70,7 @@ export default class DHDomainCard extends BaseDataItem {
     /* -------------------------------------------- */
 
     /**@override */
-    static DEFAULT_ICON = 'systems/daggerheart/assets/icons/documents/items/card-play.svg';
+    static DEFAULT_ICON = 'systems/daggerheart-ja/assets/icons/documents/items/card-play.svg';
 
     /* -------------------------------------------- */
 

@@ -2,21 +2,21 @@ export const domains = {
     arcana: {
         id: 'arcana',
         label: 'DAGGERHEART.GENERAL.Domain.arcana.label',
-        src: 'systems/daggerheart/assets/icons/domains/arcana.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/arcana.svg',
         description: 'DAGGERHEART.GENERAL.Domain.arcana.description',
         color: '#4e345b'
     },
     blade: {
         id: 'blade',
         label: 'DAGGERHEART.GENERAL.Domain.blade.label',
-        src: 'systems/daggerheart/assets/icons/domains/blade.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/blade.svg',
         description: 'DAGGERHEART.GENERAL.Domain.blade.description',
         color: '#af231c'
     },
     bone: {
         id: 'bone',
         label: 'DAGGERHEART.GENERAL.Domain.bone.label',
-        src: 'systems/daggerheart/assets/icons/domains/bone.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/bone.svg',
         description: 'DAGGERHEART.GENERAL.Domain.bone.description',
         color: '#a4a9a8',
         invertText: true
@@ -24,42 +24,42 @@ export const domains = {
     codex: {
         id: 'codex',
         label: 'DAGGERHEART.GENERAL.Domain.codex.label',
-        src: 'systems/daggerheart/assets/icons/domains/codex.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/codex.svg',
         description: 'DAGGERHEART.GENERAL.Domain.codex.description',
         color: '#24395d'
     },
     dread: {
         id: 'dread',
         label: 'DAGGERHEART.GENERAL.Domain.dread.label',
-        src: 'systems/daggerheart/assets/icons/domains/dread.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/dread.svg',
         description: 'DAGGERHEART.GENERAL.Domain.dread.description',
         color: '#2f2862'
     },
     grace: {
         id: 'grace',
         label: 'DAGGERHEART.GENERAL.Domain.grace.label',
-        src: 'systems/daggerheart/assets/icons/domains/grace.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/grace.svg',
         description: 'DAGGERHEART.GENERAL.Domain.grace.description',
         color: '#8d3965'
     },
     midnight: {
         id: 'midnight',
         label: 'DAGGERHEART.GENERAL.Domain.midnight.label',
-        src: 'systems/daggerheart/assets/icons/domains/midnight.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/midnight.svg',
         description: 'DAGGERHEART.GENERAL.Domain.midnight.description',
         color: '#1e201f'
     },
     sage: {
         id: 'sage',
         label: 'DAGGERHEART.GENERAL.Domain.sage.label',
-        src: 'systems/daggerheart/assets/icons/domains/sage.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/sage.svg',
         description: 'DAGGERHEART.GENERAL.Domain.sage.description',
         color: '#244e30'
     },
     splendor: {
         id: 'splendor',
         label: 'DAGGERHEART.GENERAL.Domain.splendor.label',
-        src: 'systems/daggerheart/assets/icons/domains/splendor.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/splendor.svg',
         description: 'DAGGERHEART.GENERAL.Domain.splendor.description',
         color: '#b8a342',
         invertText: true
@@ -67,7 +67,7 @@ export const domains = {
     valor: {
         id: 'valor',
         label: 'DAGGERHEART.GENERAL.Domain.valor.label',
-        src: 'systems/daggerheart/assets/icons/domains/valor.svg',
+        src: 'systems/daggerheart-ja/assets/icons/domains/valor.svg',
         description: 'DAGGERHEART.GENERAL.Domain.valor.description',
         color: '#e2680e'
     }

@@ -1,6 +1,6 @@
 {
   "name": "Abandoned Grove",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "type": "environment",
   "folder": "GQ0VnOLrKBIHR6Us",
   "system": {
@@ -8,17 +8,17 @@
       "VbbsqTQkmScgraqy": {
         "label": "Beasts",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.71qKDLKO3CsrNkdy",
-          "Compendium.daggerheart.adversaries.Actor.wNzeuQLfLUMvgHlQ",
-          "Compendium.daggerheart.adversaries.Actor.8KWVLWXFhlY2kYx0"
+          "Compendium.daggerheart-ja.adversaries.Actor.71qKDLKO3CsrNkdy",
+          "Compendium.daggerheart-ja.adversaries.Actor.wNzeuQLfLUMvgHlQ",
+          "Compendium.daggerheart-ja.adversaries.Actor.8KWVLWXFhlY2kYx0"
         ]
       },
       "oKq6LhpXvSWnmqyS": {
         "label": "Grove Guardians",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.G62k4oSkhkoXEs2D",
-          "Compendium.daggerheart.adversaries.Actor.VtFBt9XBE0WrGGxP",
-          "Compendium.daggerheart.adversaries.Actor.8yUj2Mzvnifhxegm"
+          "Compendium.daggerheart-ja.adversaries.Actor.G62k4oSkhkoXEs2D",
+          "Compendium.daggerheart-ja.adversaries.Actor.VtFBt9XBE0WrGGxP",
+          "Compendium.daggerheart-ja.adversaries.Actor.8yUj2Mzvnifhxegm"
         ]
       }
     },
@@ -320,7 +320,7 @@
       "name": "You Are Not Welcome Here",
       "type": "feature",
       "system": {
-        "description": "<p>A @UUID[Compendium.daggerheart.adversaries.Actor.8yUj2Mzvnifhxegm]{Young Dryad}, two @UUID[Compendium.daggerheart.adversaries.Actor.VtFBt9XBE0WrGGxP]{Sylvan Soldiers}, and a number of @UUID[Compendium.daggerheart.adversaries.Actor.G62k4oSkhkoXEs2D]{Minor Treants} equal to the number of PCs appear to confront the party for their intrusion.</p><section id=\"secret-01hkXuVJc5Kei4QW\" class=\"secret\"><p><em>What are the grove guardians concealing? What threat to the forest could the PCs confront to appease the Dryad?</em></p></section>",
+        "description": "<p>A @UUID[Compendium.daggerheart-ja.adversaries.Actor.8yUj2Mzvnifhxegm]{Young Dryad}, two @UUID[Compendium.daggerheart-ja.adversaries.Actor.VtFBt9XBE0WrGGxP]{Sylvan Soldiers}, and a number of @UUID[Compendium.daggerheart-ja.adversaries.Actor.G62k4oSkhkoXEs2D]{Minor Treants} equal to the number of PCs appear to confront the party for their intrusion.</p><section id=\"secret-01hkXuVJc5Kei4QW\" class=\"secret\"><p><em>What are the grove guardians concealing? What threat to the forest could the PCs confront to appease the Dryad?</em></p></section>",
         "resource": null,
         "actions": {
           "TPm6rpKA4mbili82": {
@@ -344,15 +344,15 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.8yUj2Mzvnifhxegm",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.8yUj2Mzvnifhxegm",
                 "count": "1"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.VtFBt9XBE0WrGGxP",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.VtFBt9XBE0WrGGxP",
                 "count": "2"
               },
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.G62k4oSkhkoXEs2D",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.G62k4oSkhkoXEs2D",
                 "count": "@partySize"
               }
             ],
@@ -380,7 +380,7 @@
       "name": "Defiler",
       "type": "feature",
       "system": {
-        "description": "<p><strong>Spend a Fear</strong> to summon a @UUID[Compendium.daggerheart.adversaries.Actor.sRn4bqerfARvhgSV]{Minor Chaos Elemental} drawn to the echoes of violence and discord. They appear within Far range of a chosen PC and immediately take the spotlight.</p><section id=\"secret-ChOafrgiTeYqsqoe\" class=\"secret\"><p><em>What color does the grass turn as the elemental appears? How does the chaos warp insects and small wildlife within the grove?</em></p></section>",
+        "description": "<p><strong>Spend a Fear</strong> to summon a @UUID[Compendium.daggerheart-ja.adversaries.Actor.sRn4bqerfARvhgSV]{Minor Chaos Elemental} drawn to the echoes of violence and discord. They appear within Far range of a chosen PC and immediately take the spotlight.</p><section id=\"secret-ChOafrgiTeYqsqoe\" class=\"secret\"><p><em>What color does the grass turn as the elemental appears? How does the chaos warp insects and small wildlife within the grove?</em></p></section>",
         "resource": null,
         "actions": {
           "p6V4k4yMwJ1UPZMz": {

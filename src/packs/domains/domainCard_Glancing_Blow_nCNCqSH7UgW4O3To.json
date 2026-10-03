@@ -1,6 +1,6 @@
 {
   "name": "Glancing Blow",
-  "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+  "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
   "type": "domainCard",
   "folder": "HAGbPLHwm0UozDeG",
   "system": {
@@ -43,7 +43,7 @@
         },
         "effects": [],
         "name": "Mark a Stress",
-        "img": "systems/daggerheart/assets/icons/domains/domain-card/blade.png",
+        "img": "systems/daggerheart-ja/assets/icons/domains/domain-card/blade.png",
         "range": "",
         "baseAction": false,
         "originItem": {

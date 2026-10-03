@@ -16,22 +16,22 @@
       "nwm0MT2J8z6il7m9": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.pOtg2aQs8iI3GzMV",
-          "Compendium.daggerheart.adversaries.Actor.Xq00qigdsoB2b3gJ"
+          "Compendium.daggerheart-ja.adversaries.Actor.pOtg2aQs8iI3GzMV",
+          "Compendium.daggerheart-ja.adversaries.Actor.Xq00qigdsoB2b3gJ"
         ]
       },
       "FZjcBiiElTEYtYKO": {
         "label": "Enchanted Defenses",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.Nj9E7DLb7UakiKz6",
-          "Compendium.daggerheart.adversaries.Actor.lOIaoJscG3he5thc"
+          "Compendium.daggerheart-ja.adversaries.Actor.Nj9E7DLb7UakiKz6",
+          "Compendium.daggerheart-ja.adversaries.Actor.lOIaoJscG3he5thc"
         ]
       },
       "5KYOTYpoLTxkwK4u": {
         "label": "The Witch's Victims",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.qhMbIUVeD7BWuRKJ",
-          "Compendium.daggerheart.adversaries.Actor.NWhnMXGWzAVUyelj"
+          "Compendium.daggerheart-ja.adversaries.Actor.qhMbIUVeD7BWuRKJ",
+          "Compendium.daggerheart-ja.adversaries.Actor.NWhnMXGWzAVUyelj"
         ]
       }
     },
@@ -133,7 +133,7 @@
             },
             "summon": [
               {
-                "actorUUID": "Compendium.daggerheart.adversaries.Actor.NWhnMXGWzAVUyelj",
+                "actorUUID": "Compendium.daggerheart-ja.adversaries.Actor.NWhnMXGWzAVUyelj",
                 "count": "@partySize * 2"
               }
             ],
@@ -314,7 +314,7 @@
     }
   ],
   "_id": "HnJrh1GLJfu2nBbY",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Witch's Hut",
     "displayName": 0,
@@ -323,7 +323,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

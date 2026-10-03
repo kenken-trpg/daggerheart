@@ -16,10 +16,10 @@
       "gzQzvwR4kNa9okSB": {
         "label": "Adversaries",
         "adversaries": [
-          "Compendium.daggerheart.adversaries.Actor.mK3A5FTx6k8iPU3F",
-          "Compendium.daggerheart.adversaries.Actor.rM9qCIYeWg9I0B4l",
-          "Compendium.daggerheart.adversaries.Actor.sLAccjvCWfeedbpI",
-          "Compendium.daggerheart.adversaries.Actor.UFVGl1osOsJTneLf"
+          "Compendium.daggerheart-ja.adversaries.Actor.mK3A5FTx6k8iPU3F",
+          "Compendium.daggerheart-ja.adversaries.Actor.rM9qCIYeWg9I0B4l",
+          "Compendium.daggerheart-ja.adversaries.Actor.sLAccjvCWfeedbpI",
+          "Compendium.daggerheart-ja.adversaries.Actor.UFVGl1osOsJTneLf"
         ]
       }
     },
@@ -430,7 +430,7 @@
     }
   ],
   "_id": "7e8T9O0JSj6QzY9P",
-  "img": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+  "img": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
   "prototypeToken": {
     "name": "Heist",
     "displayName": 0,
@@ -439,7 +439,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "systems/daggerheart/assets/icons/documents/actors/forest.svg",
+      "src": "systems/daggerheart-ja/assets/icons/documents/actors/forest.svg",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

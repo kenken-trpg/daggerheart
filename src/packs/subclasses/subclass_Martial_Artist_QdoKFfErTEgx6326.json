@@ -15,28 +15,28 @@
     "features": [
       {
         "type": "foundation",
-        "item": "Compendium.daggerheart.subclasses.Item.EVEP9G6lNF8nR5f3"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.EVEP9G6lNF8nR5f3"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.pv1hw4kJ1Q28xSiG"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.pv1hw4kJ1Q28xSiG"
       },
       {
         "type": "specialization",
-        "item": "Compendium.daggerheart.subclasses.Item.fMiu9xPbBVDizZEB"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.fMiu9xPbBVDizZEB"
       },
       {
         "type": "mastery",
-        "item": "Compendium.daggerheart.subclasses.Item.zrBAilBZuk9e4R1C"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.zrBAilBZuk9e4R1C"
       },
       {
         "type": "mastery",
-        "item": "Compendium.daggerheart.subclasses.Item.iuqAzugTIf7Ipcmb"
+        "item": "Compendium.daggerheart-ja.subclasses.Item.iuqAzugTIf7Ipcmb"
       }
     ],
     "featureState": 1,
     "isMulticlass": false,
-    "linkedClass": "Compendium.daggerheart.classes.Item.0Qw2heB75eXNV4SM"
+    "linkedClass": "Compendium.daggerheart-ja.classes.Item.0Qw2heB75eXNV4SM"
   },
   "effects": [],
   "sort": 0,
