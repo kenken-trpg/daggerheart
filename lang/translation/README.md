@@ -359,16 +359,63 @@ node "/Applications/Foundry Virtual Tabletop.app/Contents/Resources/app/main.js"
   失敗する (`Documents from a core version newer than the running version
   cannot be migrated`)。`system.json` の verified に合わせた core を使う。
 
+## 実機走査のカバレッジ
+
+「崩れがない」と言えるのは**実際に開いた画面だけ**なので、どこまで見たかを残す。
+
+| 画面 | レイアウト崩れ | 未訳 |
+| --- | --- | --- |
+| アクターシート 6種 (character / adversary / companion / party / environment / npc) | 修正済み (下記「日本語で崩れるレイアウト」参照) | なし |
+| アイテムシート 12種 | なし | なし |
+| ロールダイアログ (`D20RollDialog`) | 修正済み (希望/恐怖) | なし |
+| チャットカード (デュアリティロール) | なし | なし |
+| システム設定 5種 × 全タブ (自動化 / メタ情報 / ホームブリュー9タブ / 外観 / 選択ルール) | **なし** | `Image` 1件 |
+| キャラクターレベルアップ 全3タブ (レベル成長 / 成長の選択 / 要約) | **なし** | なし。符号も全11箇所が全角＋ |
+| レベルアップ選択肢ダイアログ (GM 側のティア編集) | なし | **17件** (`Tiers` / `Add Levelup Option` / 選択肢17種) |
+| `CharacterResetDialog` / `DeathMove` / `Downtime` / `RiskItAll` / `CompendiumBrowserSettings` / `CountdownPermissions` / `ActiveEffectPathViewer` | なし | `Name` / `Submit` / `Save` |
+
+未走査 (開くのに前提データが要り、今回は到達できなかった):
+`BeastformDialog` / `ImageSelectDialog` / `ItemTransferDialog` / `TagTeamDialog` /
+`GroupRollDialog` / `ResourceDiceDialog` / `DamageReductionDialog` /
+`MulticlassChoiceDialog` / `ActionSelectionDialog` / キャラクター作成フロー /
+コンバットトラッカー / 各種 HUD。
+
+補足:
+
+- `Submit` / `Save` は Foundry core の既定ボタンラベル。システム側ではなく
+  `foundryVTTja` の守備範囲。
+- コンペンディウムブラウザ設定に出る `Classes` / `Subclasses` / `Domains` …は
+  `system.json` の `packs[].label`。Foundry は `CompendiumCollection#title` を
+  `metadata.label` のまま返すだけで localize しない (dnd5e も同様に英語のまま)。
+  **これは packs 翻訳の課題**であって UI 翻訳の抜けではない。Babele は
+  コンペンディウム名も訳せるので、上記「packs の翻訳方式」でまとめて解決する。
+
 ## 翻訳機構を通っていない文字列 (上流の不具合)
 
-`{{localize}}` を経由しておらず、`ja.json` では直せないもの。
+`ja.json` では直せないもの。**どれも en.json にキーを足す上流 PR が必要。**
 
-`.hbs` 側 (296ファイル走査) は2件のみ。
+`.hbs` 側は2種類ある。
+
+生の英語がそのまま書かれているもの:
 
 | 箇所 | 文字列 | 備考 |
 | --- | --- | --- |
 | `templates/dialogs/reactionRoll.hbs:2` | `Reaction Roll` | 上流に PR を出す価値がある (en.json にキーを追加してテンプレートを差し替えるだけ) |
 | `templates/sheets/actors/party/projects.hbs:3` | `Soon tm` | 未実装機能のプレースホルダ。放置で可 |
+
+**`{{localize}}` は通っているが、渡しているキーが存在しないもの。**
+Foundry は未知のキーを渡されるとキー文字列自体を返すので、英語がそのまま出る。
+「`{{localize}}` の有無」で検索すると見落とすので注意:
+
+| 箇所 | 渡しているキー | 画面上の出方 |
+| --- | --- | --- |
+| `templates/dialogs/levelupOptionsDialog/header.hbs:2` | `"Tiers"` | クラス/サブクラスの「レベルアップ選択肢」ダイアログの見出し |
+| `templates/dialogs/levelupOptionsDialog/parts/tier.hbs:6` | `"Add Levelup Option"` | 同ダイアログのボタン |
+
+この2件は ja.json のルートに同名キーを置けば一応は訳せるが、**`lang:apply` が
+en.json を基準に ja.json を組み直す際に落とされる** (`tools/lang-sync.mjs` の
+「en.json にないキーは retired として捨てる」挙動)。その場しのぎにしかならないので
+採用していない。
 
 **`.mjs` 側はテンプレートより多い。** データモデルの `initial` 値や設定テーブルに
 英語がそのまま書かれている箇所があり、こちらは画面に出るにもかかわらず
@@ -383,6 +430,8 @@ node "/Applications/Foundry Virtual Tabletop.app/Contents/Resources/app/main.js"
 | `module/config/actorConfig.mjs:281-326` | `Armor Marks +1` / `Major Damage Threshold +2` など | レベルアップのティア選択肢 |
 | `module/data/fields/action/rollField.mjs:91,155` | `Bonus to Hit` / `Attack` | アクション設定 |
 | `module/data/activeEffect/baseEffect.mjs:160` | `New Effect` | 効果の新規作成時の名前 |
+| `module/data/settings/Homebrew.mjs:145` | `label: 'Image'` | ホームブリュー設定 → ドメイン タブ。隣の `label` フィールドは `DAGGERHEART.GENERAL.label` を使っており、**`DAGGERHEART.GENERAL.imagePath` が既に存在する**ので1語差し替えるだけで直る |
+| `module/applications/dialogs/characterResetDialog.mjs:17` | `label: 'Name'` | キャラクターリセットの確認ダイアログ |
 
 一括検出は下記で出せる (内部 ID と混ざるので目視選別が要る):
 
