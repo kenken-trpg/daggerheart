@@ -295,8 +295,25 @@ minimum v13 / verified v14 / maximum v14。本リポジトリの
 | `styles/less/sheets/actors/companion/details.less` | 相棒シートの「パートナー」が5行に分解 | 同上 |
 | `styles/less/sheets/actors/companion/header.less` の `.status-label` | 相棒シートの「回避値」が2行になりバッジからはみ出す | `width: auto; min-width: 100%` + `h4` に `white-space: nowrap` |
 | `styles/less/dialog/dice-roll/roll-selection.less` の `.dice-select .label` | ロールダイアログの「希望」「恐怖」が縦積み | `.label` に `white-space: nowrap` |
+| `styles/less/dialog/item-transfer/sheet.less` の `label` | アイテム受け渡しダイアログの「数量」が2行 | `flex: 0` → `flex: 0 0 auto` |
+| `styles/less/dialog/level-up/selections-container.less` の `.levelup-radio-choices label` | 相棒レベルアップ「獰猛」の「ダメージ」「射程」が縦積み (4行) | 同上 |
 
 いずれも英語表示では描画幅が変わらないので、上流にそのまま PR できる性質の修正。
+
+### 原因は2パターンある
+
+- **flex アイテムの既定の縮み。** `min-content` まで縮むので、英語は単語幅、
+  日本語は1文字幅で止まる。`white-space: nowrap` で対処。
+- **`flex: 0` と書かれている箇所。** これは `flex: 0 1 0%` の略で、
+  「伸びない」つもりでも **basis 0 + 縮み許可**なので日本語だと1文字まで潰れる。
+  意図どおりにするなら `flex: 0 0 auto`。
+
+後者は `grep -rn "flex: 0;" styles/less/` で7箇所あるが、**実害があるのは
+日本語テキストを直接持つ2箇所だけ**だった。残り5箇所は中身がアイコンのみの
+ボタン (`.end-button`)、子要素を並べるコンテナ (`.tags` / `.combatant-controls`)、
+親が flex ではない箇所で、いずれも潰れない。
+**`flex: 0` を見つけたら機械的に直すのではなく、そこに日本語の文字列が
+直接入るかを先に確かめること。**
 
 ### 検出のしかた
 
@@ -374,11 +391,26 @@ node "/Applications/Foundry Virtual Tabletop.app/Contents/Resources/app/main.js"
 | レベルアップ選択肢ダイアログ (GM 側のティア編集) | なし | **17件** (`Tiers` / `Add Levelup Option` / 選択肢17種) |
 | `CharacterResetDialog` / `DeathMove` / `Downtime` / `RiskItAll` / `CompendiumBrowserSettings` / `CountdownPermissions` / `ActiveEffectPathViewer` | なし | `Name` / `Submit` / `Save` |
 
-未走査 (開くのに前提データが要り、今回は到達できなかった):
-`BeastformDialog` / `ImageSelectDialog` / `ItemTransferDialog` / `TagTeamDialog` /
-`GroupRollDialog` / `ResourceDiceDialog` / `DamageReductionDialog` /
-`MulticlassChoiceDialog` / `ActionSelectionDialog` / キャラクター作成フロー /
-コンバットトラッカー / 各種 HUD。
+2巡目で追加:
+
+| 画面 | レイアウト崩れ | 未訳 |
+| --- | --- | --- |
+| キャラクター作成 全7タブ (クラス / 種族 / コミュニティ / 特性 / 経験 / 能力カード / 装備) | **なし** | コンペンディウム内容のみ (`Assassin` / `Katana` など。packs の課題) |
+| `ItemTransferDialog` | **1件 → 修正済み** (数量) | なし |
+| `GroupRollDialog` / `TagTeamDialog` / `ImageSelectDialog` / `DamageReductionDialog` / `MultiActionSelectionDialog` | なし | なし |
+| `ItemBrowser` / `CountdownEdit` / `DhCountdowns` | なし | なし |
+| 相棒レベルアップの「獰猛」選択肢 | **1件 → 修正済み** (ダメージ/射程) | なし |
+
+未走査のまま残っているもの:
+`BeastformDialog` (ビーストフォーム設定データが要る) /
+`ResourceDiceDialog` と `ActionSelectionDialog` (リソースダイス付きアイテムが要る) /
+`MulticlassChoiceDialog` / コンバットトラッカーの戦闘中表示 / 各種 HUD。
+
+ダイアログによっては、ゲーム操作から実際の状態に到達するより
+**実在の祖先クラス連鎖を組み立てて該当マークアップを差し込むほうが速い**。
+相棒レベルアップの「獰猛」はこの方法で確認した。ただし
+**コンテナに生テキストを入れると実際には起きない崩れを誤検出する**
+(`.tags` がこれで誤検出だった) ので、本来そこに入る要素の形を再現すること。
 
 補足:
 
