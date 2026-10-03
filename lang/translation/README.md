@@ -275,9 +275,32 @@ minimum v13 / verified v14 / maximum v14。本リポジトリの
 この形なら上流追従そのものが消える。`lang-sync.mjs` と `glossary/` はそのまま
 モジュール側へ持っていける。
 
-**要検証**: `languages` の `system` スコープの正確な挙動は v14 のマニフェスト
-スキーマで確認する (調査時、公式ドキュメントは JS レンダリングで本文が取得できず、
-コミュニティ Wiki の記述に依拠している)。
+**検証済み (2026-10)。** v14 本体のソースで確認した。コミュニティ Wiki ではなく
+インストール済みの Foundry v14.365 の実装そのもの:
+
+`common/packages/_types.mjs` の `PackageLanguageData`:
+
+```
+@property {string} [system]  Only apply this set of translations when a specific
+                             system is being used
+```
+
+`client/helpers/localization.mjs` の `#getTranslations()` は**この順で読み込み、
+`mergeObject` でマージする**:
+
+```
+1. コア          lang/<lang>.json
+2. システム      game.system の languages
+3. モジュール    有効な全モジュールの languages
+4. ワールド      game.world の languages
+```
+
+同じ `#filterLanguagePaths()` が `l.system === game.system.id` を判定している。
+
+つまり**モジュールはシステムより後に読まれ、キー単位で上書きする**。
+`languages: [{ lang: "ja", path: "lang/ja.json", system: "daggerheart" }]` を
+持つモジュールを入れれば、公式システムの `lang/ja.json` を置き換えられる。
+**UI 文言のためにフォークを維持する必要はない。**
 
 ### 設計 (Babele 2.9.1 のソースを読んで確定させたこと)
 
@@ -417,15 +440,62 @@ Daggerheart のデータは、訳すべきテキストが**ランダム ID を�
 
 ### 残っている未検証項目
 
-- **`module.json` の `languages[].system` フィールド。** これが効くなら
-  (前述の通り) フォーク自体が不要になる。v14 のマニフェストスキーマで確認する。
-  **フォークをやめるかどうかの判断なので、工程0より前に片付けるべき。**
 - **既存ワールドへの影響。** Babele は閲覧・インポート時にのみ訳を当てる。
   既にワールドへインポート済みのドキュメントは遡って翻訳されない。
   ユーザーへの告知事項。
 - **`src/packs` の `_stats.coreVersion` が 14.366/14.367** のため、
   それより古いコアでは journals / rolltables の移行が失敗する (実機テストで確認済み)。
   Babele 検証は `verified` の 14.368 で行う。
+
+## 配布 (マニフェスト URL でのインストール)
+
+**現状、このフォークは URL インストールできない。** `system.json` は URL 上に
+存在する (`https://raw.githubusercontent.com/kenken-trpg/daggerheart/main/system.json`、
+HTTP 200) が、Foundry に食わせても日本語版は入らない。
+
+| 項目 | 現状 | 問題 |
+| --- | --- | --- |
+| `manifest` | `.../Foundryborne/daggerheart/v14/system.json` | **上流を指している** |
+| `download` | `.../Foundryborne/.../2.10.7/system.zip` | **上流の zip を落とす** |
+| フォークのリリース | **0件** | 落とす zip が存在しない |
+| フォークの `v14` ブランチ | 2.7.4 / `ja` なし | 古い。`main` が作業ブランチ |
+
+Foundry はマニフェストを読んだあと `download` の zip を取得するので、
+現在の `system.json` を指定すると**上流の英語版がインストールされる**。
+
+### `id` の衝突
+
+`system.json` の `id` は `daggerheart` のまま。Foundry はシステムを `id` で
+識別するので、公式版とフォーク版は**共存できない**。フォークを入れると公式版が
+置き換わり、以後は上流の更新通知と自前の更新がぶつかる。
+
+### 選択肢
+
+**A. モジュールとして配る (推奨)。** 前述の `languages[].system` が v14 で
+動作することを確認済みなので、UI 文言はモジュールから公式システムへ上書きできる。
+`id` の衝突がなく、公式システムの更新にも追従不要。packs 訳 (Babele) と
+同じモジュールに同梱できる。**この場合フォークのリリースは不要。**
+
+```text
+公式 daggerheart (そのまま) + Babele + daggerheart-ja モジュール
+                                          ├ lang/ja.json
+                                          └ babele/*.json
+```
+
+**B. フォークをシステムとして配る。** やるなら最低限これだけ必要:
+
+1. `deploy.yml` の `manifest` が `.../${{github.repository}}/v14/system.json` と
+   **ブランチを `v14` 固定**している。フォークの作業ブランチは `main` なので
+   ここを直す (または `main` を `v14` へも push する)。
+   `${{github.repository}}` は自動でフォーク名に置き換わるので、他は触らなくてよい。
+2. GitHub で Release を作る → `deploy.yml` が packs/js/css をビルドして
+   `system.json` と `system.zip` を添付する。
+3. `id` 衝突を受け入れるか、`id` を変える (変えると既存ワールドが壊れる)。
+4. バージョンは上流と同じ `2.10.7`。上流の同バージョンと区別がつかないので
+   採番規則を決める。
+
+A と B は排他ではないが、**B を選ぶと上流リリースへの追従責任を負う**。
+方式比較の表で B (ビルド時注入) を却下した理由と同じ構図になる。
 
 ## 日本語で崩れるレイアウト (CSS)
 
