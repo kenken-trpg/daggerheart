@@ -118,7 +118,7 @@ export default class DaggerheartMenu extends HandlebarsApplicationMixin(Abstract
             title: _loc('DAGGERHEART.APPLICATIONS.DaggerheartMenu.chatMessageTitle'),
             flavor: `<span>${_loc('DAGGERHEART.APPLICATIONS.DaggerheartMenu.chatMessageText')}</span>`,
             rolls: [fearRoll],
-            flags: { daggerheart: { noButtons: true } }
+            flags: { 'daggerheart-ja': { noButtons: true } }
         });
 
         await game.dice3d.waitFor3DAnimationByMessageID(message.id);

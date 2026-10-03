@@ -74,10 +74,10 @@ export default class DhEnvironment extends BaseDataActor {
         super._onDelete(options, userId);
         for (const scene of this.scenes) {
             if (game.user.isActiveGM) {
-                const newSceneEnvironments = scene.flags.daggerheart.sceneEnvironments.filter(
+                const newSceneEnvironments = scene.flags['daggerheart-ja'].sceneEnvironments.filter(
                     x => x !== this.parent.uuid
                 );
-                scene.update({ 'flags.daggerheart.sceneEnvironments': newSceneEnvironments }).then(() => {
+                scene.update({ 'flags.daggerheart-ja.sceneEnvironments': newSceneEnvironments }).then(() => {
                     Hooks.callAll(socketEvent.Refresh, { refreshType: RefreshType.Scene });
                 });
             }

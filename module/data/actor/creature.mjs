@@ -29,7 +29,7 @@ export default class DhCreature extends BaseDataActor {
 
     get isAutoVulnerableActive() {
         const vulnerableAppliedByOther = this.parent.effects.some(
-            x => x.statuses.has('vulnerable') && !x.flags.daggerheart?.autoApplyFlagId
+            x => x.statuses.has('vulnerable') && !x.flags['daggerheart-ja']?.autoApplyFlagId
         );
         return !vulnerableAppliedByOther;
     }
@@ -52,7 +52,7 @@ export default class DhCreature extends BaseDataActor {
         if (vulnerableAutomation && this.parent.type !== 'companion' && typeof changes.system?.resources?.stress?.value === 'number') {
             const { name, description, img, autoApplyFlagId } = CONFIG.DH.GENERAL.conditions().vulnerable;
             const autoEffects = this.parent.effects.filter(
-                x => x.flags.daggerheart?.autoApplyFlagId === autoApplyFlagId
+                x => x.flags['daggerheart-ja']?.autoApplyFlagId === autoApplyFlagId
             );
             if (changes.system.resources.stress.value >= this.resources.stress.max) {
                 if (!autoEffects.length)
@@ -62,7 +62,7 @@ export default class DhCreature extends BaseDataActor {
                             description: game.i18n.localize(description),
                             img: img,
                             statuses: ['vulnerable'],
-                            flags: { daggerheart: { autoApplyFlagId } }
+                            flags: { 'daggerheart-ja': { autoApplyFlagId } }
                         }
                     ]);
             } else if (this.resources.stress.value >= this.resources.stress.max) {

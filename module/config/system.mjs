@@ -14,8 +14,8 @@ import * as ITEMBROWSER from './itemBrowserConfig.mjs';
 import * as LOOKUP from './lookupConfig.mjs';
 import * as DICESONICE from './dsnConfig.mjs';
 
-/** @type {"daggerheart"} */
-export const SYSTEM_ID = 'daggerheart';
+/** @type {"daggerheart-ja"} */
+export const SYSTEM_ID = 'daggerheart-ja';
 
 export const SYSTEM = {
     id: SYSTEM_ID,

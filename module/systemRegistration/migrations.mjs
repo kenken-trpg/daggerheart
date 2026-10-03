@@ -191,13 +191,13 @@ export async function runMigrations() {
     if (foundry.utils.isNewerVersion('1.5.5', lastMigrationVersion)) {
         /* Clear out Environments that were added directly from compendium */
         for (const scene of game.scenes) {
-            if (!scene.flags.daggerheart) continue;
-            const systemData = new game.system.api.data.scenes.DHScene(scene.flags.daggerheart);
+            if (!scene.flags['daggerheart-ja']) continue;
+            const systemData = new game.system.api.data.scenes.DHScene(scene.flags['daggerheart-ja']);
             const sceneEnvironments = systemData.sceneEnvironments;
 
             const newEnvironments = sceneEnvironments.filter(x => !x?.pack);
             if (newEnvironments.length !== sceneEnvironments.length)
-                await scene.update({ 'flags.daggerheart.sceneEnvironments': newEnvironments });
+                await scene.update({ 'flags.daggerheart-ja.sceneEnvironments': newEnvironments });
         }
 
         ui.nav.render(true);

@@ -35,7 +35,7 @@ export default class DhRollTableSheet extends foundry.applications.sheets.RollTa
         await super._preRender(context, options);
 
         if (!options.internalRefresh)
-            this.daggerheartFlag = new game.system.api.data.DhRollTable(this.document.flags.daggerheart);
+            this.daggerheartFlag = new game.system.api.data.DhRollTable(this.document.flags['daggerheart-ja']);
     }
 
     /* root PART has a blank element on _attachPartListeners, so it cannot be used to set the eventListeners for the view mode */
@@ -106,7 +106,7 @@ export default class DhRollTableSheet extends foundry.applications.sheets.RollTa
     }
 
     getSystemFlagUpdate() {
-        const deleteUpdate = Object.keys(this.document._source.flags.daggerheart?.altFormula ?? {}).reduce(
+        const deleteUpdate = Object.keys(this.document._source.flags['daggerheart-ja']?.altFormula ?? {}).reduce(
             (acc, formulaKey) => {
                 if (!this.daggerheartFlag.altFormula[formulaKey]) acc.altFormula[formulaKey] = _del;
 
@@ -152,8 +152,8 @@ export default class DhRollTableSheet extends foundry.applications.sheets.RollTa
     async _processSubmitData(event, form, submitData, options) {
         /* RollTable sends an empty dummy event when swapping from view/edit first time */
         if (Object.keys(submitData).length) {
-            if (!submitData.flags) submitData.flags = { daggerheart: {} };
-            submitData.flags.daggerheart = this.getSystemFlagUpdate();
+            if (!submitData.flags) submitData.flags = { 'daggerheart-ja': {} };
+            submitData.flags['daggerheart-ja'] = this.getSystemFlagUpdate();
         }
 
         super._processSubmitData(event, form, submitData, options);

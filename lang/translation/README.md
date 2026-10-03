@@ -662,10 +662,72 @@ Foundry が更新を確認するのは**インストール済みの `system.json
   Foundry は生の `update()` 経由なら未登録スコープでも読み書きできるため
   動作し、変えると既存シーンのデータが参照できなくなる。据え置いた。
 
+##### フラグと設定のスコープも ID だった (実機で発覚)
+
+据え置くと判断した `flags.daggerheart` は**間違いだった**。実機でキャラクター
+シートを開いた時点で落ちる:
+
+```
+Flag scope "daggerheart" is not valid or not currently active
+```
+
+Foundry はフラグのスコープを**現在有効なパッケージ ID**で検証するので、
+`daggerheart-ja` でなければ通らない。旧システムが同時にインストールされて
+いても無関係 (有効なのは起動中のシステムだけ)。
+
+同じ理由で `module/config/system.mjs` の `SYSTEM_ID` も変える必要があった。
+これは `CONFIG.DH.id` として**設定の登録109件とシート登録の名前空間**に
+使われている。
+
+| 対象 | 件数 |
+| --- | --- |
+| `flags.daggerheart` → `flags['daggerheart-ja']` ほか | 43 |
+| `SYSTEM_ID` | 1 |
+
+ハイフンを含む ID はプロパティアクセスに使えない (`flags.daggerheart-ja` は
+引き算に解釈される) ので、**ブラケット記法に書き換えた**。文字列パス
+(`'flags.daggerheart-ja.sceneEnvironments'`) と hbs の `name=` 属性は
+ドット区切りのままでよい。
+
+Foundry の `validateId` は `/^[A-Za-z0-9-_]+$/` でアンダースコアも許すため
+`daggerheart_ja` にすればブラケット記法を避けられたが、ハイフンが慣例なので
+そちらを採った。
+
 ##### 採番
 
 `id` が変わった時点で別パッケージなので、バージョンは `2.10.7.2` に上げた
 (`2.10.7.1` の成果物は旧 `id` を含むため再利用できない)。
+
+#### `id` 変更後の実機確認 (2026-10-03)
+
+隔離データパス (ポート30100) に旧 `daggerheart` 2.10.7.1 と新
+`daggerheart-ja` 2.10.7.2 を**両方置いて**確認した。
+
+| 確認項目 | 結果 |
+| --- | --- |
+| 2システムの共存 | セットアップ画面に両方表示 |
+| `game.system.id` | `daggerheart-ja` 2.10.7.2 |
+| コンペンディウム15パック | 全て open 可・`packs[].system` も全て `daggerheart-ja` |
+| ドキュメント総数 | classes 78 / subclasses 160 / domains 210 / ancestries 72 / communities 30 / weapons 324 / armors 69 / consumables 121 / loot 121 / adversaries 264 / environments 47 / journals 3 / rolltables 5 / beastforms 55 / transformations 18 |
+| 書き換えた UUID リンクの解決 | **767/767** (1件は旧形式 `@Compendium[...]` でエンリッチャが補完) |
+| 画像パス (15種・のべ867件) | 全て HTTP 200 |
+| アクターシート6種 | character / companion / adversary / npc / environment / party **全て描画** |
+| アイテムシート12種 | **全て描画** |
+| 設定のスコープ | 旧 `daggerheart.*` 0件 / 新 `daggerheart-ja.*` 13件・読み出し可 |
+| シート登録の名前空間 | `daggerheart-ja.CharacterSheet` ほか |
+| シーンのフラグ往復 | 書き込み・読み出し・シーン設定画面の描画すべて可 |
+| 日本語表示とレイアウト | 崩れ 0件 |
+
+残った警告1件は**この変更とは無関係**:
+
+```
+TypeError: Failed data migration for DhItem: Cannot read properties of undefined (reading 'armor')
+```
+
+`DHArmor.migrateDocumentData` が `source.system` の存在を確認せずに
+`source.system.armor` を見ているため。検証で `system` を持たない空の防具
+アイテムを作ったときだけ出る。上流から引き継いだもので、通常の操作では
+発生せず、シートの描画にも影響しない。
 
 #### 採番
 

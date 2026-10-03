@@ -41,7 +41,7 @@ export default class DhSceneConfigSettings extends foundry.applications.sheets.S
         await super._preFirstRender(context, options);
 
         if (!options.internalRefresh)
-            this.daggerheartFlag = new game.system.api.data.scenes.DHScene(this.document.flags.daggerheart);
+            this.daggerheartFlag = new game.system.api.data.scenes.DHScene(this.document.flags['daggerheart-ja']);
     }
 
     _attachPartListeners(partId, htmlElement, options) {
@@ -112,11 +112,11 @@ export default class DhSceneConfigSettings extends foundry.applications.sheets.S
     /** @override */
     async _processSubmitData(event, form, submitData, options) {
         if (!submitData.flags) submitData.flags = {};
-        submitData.flags.daggerheart = foundry.utils.mergeObject(
+        submitData.flags['daggerheart-ja'] = foundry.utils.mergeObject(
             this.daggerheartFlag.toObject(),
-            submitData.flags.daggerheart
+            submitData.flags['daggerheart-ja']
         );
-        submitData.flags.daggerheart.sceneEnvironments = submitData.flags.daggerheart.sceneEnvironments.filter(x =>
+        submitData.flags['daggerheart-ja'].sceneEnvironments = submitData.flags['daggerheart-ja'].sceneEnvironments.filter(x =>
             foundry.utils.fromUuidSync(x)
         );
 

@@ -1204,7 +1204,7 @@ export default class DhActor extends Actor {
             .reduce((acc, effect) => {
                 /* Could be generalized if needed. Currently just related to Vulnerable */
                 const isAutoVulnerableEffect =
-                    effect.flags.daggerheart?.autoApplyFlagId === conditions.vulnerable.autoApplyFlagId;
+                    effect.flags['daggerheart-ja']?.autoApplyFlagId === conditions.vulnerable.autoApplyFlagId;
                 if (isAutoVulnerableEffect) {
                     if (!autoVulnerableActive) return acc;
 
