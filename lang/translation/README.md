@@ -1124,3 +1124,151 @@ README.md（Licenses 節）より:
 3. 上の表に出典・版・参照日・許諾の状況を追記する。
 4. `node tools/lang-sync.mjs diff --only=shiropanda` → 用語ごとに採否を決める → `apply`。
    未訳キーがある場合は `prepare` も併用する。
+
+## 再撤回: A (翻訳モジュール) へ移る (2026-10-04)
+
+`id` を `daggerheart-ja` に変えた判断 (上節) をさらに覆し、**B を捨てて A
+(翻訳モジュール) に移る**。方式そのものの評価は上の「選択肢」の表から変えない。
+変わったのは決定要因で、**本家の mod が使えるかどうか**が加わった。
+
+### 決定要因: `id` を変えた時点で本家 mod が使えなくなっていた
+
+Foundry の mod は次の5点でシステム `id` に依存する。`daggerheart-ja` ではすべて外れる。
+
+1. **マニフェストのシステム制限。** 公式ドキュメント (Module Development) は
+   「`"system": ["dnd5e"]` を指定すると、そのゲームシステムで動いている
+   ワールドでしか有効化できない」と書いている (v10 以降は
+   `relationships.systems` に統合)。`daggerheart` を宣言した mod は
+   `daggerheart-ja` では**有効化すらできない**。
+   *確度: ドキュメントで確認。サーバ実装は手元に無く未確認。*
+2. `game.system.id === 'daggerheart'` のコード判定。
+3. `systems/daggerheart/...` のパス参照 → 404。
+4. `Compendium.daggerheart.*` の UUID 参照 → 解決不能。
+5. `flags.daggerheart` の読み書き。フォークは一部を `daggerheart-ja` に改名済み
+   (`38d01473`)。
+
+1 はサーバ側で効くので、システム側のコードからは回避できない。mod ごとに
+`module.json` を書き換える運用は、mod の更新ごとに再発する。
+
+### B の前提だった「開発しない」はすでに崩れている
+
+A を退けた理由は「新しいリポジトリ、`module.json`、`lang/` と `tools/` の移設、
+CSS のレイヤ上書き、Babele の配線 ＝ 作業が増える」だった。その後 B のために
+実際に払ったのは次のとおりで、A の見積もりを上回る。
+
+- `id` 改名: 1,415 パス + 882 UUID + `packs[].system` 15件 (`a0173fef`)
+- 取りこぼしたフラグ・設定スコープの改名 (`38d01473`、実機で発覚)
+- リリースワークフローがフォークでは走らない → ローカル手順の整備 (`55f3c7bb`)
+- 以後、上流リリースごとに同じ改名をマージし続ける固定費
+
+### 移る先の中身は「翻訳 + CSS 10宣言」しかない (実測)
+
+上流 (`36bfd833`) との差分 842 ファイルから `id` 改名分を除くと、残るのは下表だけ。
+**`module/` と `templates/` の実質的変更はゼロ** (全て `id` 改名)。
+
+| 中身 | 規模 | 移設先 |
+| --- | --- | --- |
+| `lang/ja.json` | 2,285 キー (未訳 0) | モジュールの `languages[]` |
+| CSS 修正 | **10 宣言** | モジュールの `styles[]` |
+| `lang/translation/`, `tools/lang-sync.mjs` | 翻訳作業用。配布物ではない | そのまま移設 |
+| `packs/` | 未翻訳 | Babele (上の設計節のまま) |
+
+### CSS は 10 宣言。セレクタは実測で確定した
+
+LESS の差分 (7ファイル) を手でセレクタに起こす必要はない。**上流と現在の
+両方をビルドして、コンパイル後の CSS を差分する**と完全なセレクタ鎖が得られる。
+
+```bash
+npm run gulp && cp styles/daggerheart.css /tmp/fork.css
+git worktree add /tmp/base 36bfd833 && ln -s "$PWD/node_modules" /tmp/base/
+(cd /tmp/base && npx gulp less && cp styles/daggerheart.css /tmp/base.css)
+diff <(sed 's/}/}\n/g' /tmp/base.css) <(sed 's/}/}\n/g' /tmp/fork.css)
+```
+
+実行結果は 10 宣言。セレクタは**すべて `daggerheart` / `dh-style` の CSS
+クラス**を使っており、`a0173fef` がクラス名を意図的に改名しなかったおかげで
+**公式システムにそのまま当たる**。
+
+| セレクタ | 宣言 |
+| --- | --- |
+| `.application.sheet.daggerheart.actor.dh-style.adversary .adversary-sidebar-sheet .attack-section .title h3` | `white-space: nowrap` |
+| `… .adversary .adversary-sidebar-sheet .experience-section .title h3` | `white-space: nowrap` |
+| `.application.sheet.dh-style .character-sidebar-sheet .experience-section .title h3` | `white-space: nowrap` |
+| `… .companion .tab.details.active .experience-list .title h3` | `white-space: nowrap` |
+| `… .companion .companion-header-sheet .status-section .status-number .status-label` | `width: auto` / `min-width: 100%` |
+| `… .status-label h4` | `white-space: nowrap` |
+| `.application.daggerheart.dialog.dh-style.views.roll-selection … .dice-select .label` | `white-space: nowrap` |
+| `.daggerheart.levelup .levelup-selections-container .levelup-radio-choices label` | `flex: 0 0 auto` |
+| `.daggerheart.dh-style.dialog.item-transfer label` | `flex: 0 0 auto` |
+
+`modules` カスケードレイヤが `system` より後なので、詳細度を気にせず当たる
+(上の「モジュールの CSS はシステムの CSS に勝つ」節で検証済み)。
+
+### 工程
+
+**工程1. リポジトリを起こす。** 新規 `kenken-trpg/daggerheart-ja` を推す。
+フォーク (`kenken-trpg/daggerheart`) は上流履歴を持つシステムであり、そこに
+モジュールのマニフェストを同居させると配布物の筋が二重になる。既存リリースは
+残したまま非推奨にする。
+*代替: 同一リポジトリの別ブランチに置き、`raw.githubusercontent.com/<repo>/<branch>/module.json`
+を配る。リポジトリは増えないが、`deploy.yml` が2系統になる。*
+
+**工程2. `module.json` を書く。** 確定している形:
+
+```json
+{
+  "id": "daggerheart-ja",
+  "languages": [
+    { "lang": "ja", "name": "日本語", "path": "lang/ja.json", "system": "daggerheart" }
+  ],
+  "styles": ["styles/daggerheart-ja.css"],
+  "relationships": {
+    "systems": [{ "id": "daggerheart", "type": "system",
+                  "compatibility": { "minimum": "2.10.7", "verified": "2.10.9" } }],
+    "recommends": [{ "id": "babele", "type": "module", "reason": "packs 訳" },
+                   { "id": "foundryVTTja", "type": "module", "reason": "コア UI の日本語化" }]
+  }
+}
+```
+
+`languages[].system` による上書きは v14.365 の `localization.mjs` で検証済み
+(上節)。上流の `languages` は `en` のみなので、現時点では衝突もしない。
+
+**工程3. `lang/ja.json` と CSS を移す。** CSS は上表の 10 宣言を手書きの
+`styles/daggerheart-ja.css` として起こす。LESS のビルドは持ち込まない
+(10 宣言に gulp/less は不要)。
+
+**工程4. `tools/lang-sync.mjs` の参照元を外部化する。** これが唯一の新規実装。
+現在 `lang/en.json` を同じリポジトリ内の実ファイルとして読んでいる
+(`report` / `prepare` / `apply` すべて) が、モジュール側には存在しない。
+上流の `lang/en.json` をタグ固定で取得して `lang/.reference/en.json`
+(gitignore) に置く `tools/fetch-reference.mjs` を足し、`LANG` の参照を分ける。
+これで上流追従は「参照を引き直して `lang:report` → `prepare` → `apply`」だけになり、
+**マージ競合がゼロになる** (A の決め手)。
+
+**工程5. 実機確認。** 公式システム 2.10.9 + 本モジュールで、既存の
+「実機テストの手順」「実機走査のカバレッジ」節をそのまま流す。
+あわせて**本家 mod が1つ有効化できることを確認する** (今回の移行理由なので)。
+
+**工程6. 配布。** `module.json` / `module.zip` を Release に添付する
+ワークフロー。`deploy.yml` を流用するが、packs ビルド (`pullYMLtoLDBBuild`) と
+`rollup` は不要になり、zip の中身は `module.json` / `lang/` / `styles/` /
+`LICENSE` / `README.md` だけになる。フォークで Release イベントが走らなかった
+問題 (`55f3c7bb`) は新規リポジトリでは発生しないが、初回は要確認。
+
+**工程7. packs 訳 (Babele)。** 上の「設計」節で決着済みの内容を、そのまま
+このモジュールの `babele/` に実装する。`Babele.get().register({ module, lang, dir })`
+で登録する (dnd5e-de の実装で確認)。工程6 までと独立なので後回しでよい。
+
+### 移行で壊れるもの
+
+- **`daggerheart-ja` のワールドは開けなくなる。** システムが無くなるため。
+  ワールドの `world.json` の `system` を `daggerheart-ja` → `daggerheart` に
+  書き換えれば開く。`id` 改名のときと逆向きの同じ作業。
+- **公開済みのインストール URL (2026-10-03) は非推奨になる。** 入れた人に
+  移行先を案内する必要がある。README に移行手順を書く。
+- **`.mjs` 内のハードコード文字列は直せなくなる** (「翻訳機構を通っていない
+  文字列」節)。上流の AI Policy で PR も出せないので、**訳せないまま残る**。
+  これは A を選ぶ代償として受け入れる。
+- **CSS が静かに効かなくなりうる。** 上流がセレクタを変えてもエラーは出ない。
+  上の `diff` 手順を上流追従時に回して検出する。
