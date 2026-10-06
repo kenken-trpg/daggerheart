@@ -1,89 +1,34 @@
-# Foundryborne Daggerheart
+# このリポジトリは廃止されました
 
-## Table of Contents
+Daggerheart の日本語化は、システムのフォークではなく **Babele 翻訳モジュール**に移行しました。
 
-- [Foundryborne Daggerheart](#foundryborne-daggerheart)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [User Install](#user-install)
-  - [Documentation](#documentation)
-  - [Development Setup](#development-setup)
-    - [Available Scripts](#available-scripts)
-    - [Notes](#notes)
-  - [Contributing](#contributing)
-  - [AI Policy](#ai-policy)
-  - [Disclaimer](#disclaimer)
+→ **https://github.com/kenken-trpg/daggerheart-ja**
 
-## Overview
+このリポジトリは読み取り専用です。更新は行われません。
 
-This is the community repo for the Foundry VTT system _Foundryborne_ Daggerheart. It is not associated with Critical Role or Darrington Press.
+## なぜ移行したのか
 
-## User Install
+このフォークは、公式システムと並べて入れられるよう system id を `daggerheart-ja` に変更していました。
+その結果、`daggerheart` システムを宣言している公式モジュールが一切有効化できなくなります。
+この制限はサーバー側で強制されるため、システム側のコードでは回避できません。
 
-1. **Recommended** Searching for _Daggerheart_ or _Foundryborne_ in the System Installation dialogue of the FoundryVTT admin settings.
-2. Pasting `https://raw.githubusercontent.com/Foundryborne/daggerheart/refs/heads/main/system.json` into the Install System dialog on the Setup menu of the application.
-3. Downloading one of the .zip archives from the Releases page and extracting it into your foundry Data folder, under Data/systems/daggerheart.
+翻訳モジュールなら公式システムをそのまま使うので、公式モジュールと併用できます。
 
-## Documentation
+## すでにこのフォークを入れている方へ
 
-You can find the documentation here: https://github.com/Foundryborne/daggerheart/wiki
+このフォークで作成したワールドは system `daggerheart-ja` に紐づいており、
+Foundry はワールドの system を後から変更できません。移行には作り直しが必要です。
 
-## Development Setup
+1. 公式システム（[Foundryborne/daggerheart](https://github.com/Foundryborne/daggerheart)）をインストールする
+2. 公式システムで新しいワールドを作成する
+3. [daggerheart-ja](https://github.com/kenken-trpg/daggerheart-ja) モジュールと、Babele / lib-wrapper を有効化する
+4. アクターやアイテムは、旧ワールドからエクスポートして新ワールドにインポートする
 
-1. **Navigate to the repo directory:**
+既存のインストールを壊さないため、`system.json` と過去のリリース（2.10.7.1 / 2.10.7.2）は
+そのまま残してあります。更新は配信されません。
 
-    ```bash
-    cd <path>/<to>/<repo>
-    ```
+## 元のシステムについて
 
-2. **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-3. **Configure your Foundry paths:**
-
-    Copy `.env.example` to `.env` and set up the foundry path and data path. The foundry path must point to main.js, and the data path must point the folder containing the Data folder itself (but not the `Data` folder itself).
-
-4. **Setup symlinks:**
-
-    In a shell with elevated privilages, run `npm run createSymlink`. It will add a foundry folder for types, and add a symlink to the daggerheart folder into your foundry data.
-
-5. **Start developing:**
-    ```bash
-    npm start
-    ```
-
-### Available Scripts
-
-- `npm start` - Start development with file watching and Foundry launching
-- `npm run build` - One-time build
-- `npm run createSymlink` - Setup types and output symlinks
-
-### Notes
-
-- The repo should be placed in your Foundry `Data/systems/` directory or symlinked there
-- Linux symlink can be made using `ln -snf <path to development folder> daggerheart` inside the systems folder
-- Your `.env` file is ignored by git, so each developer can have their own configuration
-  [Foundry VTT Website][1]
-
-[1]: https://foundryvtt.com/
-
-## Contributing
-
-Looking to contribute to the project? Look no further, check out our [contributing guide](CONTRIBUTING.md), and keep the [Code of Conduct](coc.md) in mind when working on things.
-
-## AI Policy
-
-The Foundryborne Daggerheart system does not make use of AI (generative or otherwise) for any area of its implementation. We expect all contributors to follow this same policy when contributing with a pull request; contributions made using AI will be rejected outright.
-
-## Licenses
-
-Game system content available in the Daggerheart System Reference Document as well as the domain icons are licensed under the [Darrington Press Community Gaming License](https://darringtonpress.com/wp-content/uploads/2025/07/DPCGL-July-30th-2025.pdf). All other Daggerheart specific content including logos and other images are packaged with and provided for use in the daggerheart system and may not be redistributed or used outside of Foundry Virtual Tabletop except as permitted by a separate license agreement between the original copyright owner.
-
-All HTML, CSS, and Javascript in this project is distributed under the [MIT License](LICENSE). 
-
-Some icons used in this project are provided by https://game-icons.net and are licensed under the Creative Commons Attribution 3.0 Unported (CC BY 3.0).
-
-Darrington Press™, Daggerheart™, and their respective logos are trademarks of Critical Role, LLC and used with permission.
+このリポジトリは [Foundryborne/daggerheart](https://github.com/Foundryborne/daggerheart) のフォークです。
+システム本体の README、ドキュメント、ライセンスは上流を参照してください。
+Critical Role および Darrington Press とは関係ありません。
